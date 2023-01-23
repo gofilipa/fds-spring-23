@@ -1,0 +1,21 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: syllabus #considered as frontmatter
+chapters:
+- file: schedule
+- file: data_types_variables
+- file: functions_scripts
+- file: loops_lists
+- file: conditionals
+- file: data_investigation
+- file: data_cleaning
+- file: data_exploration 
+- file: data_visualization
+- file: linear_regression
+- file: homework_00
+- file: homework_01
+- file: homework_02
+- file: homework_03
+- file: homework_04
