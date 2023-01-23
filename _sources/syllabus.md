@@ -1,10 +1,15 @@
 # Syllabus
 
 CSC 31167: Foundations of Data Science
+
 Instructor:  Filipa Calado     
+
 Email: fcalado@gradcenter.cuny.edu
-Zoom address: https://nyu.zoom.us/my/filipa.calado               	
+
+Zoom address: https://nyu.zoom.us/my/filipa.calado         
+
 Office hours: https://www.bit.ly/calado_office  	
+
 
 Bulletin Description: This course introduces the fundamental concepts and computational techniques of data science to all students, including those majoring in the Arts, Humanities, and Social Sciences. Students engage with data arising from real-world phenomena—including literary corpora, spatial datasets, and social networks data—to learn analytical skills such as inferential thinking and computational thinking. The competencies learned in this course will provide students with skills that will be of use in their professional careers, as well as tools to better understand, quantitatively and qualitatively, the social world around them. Finally, by teaching critical concepts and skills in computer programming and statistical inference, the class prepares students for further coursework in technology-dependent subjects, such as Digital Humanities. The course is designed for students who are new to statistics and programming. Students will make use of the Python programming language, but no computer science pre-requisites are required.
 
