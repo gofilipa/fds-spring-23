@@ -1,8 +1,11 @@
-# homework 1: create a project folder
-Demonstrate you have created a course folder for this course using the command line.
+# homework 1: data types and variables
 
-- First, using the command line, create a folder for this course somewhere that makes sense for your own directory structure in your computer. For example, I created my course folder within my Desktop folder. 
-- Then, go to the “parent” folder (the one that contains your course folder). For example, if the course folder is on your Desktop, the parent folder is your Desktop folder.
-- Then, run the command for “list.” After running this command, you should see your course folder on the list. 
-- Copy and paste the output into a blank document, such as a word document or another word processor.
-- Below this pasted text, write a short paragraph explaining any trouble you had with this homework and how you tried to figure it out. If you had no trouble with this homework, instead write a short paragraph explaining where you chose to create your folder on your computer and why you chose that location. 
+Open a command line program (Terminal or Powershell) or a new Google Colab document. Complete the following tasks as separate cells/commands within the document: 
+- Save your full name to a variable called "name". 
+- Save your age to a variable called "age." 
+- Run the following line of code: `f"my name is {name}, and my age is {age}"
+
+
+Submit the assignment via Blackboard. You may save the output as a `.txt` or `.docx` file (by copy/pasting the content into a word doc, for example), or you may download the output as an `.ipynb` file
+
+
