@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Python as a calculator
-# You can use Python to make calculations like addition, subtraction, multiplication, and division
+# # Data Types and Variables
+
+# ## Python as a calculator
+# You can use Python to make calculations like addition, subtraction, multiplication, and division.
 
 # In[1]:
 
@@ -28,7 +30,7 @@
 10 - 9
 
 
-# # Data Types
+# ## Data Types
 # Python interprets all data as a type of data. For example, a number is interpreted as an "integer," and any characters contained within quotes are interpreted as a "string." 
 
 # In[5]:
@@ -85,8 +87,8 @@ type(['sausage', 'egg', 'cheese'])
 type([1, 4, 2])
 
 
-# # Variables
-# Python saves data as "variables," which are a kind of shorthand that we can assign to values like integers, strings, or lists.
+# ## Variables
+# Python saves data as "variables," which are a kind of label that we can assign to values like integers, strings, or lists.
 
 # In[14]:
 
@@ -184,7 +186,7 @@ number = 1000
 number
 
 
-# # Rules for creating variables
+# ## Rules for creating variables
 
 # In[30]:
 
@@ -220,69 +222,72 @@ my_variable
 $varialbe = "dollar"
 
 
-# # Objects
+# ## Objects
 # Every time you save some data to a variable, you are creating an "object" in python. 
 
-# In[67]:
+# In[ ]:
 
 
 # this creates a string type object
 greeting = "Hello World!"
 
 
-# In[55]:
+# In[ ]:
 
 
 greeting
 
 
-# In[68]:
+# ## Methods for Objects
+# Objects have built-in functionality based on their data type, like strings and lists. In other words, you can do certain things to string-type objects that you cannot with list-type objects.
+
+# In[ ]:
 
 
 # certain methods, like upper(), can be used to do things to strings
 greeting.upper()
 
 
-# In[69]:
+# In[ ]:
 
 
 # lower() is another string method
 greeting.lower()
 
 
-# In[58]:
+# In[ ]:
 
 
 greeting
 
 
-# In[59]:
+# In[ ]:
 
 
 breakfast
 
 
-# In[70]:
+# In[ ]:
 
 
 # there are also methods for lists, like sort()
 breakfast.sort()
 
 
-# In[61]:
+# In[ ]:
 
 
 breakfast
 
 
-# In[71]:
+# In[ ]:
 
 
 # string concatenation is when you add two strings together
 "Hello" + "goodbye"
 
 
-# In[72]:
+# In[ ]:
 
 
 # f-string formatting is when you use an "f" and curly brackets {} 
@@ -291,26 +296,22 @@ breakfast
 f"Today for breafast, I ate {breakfast}"
 
 
-# In[64]:
+# ## Homework help
+
+# In[ ]:
 
 
 name = "Filipa"
 
 
-# In[65]:
+# In[ ]:
 
 
 age = 33
 
 
-# In[66]:
-
-
-f"my name is {name}, and my age is {age}"
-
-
 # In[ ]:
 
 
-
+f"my name is {name}, and my age is {age}"
 

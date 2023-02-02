@@ -6,14 +6,7 @@ root: syllabus #considered as frontmatter
 chapters:
 - file: schedule
 - file: data_types_variables
-- file: functions_scripts
-- file: loops_lists
-- file: conditionals
-- file: data_investigation
-- file: data_cleaning
-- file: data_exploration 
-- file: data_visualization
-- file: linear_regression
+- file: functions
 - file: homework_00
 - file: homework_01
 - file: homework_02

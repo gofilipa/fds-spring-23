@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python as a calculator &#8212; Foundations of Data Science</title>
+    <title>Data Types and Variables &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="functions and scripts" href="functions_scripts.html" />
+    <link rel="next" title="homework 0: install python (optional)" href="homework_00.html" />
     <link rel="prev" title="Course Schedule" href="schedule.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -121,17 +121,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Python as a calculator
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="functions_scripts.html">
-   functions and scripts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="loops_lists.html">
-   loops and lists
+   Data Types and Variables
   </a>
  </li>
  <li class="toctree-l1">
@@ -320,29 +310,39 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-as-a-calculator">
    Python as a calculator
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-types">
    Data Types
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables">
    Variables
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rules-for-creating-variables">
    Rules for creating variables
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objects">
    Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods-for-objects">
+   Methods for Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework-help">
+   Homework help
   </a>
  </li>
 </ul>
@@ -354,7 +354,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Python as a calculator</h1>
+                <h1>Data Types and Variables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -364,29 +364,39 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-as-a-calculator">
    Python as a calculator
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-types">
    Data Types
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables">
    Variables
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rules-for-creating-variables">
    Rules for creating variables
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objects">
    Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods-for-objects">
+   Methods for Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework-help">
+   Homework help
   </a>
  </li>
 </ul>
@@ -399,9 +409,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="python-as-a-calculator">
-<h1>Python as a calculator<a class="headerlink" href="#python-as-a-calculator" title="Permalink to this headline">#</a></h1>
-<p>You can use Python to make calculations like addition, subtraction, multiplication, and division</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-types-and-variables">
+<h1>Data Types and Variables<a class="headerlink" href="#data-types-and-variables" title="Permalink to this headline">#</a></h1>
+<section id="python-as-a-calculator">
+<h2>Python as a calculator<a class="headerlink" href="#python-as-a-calculator" title="Permalink to this headline">#</a></h2>
+<p>You can use Python to make calculations like addition, subtraction, multiplication, and division.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
@@ -451,8 +463,8 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="data-types">
-<h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h1>
+<section id="data-types">
+<h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h2>
 <p>Python interprets all data as a type of data. For example, a number is interpreted as an “integer,” and any characters contained within quotes are interpreted as a “string.”</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -563,9 +575,9 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="variables">
-<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h1>
-<p>Python saves data as “variables,” which are a kind of shorthand that we can assign to values like integers, strings, or lists.</p>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<p>Python saves data as “variables,” which are a kind of label that we can assign to values like integers, strings, or lists.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -729,8 +741,8 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="rules-for-creating-variables">
-<h1>Rules for creating variables<a class="headerlink" href="#rules-for-creating-variables" title="Permalink to this headline">#</a></h1>
+<section id="rules-for-creating-variables">
+<h2>Rules for creating variables<a class="headerlink" href="#rules-for-creating-variables" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># variables can start with an underscore or an alphabetic character.  </span>
@@ -789,8 +801,8 @@ SyntaxError: invalid syntax
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="objects">
-<h1>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">#</a></h1>
+<section id="objects">
+<h2>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">#</a></h2>
 <p>Every time you save some data to a variable, you are creating an “object” in python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -812,6 +824,10 @@ SyntaxError: invalid syntax
 </div>
 </div>
 </div>
+</section>
+<section id="methods-for-objects">
+<h2>Methods for Objects<a class="headerlink" href="#methods-for-objects" title="Permalink to this headline">#</a></h2>
+<p>Objects have built-in functionality based on their data type, like strings and lists. In other words, you can do certain things to string-type objects that you cannot with list-type objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># certain methods, like upper(), can be used to do things to strings</span>
@@ -910,6 +926,9 @@ SyntaxError: invalid syntax
 </div>
 </div>
 </div>
+</section>
+<section id="homework-help">
+<h2>Homework help<a class="headerlink" href="#homework-help" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Filipa&quot;</span>
@@ -936,6 +955,7 @@ SyntaxError: invalid syntax
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -972,10 +992,10 @@ SyntaxError: invalid syntax
             <p class="prev-next-title">Course Schedule</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="functions_scripts.html" title="next page">
+    <a class='right-next' id="next-link" href="homework_00.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">functions and scripts</p>
+        <p class="prev-next-title">homework 0: install python (optional)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
