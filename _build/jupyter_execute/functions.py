@@ -39,7 +39,7 @@ def multiply_with_input(a, b):
 # In[4]:
 
 
-multiply_with_input(2, 3)
+multiply_with_input(98, 10100)
 
 
 # In[5]:

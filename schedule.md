@@ -9,8 +9,8 @@ As course schedule and assignments are subject to change, please check this page
 | 2/1/2023  | types and variables  |  | Homework #0 due (optional) |
 | Week 3: 2/6/2023 |  functions |   | Homework #1 due: data types and variables  |
 | 2/8/2023  |  loops |   |   |
-| Week 4: 2/15/2023  | lists |   |  Homework #2 due: functions and loops |
-|  Week 5: CUNY MONDAY 2/21/2023 | logic and conditionals  |   |   |
+| Week 4: 2/15/2023  | lists |   |  |
+|  Week 5: CUNY MONDAY 2/21/2023 | logic and conditionals  |   |  Homework #2 due: python basics |
 |  UNIT TWO 2/22/2023 | investigation, data frames |  |   |
 | Week 6: 2/27/2023  | investigation continued  | *Data Feminism*, "[Introduction: Why Data Science Needs Feminism](https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6)"  |   |
 | 3/1/2023  | cleaning  |   | Homework #3 due: Data investigation  |

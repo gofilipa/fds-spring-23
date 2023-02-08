@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Course Schedule &#8212; Foundations of Data Science</title>
+    <title>Loops and Lists &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Types and Variables" href="data_types_variables.html" />
-    <link rel="prev" title="Syllabus" href="syllabus.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,9 +111,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="schedule.html">
    Course Schedule
   </a>
  </li>
@@ -205,6 +203,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/loops_and_lists.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -227,7 +254,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/schedule.md"
+        <a href="_sources/loops_and_lists.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -238,7 +265,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -264,23 +291,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-challenge">
+   Group challenge:
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Course Schedule</h1>
+                <h1>Loops and Lists</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-challenge">
+   Group challenge:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -288,180 +352,130 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="course-schedule">
-<h1>Course Schedule<a class="headerlink" href="#course-schedule" title="Permalink to this headline">#</a></h1>
-<p>As course schedule and assignments are subject to change, please check this page frequently.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Date</p></th>
-<th class="head"><p>Topic</p></th>
-<th class="head"><p>Readings</p></th>
-<th class="head"><p>Due</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Week 1: 1/25/2023</p></td>
-<td><p>introduction</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>UNIT ONE Week 2: 1/30/2023</p></td>
-<td><p>Jupyter, calculation and data types</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2/1/2023</p></td>
-<td><p>types and variables</p></td>
-<td><p></p></td>
-<td><p>Homework #0 due (optional)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 3: 2/6/2023</p></td>
-<td><p>functions</p></td>
-<td><p></p></td>
-<td><p>Homework #1 due: data types and variables</p></td>
-</tr>
-<tr class="row-even"><td><p>2/8/2023</p></td>
-<td><p>loops</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 4: 2/15/2023</p></td>
-<td><p>lists</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 5: CUNY MONDAY 2/21/2023</p></td>
-<td><p>logic and conditionals</p></td>
-<td><p></p></td>
-<td><p>Homework #2 due: python basics</p></td>
-</tr>
-<tr class="row-odd"><td><p>UNIT TWO 2/22/2023</p></td>
-<td><p>investigation, data frames</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 6: 2/27/2023</p></td>
-<td><p>investigation continued</p></td>
-<td><p><em>Data Feminism</em>, “<a class="reference external" href="https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6">Introduction: Why Data Science Needs Feminism</a>”</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>3/1/2023</p></td>
-<td><p>cleaning</p></td>
-<td><p></p></td>
-<td><p>Homework #3 due: Data investigation</p></td>
-</tr>
-<tr class="row-even"><td><p>Week 7: 3/6/2023</p></td>
-<td><p>cleaning</p></td>
-<td><p>Katie Rawson and Trevor Muñoz, “Against Cleaning”</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>3/8/2023</p></td>
-<td><p>MIDTERM</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 8: 3/13/2023</p></td>
-<td><p>exploration</p></td>
-<td><p>Data Feminism, “<a class="reference external" href="https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4">Chapter 1: The Power Chapter</a>”</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>3/15/2023</p></td>
-<td><p>exploration</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 9: 3/20/2023</p></td>
-<td><p>visualization</p></td>
-<td><p></p></td>
-<td><p>Homework #4 due: Data exploration</p></td>
-</tr>
-<tr class="row-odd"><td><p>3/22/2023</p></td>
-<td><p>visualization</p></td>
-<td><p>Data Feminism, Chapter 2. Collect, Analyze, Imagine, Teach</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 10: 3/27/2023</p></td>
-<td><p>transformers</p></td>
-<td><p></p></td>
-<td><p>Homework #5 due: Data visualization</p></td>
-</tr>
-<tr class="row-odd"><td><p>3/29/2023</p></td>
-<td><p>transformers</p></td>
-<td><p>Data Feminism, Chapter 3. On Rational, Scientific, Objective Viewpoints from Mythical, Imaginary, Impossible Standpoints</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 11: 4/3/2023</p></td>
-<td><p>transformers</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>4/5/2023 - 4/12/2023</p></td>
-<td><p>SPRING BREAK</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>UNIT THREE</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 12: 4/17/2023</p></td>
-<td><p>discovery</p></td>
-<td><p>Data Feminism, Chapter 4. “What Gets Counted Counts”</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>4/19/2023</p></td>
-<td><p>research questions and methods</p></td>
-<td><p></p></td>
-<td><p>Project brainstorms due</p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 13: 4/24/2023</p></td>
-<td><p>workshops</p></td>
-<td><p>Data Feminism, chapter 5</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>4/26/2023</p></td>
-<td><p>workshops</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>Week 14: 5/1/2023</p></td>
-<td><p>workshops</p></td>
-<td><p>Data Feminism, chapter 6</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>5/1/2023</p></td>
-<td><p>workshops</p></td>
-<td><p></p></td>
-<td><p>Project proposals due</p></td>
-</tr>
-<tr class="row-odd"><td><p>5/3/2023</p></td>
-<td><p>workshops</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 15: 5/8/2023</p></td>
-<td><p>presentations</p></td>
-<td><p></p></td>
-<td><p>Final projects due</p></td>
-</tr>
-<tr class="row-odd"><td><p>5/10/2023</p></td>
-<td><p>presentations</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Week 16: 5/15/2023</p></td>
-<td><p>presentations</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>TBD</p></td>
-<td><p>FINAL EXAM</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+  <section class="tex2jax_ignore mathjax_ignore" id="loops-and-lists">
+<h1>Loops and Lists<a class="headerlink" href="#loops-and-lists" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># remember lists? Let&#39;s make a list of breakfast items</span>
+
+<span class="n">breakfast</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nuts&quot;</span><span class="p">,</span> <span class="s2">&quot;sausage&quot;</span><span class="p">,</span> <span class="s2">&quot;hash browns&quot;</span><span class="p">,</span> <span class="s2">&quot;fruit snacks&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># syntax for a loop includes two lines</span>
+<span class="c1"># the first line identifies the variable name (for each item)</span>
+<span class="c1"># and the name of the list (or string) that we want to loop over</span>
+<span class="c1"># the second line instructs the loop what to do to each item</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">breakfast</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nuts
+sausage
+hash browns
+fruit snacks
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can also loop through strings</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Hello&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H
+e
+l
+l
+o
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># it doesn&#39;t matter what we name the variable, as long as we</span>
+<span class="c1"># are consistent in calling the same variable in the body </span>
+<span class="c1"># of the loop</span>
+
+<span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;sentence&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this
+is
+a
+sentence
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print out the phrase: [item] is my favorite breakfast!</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">breakfast</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2"> is my favorite breakfast!&quot;</span><span class="p">)</span> 
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nuts is my favorite breakfast!
+sausage is my favorite breakfast!
+hash browns is my favorite breakfast!
+fruit snacks is my favorite breakfast!
+</pre></div>
+</div>
+</div>
+</div>
+<section id="group-challenge">
+<h2>Group challenge:<a class="headerlink" href="#group-challenge" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write some code to print out the square of each of</span>
+<span class="c1"># these numbers:</span>
+
+<span class="c1"># you want the output to print as a string, like so:</span>
+<span class="c1"># &quot;The square of 2 is 4.&quot;</span>
+<span class="c1"># &quot;The square of 3 is 9.&quot;</span>
+
+<span class="n">prime_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">prime_numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sqaure of </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">item</span><span class="o">*</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hint: Remember that the square of a number is that number </span>
+<span class="c1"># times itself. Remember how to use &quot;f-strings&quot;.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The sqaure of 2 is 4
+The sqaure of 3 is 9
+The sqaure of 5 is 25
+The sqaure of 7 is 49
+The sqaure of 11 is 121
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -491,20 +505,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="syllabus.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Syllabus</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="data_types_variables.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Types and Variables</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
