@@ -7,7 +7,7 @@ chapters:
 - file: schedule
 - file: data_types_variables
 - file: functions
-- file: loops and lists
+- file: loops_and_lists
 - file: homework_00
 - file: homework_01
 - file: homework_02
