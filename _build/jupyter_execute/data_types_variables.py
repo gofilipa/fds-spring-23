@@ -225,14 +225,14 @@ $varialbe = "dollar"
 # ## Objects
 # Every time you save some data to a variable, you are creating an "object" in python. 
 
-# In[ ]:
+# In[6]:
 
 
 # this creates a string type object
 greeting = "Hello World!"
 
 
-# In[ ]:
+# In[7]:
 
 
 greeting
@@ -241,7 +241,7 @@ greeting
 # ## Methods for Objects
 # Objects have built-in functionality based on their data type, like strings and lists. In other words, you can do certain things to string-type objects that you cannot with list-type objects.
 
-# In[ ]:
+# In[8]:
 
 
 # certain methods, like upper(), can be used to do things to strings
@@ -278,6 +278,12 @@ breakfast.sort()
 
 
 breakfast
+
+
+# In[9]:
+
+
+greeting.sort()
 
 
 # In[ ]:
