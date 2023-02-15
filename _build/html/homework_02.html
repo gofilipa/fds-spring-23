@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>homework 2: functions and loops &#8212; Foundations of Data Science</title>
+    <title>homework 2: python basics &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -130,6 +130,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="loops_and_lists.html">
+   Loops and Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="homework_00.html">
    homework 0: install python (optional)
   </a>
@@ -141,7 +146,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   homework 2: functions and loops
+   homework 2: python basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -205,6 +210,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/homework_02.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -227,7 +261,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/homework_02.md"
+        <a href="_sources/homework_02.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -238,7 +272,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -276,7 +310,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>homework 2: functions and loops</h1>
+                <h1>homework 2: python basics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -288,9 +322,102 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="homework-2-functions-and-loops">
-<h1>homework 2: functions and loops<a class="headerlink" href="#homework-2-functions-and-loops" title="Permalink to this headline">#</a></h1>
-<p>Instructions forthcoming</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-2-python-basics">
+<h1>homework 2: python basics<a class="headerlink" href="#homework-2-python-basics" title="Permalink to this headline">#</a></h1>
+<p>Please download this page by pressing the download button on upper right corner. You should save the page as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p>Afer downloading the document, open it on your own computer, either on Google Colab or Jupyter-Notebooks. If using Google Colab, you may need to first upload the document to your Google Drive before you can work on it.</p>
+<p>When you are finished, download the document as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and submit it through Blackboard.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In the box below, define a function called &quot;subtract&quot; that </span>
+<span class="c1"># subtracts one number from another. Make sure you include two </span>
+<span class="c1"># variables in the definition which will take the values of </span>
+<span class="c1"># the input numbers passed into the function. </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now call the same function, passing two random numbers as </span>
+<span class="c1"># parameters.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give an example of a &quot;built-in&quot; function that we have used in </span>
+<span class="c1"># class. Hint: we have used at least two.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In a comment below, explain in your own words how a function </span>
+<span class="c1"># works and why it can be useful. 2-4 sentences.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write variable named `quote` that stores your favorite quote </span>
+<span class="c1"># of all time in the form of a list.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now write a loop that goes prints each word from the quote.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write a loop that prints the string &quot;hello&quot; using all capital </span>
+<span class="c1"># letters.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In a comment below, explain in your own words how a loop works </span>
+<span class="c1"># and why it can be useful. 2-4 sentences. </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Take the list that you created above (of your favorite quote)</span>
+<span class="c1"># and write a list index that prints the first word of the quote.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Take the same list, and write a list index that prints the a </span>
+<span class="c1"># slice of words from somewhere in the middle of the quote </span>
+<span class="c1"># (somewhere between the first and last words).</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## BONUS ##</span>
+<span class="c1"># Write a function that loops through a list or string which you </span>
+<span class="c1"># pass from the function call</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

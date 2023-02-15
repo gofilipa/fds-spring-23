@@ -6,7 +6,7 @@ Then, complete the following tasks as separate cells/commands within the documen
 
 1. Save your first name to a variable called `first`. 
 2. Save your age to a variable called `age`. 
-3. Use "f-string" formatting to run the following line of code: `f"my name is {first}, and my age is {age}"`. For more information on f-strings, [see this post](https://www.digitalocean.com/community/tutorials/python-f-strings-literal-string-interpolation).
+3. Use "f-string" formatting to run the following line of code: `f"my name is {first}, and my age is {age}"`. For more information on f-strings, [see this tutorial on "f-strings" on Digital Ocean](https://www.digitalocean.com/community/tutorials/python-f-strings-literal-string-interpolation).
 4. Save your last name to a variable called `last`.
 5. Use string concatenatation (when you add one string to another using `+`) to print your first and last names together. 
 6. Add the number `10` to your `name` variable. This should create an error.
