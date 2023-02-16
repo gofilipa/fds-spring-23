@@ -146,7 +146,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="homework_02.html">
-   homework 2: functions and loops
+   homework 2: python basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -325,6 +325,16 @@ title="Print to PDF"
    Group challenge:
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Group challenge
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -349,6 +359,16 @@ title="Print to PDF"
    Group challenge:
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Group challenge
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -365,7 +385,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># remember lists? Let&#39;s make a list of breakfast items</span>
 
-<span class="n">breakfast</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nuts&quot;</span><span class="p">,</span> <span class="s2">&quot;sausage&quot;</span><span class="p">,</span> <span class="s2">&quot;hash browns&quot;</span><span class="p">,</span> <span class="s2">&quot;fruit snacks&quot;</span><span class="p">]</span>
+<span class="n">breakfast</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;bread&quot;</span><span class="p">,</span> <span class="s2">&quot;butter&quot;</span><span class="p">,</span> <span class="s2">&quot;bec&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -383,10 +403,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nuts
-sausage
-hash browns
-fruit snacks
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bread
+butter
+bec
+banana
 </pre></div>
 </div>
 </div>
@@ -395,7 +415,7 @@ fruit snacks
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can also loop through strings</span>
 
-<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Hello&quot;</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Hello world!&quot;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -406,6 +426,13 @@ e
 l
 l
 o
+ 
+w
+o
+r
+l
+d
+!
 </pre></div>
 </div>
 </div>
@@ -443,10 +470,10 @@ sentence
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nuts is my favorite breakfast!
-sausage is my favorite breakfast!
-hash browns is my favorite breakfast!
-fruit snacks is my favorite breakfast!
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bread is my favorite breakfast!
+butter is my favorite breakfast!
+bec is my favorite breakfast!
+banana is my favorite breakfast!
 </pre></div>
 </div>
 </div>
@@ -478,6 +505,302 @@ The sqaure of 3 is 9
 The sqaure of 5 is 25
 The sqaure of 7 is 49
 The sqaure of 11 is 121
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Avatar&quot;</span><span class="p">,</span> <span class="s2">&quot;Nope&quot;</span><span class="p">,</span> <span class="s2">&quot;Up&quot;</span><span class="p">,</span> <span class="s2">&quot;The Cat in the Hat&quot;</span><span class="p">,</span> <span class="s2">&quot;The Incredibles&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">breakfast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for reference, these are functions we already have been using:</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">len</span><span class="p">()</span>
+<span class="nb">type</span><span class="p">()</span>
+<span class="c1"># this is a method, not a function: breakfast.upper()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="n">cce4c5ba482f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="nb">len</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">type</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># this is a method, not a function: breakfast.upper()</span>
+
+<span class="ne">TypeError</span>: len() takes exactly one argument (0 given)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Avatar&quot;</span><span class="p">,</span> <span class="s2">&quot;Nope&quot;</span><span class="p">,</span> <span class="s2">&quot;Up&quot;</span><span class="p">,</span> <span class="s2">&quot;The Cat in the Hat&quot;</span><span class="p">,</span> <span class="s2">&quot;The Incredibles&quot;</span><span class="p">]</span>
+<span class="n">movies_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">movies_length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this does the same thing as the code above, but less readable (imo)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">movies</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list indexing</span>
+<span class="n">movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Avatar&quot;</span><span class="p">,</span> <span class="s2">&quot;Nope&quot;</span><span class="p">,</span> <span class="s2">&quot;Up&quot;</span><span class="p">,</span> <span class="s2">&quot;The Cat in the Hat&quot;</span><span class="p">,</span> <span class="s2">&quot;The Incredibles&quot;</span><span class="p">]</span>
+
+<span class="n">movies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Avatar&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Nope&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The Cat in the Hat&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The Incredibles&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Up&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Avatar&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># common error with list indexing is going too far, out of the range of the list.</span>
+
+<span class="n">movies</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">27</span><span class="o">-</span><span class="mi">2</span><span class="n">b846fbb82e9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">movies</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Avatar&quot;</span><span class="p">,</span> <span class="s2">&quot;Nope&quot;</span><span class="p">,</span> <span class="s2">&quot;Up&quot;</span><span class="p">,</span> <span class="s2">&quot;The Cat in the Hat&quot;</span><span class="p">,</span> <span class="s2">&quot;The Incredibles&quot;</span><span class="p">]</span>
+
+<span class="n">movies</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Nope&#39;, &#39;Up&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># in a list slice, the first term is inclusive</span>
+<span class="c1"># and the second term is exclusive</span>
+
+<span class="n">movies</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Up&#39;, &#39;The Cat in the Hat&#39;, &#39;The Incredibles&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this also works with strings</span>
+
+<span class="s2">&quot;hello-world&quot;</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;llo-&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the colon takes everything to the left or the right, depending on where the colon is placed</span>
+<span class="n">movies</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Avatar&#39;, &#39;Nope&#39;, &#39;Up&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;The Cat in the Hat&#39;, &#39;The Incredibles&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Group challenge<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>Create a new list of books, with at least 5 books in your
+list. Make sure the total number of books in the list is an odd
+number.
+How do you print out the book in the middle of the list?</p>
+<p>What about the three books in the middle? Remember that the
+first value in a slice is inclusive, and the final value is
+exclusive.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first create a list</span>
+<span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;harry potter&quot;</span><span class="p">,</span> <span class="s2">&quot;jane eyre&quot;</span><span class="p">,</span> <span class="s2">&quot;percy jackson&quot;</span><span class="p">,</span> <span class="s2">&quot;social credit&quot;</span><span class="p">,</span> <span class="s2">&quot;hands-on python&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># grabs the third item (which is set to #2 on the list)</span>
+<span class="n">books</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;percy jackson&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># takes a slice of the middle three items, from 1 to 3 (doesn&#39;t include 4). </span>
+<span class="n">books</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;jane eyre&#39;, &#39;percy jackson&#39;, &#39;social credit&#39;]
 </pre></div>
 </div>
 </div>
