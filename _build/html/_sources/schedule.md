@@ -11,11 +11,11 @@ As course schedule and assignments are subject to change, please check this page
 | 2/8/2023  |  loops |   |   |
 | Week 4: 2/15/2023  | lists |   |  |
 |  Week 5: CUNY MONDAY 2/21/2023 | logic and conditionals  |   |  Homework #2 due: python basics |
-|  UNIT TWO 2/22/2023 | text analysis with NLTK |  |   |
-| Week 6: 2/27/2023  | text analysis: cleaning | *Data Feminism*, "[Introduction: Why Data Science Needs Feminism](https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6)"  |   |
-| 3/1/2023  | cleaning  |   | Homework #3 due: Data investigation  |
-| Week 7: 3/6/2023  | cleaning  |  Katie Rawson and Trevor Muñoz, "Against Cleaning" |   |
-| 3/8/2023  |  visualization |   |   |
+|  UNIT TWO 2/22/2023 | text analysis with NLTK | *The NLTK Book*, [chapter 1, sections 1.2 - 1.4 & 3.1](https://www.nltk.org/book/ch01.html)  |   |
+| Week 6: 2/27/2023  | CLASS CANCELED |  |   |
+| 3/1/2023  | cleaning  | *Data Feminism*, "[Introduction: Why Data Science Needs Feminism](https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6)" | |
+| Week 7: 3/6/2023  | cleaning  | *Introduction to Text Analysis with Python and NLTK*, [lessons 9 - 12](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  |  |
+| 3/8/2023  |  visualization |   | Homework #3 due: cleaning  |
 | Week 8: 3/13/2023  |  MIDTERM |  |   |
 | 3/15/2023  |  data analysis with pandas | Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4)"  |   |
 |  Week 9: 3/20/2023 |  data analysis: investigation |   | Homework #4 due: Data exploration  |
