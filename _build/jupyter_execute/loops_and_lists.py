@@ -107,7 +107,7 @@ type()
 # this is a method, not a function: breakfast.upper()
 
 
-# In[17]:
+# In[ ]:
 
 
 movies = ["Avatar", "Nope", "Up", "The Cat in the Hat", "The Incredibles"]
@@ -115,14 +115,14 @@ movies_length = len(movies)
 print(movies_length)
 
 
-# In[22]:
+# In[ ]:
 
 
 # this does the same thing as the code above, but less readable (imo)
 print(len(movies))
 
 
-# In[2]:
+# In[1]:
 
 
 # list indexing
@@ -131,37 +131,37 @@ movies = ["Avatar", "Nope", "Up", "The Cat in the Hat", "The Incredibles"]
 movies[0]
 
 
-# In[3]:
+# In[2]:
 
 
 movies[1]
 
 
-# In[23]:
+# In[3]:
 
 
 movies[3]
 
 
-# In[24]:
+# In[4]:
 
 
 movies[-1]
 
 
-# In[25]:
+# In[5]:
 
 
 movies[-3]
 
 
-# In[26]:
+# In[ ]:
 
 
 movies[-5]
 
 
-# In[27]:
+# In[ ]:
 
 
 # common error with list indexing is going too far, out of the range of the list.
@@ -169,7 +169,7 @@ movies[-5]
 movies[-6]
 
 
-# In[4]:
+# In[6]:
 
 
 movies = ["Avatar", "Nope", "Up", "The Cat in the Hat", "The Incredibles"]
@@ -177,7 +177,7 @@ movies = ["Avatar", "Nope", "Up", "The Cat in the Hat", "The Incredibles"]
 movies[1:3]
 
 
-# In[9]:
+# In[7]:
 
 
 # in a list slice, the first term is inclusive
@@ -186,7 +186,7 @@ movies[1:3]
 movies[2:5]
 
 
-# In[12]:
+# In[8]:
 
 
 # this also works with strings
@@ -194,14 +194,14 @@ movies[2:5]
 "hello-world"[2:6]
 
 
-# In[18]:
+# In[ ]:
 
 
 # the colon takes everything to the left or the right, depending on where the colon is placed
 movies[:3]
 
 
-# In[19]:
+# In[ ]:
 
 
 movies[3:]
@@ -218,25 +218,163 @@ movies[3:]
 # exclusive.
 # 
 
-# In[20]:
+# In[ ]:
 
 
 # first create a list
 books = ["harry potter", "jane eyre", "percy jackson", "social credit", "hands-on python"]
 
 
-# In[22]:
+# In[ ]:
 
 
 # grabs the third item (which is set to #2 on the list)
 books[2]
 
 
-# In[23]:
+# In[ ]:
 
 
 # takes a slice of the middle three items, from 1 to 3 (doesn't include 4). 
 books[1:4]
+
+
+# ## List methods
+
+# In[9]:
+
+
+# methods are attached to objects
+
+'hello'.upper()
+
+
+# In[10]:
+
+
+# functions take data that is passed into them. 
+
+type('hello')
+
+
+# In[11]:
+
+
+# python won't recognize "upper" as a function, only as a method.
+
+upper('hello')
+
+
+# In[14]:
+
+
+movies.sort()
+movies
+
+
+# In[15]:
+
+
+movies.append('Ant Man 3')
+
+
+# In[16]:
+
+
+movies
+
+
+# In[17]:
+
+
+movies.sort()
+
+
+# In[18]:
+
+
+movies
+
+
+# In[21]:
+
+
+movies.pop()
+
+
+# In[22]:
+
+
+movies
+
+
+# In[23]:
+
+
+'hello'.pop()
+
+
+# In[24]:
+
+
+tv_shows = ['The last of us', 'The simpsons', 'Modern family', 'Spongebob', 'South Park']
+
+
+# In[25]:
+
+
+movies.extend(tv_shows)
+
+
+# In[26]:
+
+
+movies
+
+
+# In[27]:
+
+
+movies.reverse()
+
+
+# In[28]:
+
+
+movies
+
+
+# In[30]:
+
+
+movies.remove('Spongebob')
+
+
+# In[31]:
+
+
+movies
+
+
+# In[36]:
+
+
+# professor to work on this later
+for item in movies:
+    if item in tv_shows:
+        movies.remove(item)
+
+
+# In[34]:
+
+
+tv_shows
+
+
+# In[33]:
+
+
+movies
 
 
 # In[ ]:

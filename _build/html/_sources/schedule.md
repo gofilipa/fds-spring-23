@@ -6,15 +6,15 @@ As course schedule and assignments are subject to change, please check this page
 |---|---|---|---|
 | Week 1: 1/25/2023  | introduction  |   |   |
 | UNIT ONE Week 2: 1/30/2023  | Jupyter, calculation and data types  |   | |
-| 2/1/2023  | types and variables  |  | Homework #0 due (optional) |
-| Week 3: 2/6/2023 |  functions |   | Homework #1 due: data types and variables  |
-| 2/8/2023  |  loops |   |   |
-| Week 4: 2/15/2023  | lists |   |  |
-|  Week 5: CUNY MONDAY 2/21/2023 | logic and conditionals  |   |  Homework #2 due: python basics |
+| 2/1/2023  | [types and variables](https://curriculum.dhinstitutes.org/workshops/python/lessons/?page=2)  |  | Homework #0 due (optional) |
+| Week 3: 2/6/2023 |  [functions](https://curriculum.dhinstitutes.org/workshops/python/lessons/?page=6) |   | Homework #1 due: data types and variables  |
+| 2/8/2023  |  [loops](https://curriculum.dhinstitutes.org/workshops/python/lessons/?page=8) |   |   |
+| Week 4: 2/15/2023  | [lists](https://curriculum.dhinstitutes.org/workshops/python/lessons/?page=7) |   |  |
+|  Week 5: CUNY MONDAY 2/21/2023 | [logic](https://curriculum.dhinstitutes.org/workshops/python/lessons/?page=9)  |   |  Homework #2 due: python basics |
 |  UNIT TWO 2/22/2023 | text analysis with NLTK | *The NLTK Book*, [chapter 1, sections 1.2 - 1.4 & 3.1](https://www.nltk.org/book/ch01.html)  |   |
 | Week 6: 2/27/2023  | CLASS CANCELED |  |   |
-| 3/1/2023  | cleaning  | *Data Feminism*, "[Introduction: Why Data Science Needs Feminism](https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6)" | |
-| Week 7: 3/6/2023  | cleaning  | *Introduction to Text Analysis with Python and NLTK*, [lessons 9 - 12](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  |  |
+| 3/1/2023  | [cleaning](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  | *Data Feminism*, "[Introduction: Why Data Science Needs Feminism](https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6)" | |
+| Week 7: 3/6/2023  | [cleaning](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  | *Introduction to Text Analysis with Python and NLTK*, [lessons 9 - 12](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  |  |
 | 3/8/2023  |  visualization |   | Homework #3 due: cleaning  |
 | Week 8: 3/13/2023  |  MIDTERM |  |   |
 | 3/15/2023  |  data analysis with pandas | Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4)"  |   |
