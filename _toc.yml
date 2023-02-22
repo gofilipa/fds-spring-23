@@ -8,6 +8,8 @@ chapters:
 - file: data_types_variables
 - file: functions
 - file: loops_and_lists
+- file: logic
+- file: nltk-intro
 - file: homework_00
 - file: homework_01
 - file: homework_02

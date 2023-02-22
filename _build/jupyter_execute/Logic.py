@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Logic
+
 # In[1]:
 
+
+# remember booleans?
 
 type(True)
 
@@ -15,6 +19,8 @@ type(False)
 
 # In[3]:
 
+
+# double equals sign checks for equavalence
 
 1 == 1
 
