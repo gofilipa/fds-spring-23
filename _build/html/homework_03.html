@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>homework 3: data investigation &#8212; Foundations of Data Science</title>
+    <title>homework 3: text cleaning &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -140,6 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="text_cleaning.html">
+   loading up the text
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="homework_00.html">
    homework 0: install python (optional)
   </a>
@@ -156,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   homework 3: data investigation
+   homework 3: text cleaning
   </a>
  </li>
  <li class="toctree-l1">
@@ -215,35 +220,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/homework_03.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -303,100 +279,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#choose-a-broad-topic">
-   Choose a Broad Topic
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-a-data-set">
-   Find a Data Set
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#choose-a-data-set">
-   Choose a Data Set
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluation">
-   Evaluation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-the-data-in-python">
-   Reading the Data in Python
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>homework 3: data investigation</h1>
+                <h1>homework 3: text cleaning</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#choose-a-broad-topic">
-   Choose a Broad Topic
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-a-data-set">
-   Find a Data Set
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#choose-a-data-set">
-   Choose a Data Set
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluation">
-   Evaluation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-the-data-in-python">
-   Reading the Data in Python
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -404,101 +303,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="homework-3-data-investigation">
-<h1>homework 3: data investigation<a class="headerlink" href="#homework-3-data-investigation" title="Permalink to this headline">#</a></h1>
-<p>You will find and evaluate a data set on a topic of your choosing. You will be given specific questions related to the data set, and you will also be tasked with importing the data from your data set into your Jupyter Notebook environment.</p>
-<section id="choose-a-broad-topic">
-<h2>Choose a Broad Topic<a class="headerlink" href="#choose-a-broad-topic" title="Permalink to this headline">#</a></h2>
-<p>First, choose a topic of interest to you, such as a specific social issue, a political or cultural trend, a community, or a hobby or personal interest. Ideally, it should be something relatively broad that society or culture is having some sort of conversation about, or which many people think about on a regular basis. Possible examples might be:</p>
-<ul class="simple">
-<li><p>Housing and rental prices in New York City</p></li>
-<li><p>A popular genre of music</p></li>
-<li><p>A sport</p></li>
-<li><p>Food prices</p></li>
-<li><p>Crime</p></li>
-<li><p>Government spending</p></li>
-<li><p>Popularity of movies or TV shows</p></li>
-<li><p>Bestselling books</p></li>
-</ul>
-</section>
-<section id="find-a-data-set">
-<h2>Find a Data Set<a class="headerlink" href="#find-a-data-set" title="Permalink to this headline">#</a></h2>
-<p>Search for terms related to your topic on Google, both generally and by adding specific names of websites where data will commonly be found. The following websites are frequently places to find data sets, and it sometimes makes sense to both search directly on the site and to do regular Google searches with the site name:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://datasetsearch.research.google.com/">Google Data Set Search</a></p></li>
-<li><p><a class="reference external" href="https://github.com/">GitHub</a></p></li>
-<li><p><a class="reference external" href="https://www.kaggle.com/">Kaggle</a></p></li>
-<li><p><a class="reference external" href="https://www.data.gov/">Data.gov</a></p></li>
-</ul>
-<p>For example, if your topic is bestselling books, you might try these searches on Google:</p>
-<ul class="simple">
-<li><p>bestselling books data set</p></li>
-<li><p>bestselling books data set kaggle</p></li>
-<li><p>bestselling books data set github</p></li>
-<li><p>bestselling books data set</p></li>
-</ul>
-<p>You’re not likely to find bestselling books data on <a class="reference external" href="http://data.gov">data.gov</a>, but you might find a lot of info related to health, the economy, and demographics, since that’s what the government is most concerned about.</p>
-<hr class="docutils" />
-<p>What is your topic? (Enter responses to questions like these in the cell provided below.)</p>
-<p>What drew you to this topic, or why did you choose it?</p>
-</section>
-<section id="choose-a-data-set">
-<h2>Choose a Data Set<a class="headerlink" href="#choose-a-data-set" title="Permalink to this headline">#</a></h2>
-<p>Choose a data set to use for the rest of this assignment. The data set doesn’t need to be perfect, but ideally it should interest you and be in one of the discussed formats (CSV, TSV, Excel, JSON, .txt). If the data is in another format, either reach out to me to ask about it or choose another data set for this assignment. You may want to look ahead to the rest of this assignment to make sure nothing about the data set will make it difficult to answer the questions or to import the data.</p>
-<p>What is the name of your data set? Or provide a one-sentence description.</p>
-<p>What is the URL of the page on which you found the data set? (Paste the full URL.)</p>
-</section>
-<section id="evaluation">
-<h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">#</a></h2>
-<p>In this step, you will evaluate the data to the extent possible without using data science tools like Python or Pandas. You should download the data to your computer, and use both the data set itself as downloaded and the page you found it on to answer these questions. If you can’t answer a question, write what you tried to do to answer it—don’t give up right away, and try to think of other ways to answer the question. (In some cases, you can even contact the person who created the data set—if you do so, feel free to copy me on the email.)</p>
-<p>What is the file format or file extension of the data set? Examples might be .csv (Comma Seperated Values), .tsv (Tab Separated Values), .xlsx (Excel workbook), .txt (plain text file), or JSON (JavaScript Object Notation).</p>
-<p>What is the size in megabytes (MB)or gigabytes (GB) of the data set?</p>
-<p>How many columns or fields is the data set? (Columns or fields are different types of data—for example, a book dataset might have title, author, and year as columns.)</p>
-<p>List out the columns in the data set. (You can put each column on a line, or you can separate the columns with commas.)</p>
-<p>How many rows is the data set? (To use the book data set example again, each row might represent one book.)</p>
-<p>What types of data appear in the data set? (You can use Python terms, like “integer,” “float,” “boolean,” “string,” or you can use other descriptive terms, like “numeric data” or “text data.” Try to be as comprehensive as possible in your answer.</p>
-<p>On initial inspection, does anything appear to be missing or wrong in the data set? (Don’t spend too long on this.)</p>
-<p>What kinds of questions could you answer with this data set? In answering this question, write at least one paragraph of at least 150 words.</p>
-<p>Do you see any issues or limitations with the data set? Alternatively, what do you wish was included in the data set that is not included? (Write at least one paragraph of at least 150 words.)</p>
-</section>
-<section id="reading-the-data-in-python">
-<h2>Reading the Data in Python<a class="headerlink" href="#reading-the-data-in-python" title="Permalink to this headline">#</a></h2>
-<p>Using as many cells as you need in the rest of this notebook, load the data into Python. You will probably want to use Pandas to load the data. Some example code is provided for you below.</p>
-<p>To use the example code in a Jupyter Notebook on your computer, you will need to make sure your data set is in the same folder as your notebook, and that you get the filename <em>exactly</em> right, including the extension. Here is example code for a Jupyter Notebook—this is just to get you started, and you are responsible for getting this working, which may involve looking up how to import data using Python and Pandas on Google.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;name_of_data_file.csv&#39;</span><span class="p">)</span>
-
-<span class="n">df</span>
-</pre></div>
-</div>
-<p>If your data is in another format, you will need to use the Pandas function related to that format. For example, to import JSON:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;name_of_data_file.json&#39;</span><span class="p">)</span>
-
-<span class="n">df</span>
-</pre></div>
-</div>
-<p>If you’re on Google Colab, you will need to upload your dataset to Colab. To do so, you can use some special code—when you run it, a “choose file” dialog will open below the cell. Click the “choose file” button and select your file from your hard drive.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
-
-<span class="n">upload</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Once you have uploaded the file, run this code to import it into a data frame. You will need to change the ‘name_of_uploaded_file.csv’ string to the exact name of the file you uploaded.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">io</span>
-
-<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;name_of_uploaded_file.csv&#39;</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">upload</span><span class="p">[</span><span class="n">filename</span><span class="p">]))</span>
-
-<span class="n">df</span>
-</pre></div>
-</div>
-<p>Use as much space as you need below to import the file into Pandas (as above). Make sure the dataframe (df) is shown as an output at the end.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-3-text-cleaning">
+<h1>homework 3: text cleaning<a class="headerlink" href="#homework-3-text-cleaning" title="Permalink to this headline">#</a></h1>
+<p>First, choose a text that you’ve read/seen before, maybe from the Project Gutenburg library.</p>
+<p>Second, in a cell below load up your text into a Jupyter notebook or Google Colab notebook.</p>
+<p>Third, tokenize the text.</p>
+<p>Fourth, write a loop to remove stopwords.</p>
+<p>Fifth, write a loop to remove punctuation and capital leters. Make sure you save the cleaned text to a new variable.</p>
+<p>Bonus:
+Combine all of the cleaning steps (removing stopwords, punctuation, capital letters) within a single function called “clean” which you can then call on the text.</p>
 </section>
 
     <script type="text/x-thebe-config">

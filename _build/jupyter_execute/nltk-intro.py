@@ -58,27 +58,10 @@ text5.concordance('ugly')
 # In[8]:
 
 
-# using the 'dispersion_plot' method to see where words appear across the text
+# using the 'dispersion_plot' method to see where words 
+# appear across the text
 
 text3.dispersion_plot(['good', 'evil', 'serpent', 'Adam', 'Eve'])
-
-
-# In[9]:
-
-
-text6.concordance('hello')
-
-
-# In[10]:
-
-
-text1.concordance('whale')
-
-
-# In[11]:
-
-
-text1.similar('whale')
 
 
 # In[ ]:
