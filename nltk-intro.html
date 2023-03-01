@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="homework 0: install python (optional)" href="homework_00.html" />
+    <link rel="next" title="loading up the text" href="text_cleaning.html" />
     <link rel="prev" title="Logic" href="logic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -140,6 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="text_cleaning.html">
+   loading up the text
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="homework_00.html">
    homework 0: install python (optional)
   </a>
@@ -156,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="homework_03.html">
-   homework 3: data investigation
+   homework 3: text cleaning
   </a>
  </li>
  <li class="toctree-l1">
@@ -505,7 +510,8 @@ s for some trout . PART yeah someone ugly enough for your fluids hahaha ask U9
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using the &#39;dispersion_plot&#39; method to see where words appear across the text</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using the &#39;dispersion_plot&#39; method to see where words </span>
+<span class="c1"># appear across the text</span>
 
 <span class="n">text3</span><span class="o">.</span><span class="n">dispersion_plot</span><span class="p">([</span><span class="s1">&#39;good&#39;</span><span class="p">,</span> <span class="s1">&#39;evil&#39;</span><span class="p">,</span> <span class="s1">&#39;serpent&#39;</span><span class="p">,</span> <span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="s1">&#39;Eve&#39;</span><span class="p">])</span>
 </pre></div>
@@ -513,93 +519,6 @@ s for some trout . PART yeah someone ugly enough for your fluids hahaha ask U9
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/nltk-intro_7_0.png" src="_images/nltk-intro_7_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text6</span><span class="o">.</span><span class="n">concordance</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying 25 of 27 matches:
- thump ] [ squeak ] [ boom ] GIRLS : Hello ! ZOOT : Welcome gentle Sir Knight .
-t ! [ clank ] I have seen -- GIRLS : Hello . GALAHAD : Oh . GIRLS : Hello . Hel
-RLS : Hello . GALAHAD : Oh . GIRLS : Hello . Hello . Hello . Hello . Hello . He
-llo . GALAHAD : Oh . GIRLS : Hello . Hello . Hello . Hello . Hello . Hello . He
-LAHAD : Oh . GIRLS : Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-Oh . GIRLS : Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-LS : Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . He
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . GA
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . Hello . GALAHAD : 
-lo . Hello . Hello . Hello . Hello . Hello . Hello . Hello . GALAHAD : Zoot ! D
-lo . Hello . Hello . Hello . Hello . Hello . Hello . GALAHAD : Zoot ! DINGO : N
-lo . Hello . Hello . Hello . Hello . Hello . GALAHAD : Zoot ! DINGO : No , I am
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text1</span><span class="o">.</span><span class="n">concordance</span><span class="p">(</span><span class="s1">&#39;whale&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying 25 of 1226 matches:
-s , and to teach them by what name a whale - fish is to be called in our tongue
-t which is not true .&quot; -- HACKLUYT &quot; WHALE . ... Sw . and Dan . HVAL . This ani
-ulted .&quot; -- WEBSTER &#39; S DICTIONARY &quot; WHALE . ... It is more immediately from th
-ISH . WAL , DUTCH . HWAL , SWEDISH . WHALE , ICELANDIC . WHALE , ENGLISH . BALE
-HWAL , SWEDISH . WHALE , ICELANDIC . WHALE , ENGLISH . BALEINE , FRENCH . BALLE
-least , take the higgledy - piggledy whale statements , however authentic , in 
- dreadful gulf of this monster &#39; s ( whale &#39; s ) mouth , are immediately lost a
- patient Job .&quot; -- RABELAIS . &quot; This whale &#39; s liver was two cartloads .&quot; -- ST
- Touching that monstrous bulk of the whale or ork we have received nothing cert
- of oil will be extracted out of one whale .&quot; -- IBID . &quot; HISTORY OF LIFE AND D
-ise .&quot; -- KING HENRY . &quot; Very like a whale .&quot; -- HAMLET . &quot; Which to secure , n
-restless paine , Like as the wounded whale to shore flies thro &#39; the maine .&quot; -
-. OF SPERMA CETI AND THE SPERMA CETI WHALE . VIDE HIS V . E . &quot; Like Spencer &#39; 
-t had been a sprat in the mouth of a whale .&quot; -- PILGRIM &#39; S PROGRESS . &quot; That 
-EN &#39; S ANNUS MIRABILIS . &quot; While the whale is floating at the stern of the ship
-e ship called The Jonas - in - the - Whale . ... Some say the whale can &#39; t ope
- in - the - Whale . ... Some say the whale can &#39; t open his mouth , but that is
- masts to see whether they can see a whale , for the first discoverer has a duc
- for his pains . ... I was told of a whale taken near Shetland , that had above
-oneers told me that he caught once a whale in Spitzbergen that was white all ov
-2 , one eighty feet in length of the whale - bone kind came in , which ( as I w
-n master and kill this Sperma - ceti whale , for I could never hear of any of t
- . 1729 . &quot;... and the breath of the whale is frequendy attended with such an i
-ed with hoops and armed with ribs of whale .&quot; -- RAPE OF THE LOCK . &quot; If we com
-contemptible in the comparison . The whale is doubtless the largest animal in c
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text1</span><span class="o">.</span><span class="n">similar</span><span class="p">(</span><span class="s1">&#39;whale&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ship boat sea time captain world man deck pequod other whales air
-water head crew line thing side way body
-</pre></div>
-</div>
 </div>
 </div>
 
@@ -637,10 +556,10 @@ water head crew line thing side way body
             <p class="prev-next-title">Logic</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="homework_00.html" title="next page">
+    <a class='right-next' id="next-link" href="text_cleaning.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">homework 0: install python (optional)</p>
+        <p class="prev-next-title">loading up the text</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
