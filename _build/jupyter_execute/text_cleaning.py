@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # NLTK part two: loading texts
+
 # In[1]:
 
 
