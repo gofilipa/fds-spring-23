@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# fill in the missing code at the comment, then run the cell. 
+
+no_punct = []
+# write the first line of the for loop here
+  if word.isalpha():
+    no_punct.append(word.lower())
+------------------
+
+[0;36m  File [0;32m"<ipython-input-10-a45c8c4583cf>"[0;36m, line [0;32m5[0m
+[0;31m    if word.isalpha():[0m
+[0m    ^[0m
+[0;31mIndentationError[0m[0;31m:[0m unexpected indent
+
+IndentationError: unexpected indent (<ipython-input-10-a45c8c4583cf>, line 5)
+
