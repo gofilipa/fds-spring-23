@@ -13,14 +13,14 @@ As course schedule and assignments are subject to change, please check this page
 |  Week 5: CUNY MONDAY 2/21/2023 | [logic](https://curriculum.dhinstitutes.org/workshops/python/lessons/?page=9)  |   |  Homework #2 due: python basics |
 |  UNIT TWO 2/22/2023 | text analysis with NLTK | *The NLTK Book*, [chapter 1, sections 1.2 - 1.4 & 3.1](https://www.nltk.org/book/ch01.html)  |   |
 | Week 6: 2/27/2023  | CLASS CANCELED |  |   |
-| 3/1/2023  | [cleaning](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  | *Data Feminism*, "[Introduction: Why Data Science Needs Feminism](https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6)" | |
-| Week 7: 3/6/2023  | [cleaning](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  | *Introduction to Text Analysis with Python and NLTK*, [lessons 9 - 12](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  |  |
-| 3/8/2023  |  visualization |   | Homework #3 due: cleaning  |
-| Week 8: 3/13/2023  |  MIDTERM |  |   |
-| 3/15/2023  |  data analysis with pandas | Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4)"  |   |
-|  Week 9: 3/20/2023 |  data analysis: investigation |   | Homework #4 due: Data exploration  |
-| 3/22/2023  |  data analysis: exploration | Data Feminism, Chapter 2. Collect, Analyze, Imagine, Teach  |   |
-|  Week 10: 3/27/2023 |  data analysis: exploration |   | Homework #5 due: Data exploration  |
+| 3/1/2023  | NLTK continued | | |
+| Week 7: 3/6/2023  | [cleaning](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9) | *Data Feminism*, "[Introduction: Why Data Science Needs Feminism](https://data-feminism.mitpress.mit.edu/pub/frfa9szd/release/6)"  |  |
+| 3/8/2023  |  [cleaning continued ](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  |   |   |
+| Week 8: 3/13/2023  |  midterm review |  | Homework #3 due: cleaning  |
+| 3/15/2023  |  MIDTERM |  |   |
+|  Week 9: 3/20/2023 |  data analysis: investigation |  Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4) |  |
+| 3/22/2023  |  data analysis: investigation | Data Feminism, Chapter 2. Collect, Analyze, Imagine, Teach  |   |
+|  Week 10: 3/27/2023 |  data analysis: exploration |   | Homework #4 due: Data exploration  |
 | 3/29/2023  |  data analysis: visualization | Data Feminism, Chapter 3. On Rational, Scientific, Objective Viewpoints from Mythical, Imaginary, Impossible Standpoints  |   |
 |  Week 11: 4/3/2023 |  data analysis: visualization |   |   |
 | 4/5/2023 - 4/12/2023  |  SPRING BREAK |   |   |

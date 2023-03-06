@@ -146,7 +146,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="text_cleaning.html">
-   NLTK part two: loading texts
+   NLTK part two: loading and cleaning texts
   </a>
  </li>
  <li class="toctree-l1">
@@ -225,6 +225,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/homework_03.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -310,11 +339,113 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="homework-3-text-cleaning">
 <h1>homework 3: text cleaning<a class="headerlink" href="#homework-3-text-cleaning" title="Permalink to this headline">#</a></h1>
-<p>First, choose a text that you’ve read/seen before, maybe from the Project Gutenburg library.</p>
-<p>Second, in a cell below load up your text into a Jupyter notebook or Google Colab notebook.</p>
-<p>Third, tokenize the text.</p>
-<p>Fourth, write a loop to remove stopwords.</p>
-<p>Fifth, write a loop to remove punctuation and capital leters. Make sure you save the cleaned text to a new variable.</p>
+<p>Please download this page by pressing the download button on upper right corner. You should save the page as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p>Afer downloading the document, open it on your own computer, either on Google Colab or Jupyter-Notebooks. If using Google Colab, you may need to first upload the document to your Google Drive before you can work on it.</p>
+<p>When you are finished, download the document as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and submit it through Blackboard.</p>
+<p>For this assignment, you will choose a text that you’ve read/seen before, maybe from the Project Gutenburg library. Then, in the cells below, you will load up your text into a Jupyter notebook or Google Colab notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, import the libraries we need to analyze text (nltk) and get </span>
+<span class="c1"># data over URLs (urllib)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Then, grab the URL of your text from Gutenberg (or elsewhere) and </span>
+<span class="c1"># save it to a variable called &quot;my_url&quot; </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open the URL address with urlopen(my_url) and save it to &quot;opened_url&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read the data in the URL using read() and save it to &quot;raw&quot; </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># our data is currently in byte type, so we need to convert it to a </span>
+<span class="c1"># string type using decode(). Save the result to &quot;decoded&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we will tokenize the text, then remove the front &amp; back matter</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use NLTK &quot;word_tokenize&quot; method to create a list of &quot;tokens,&quot;</span>
+<span class="c1"># or smaller strings, from our long string above</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the first ten words from our list of tokens</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find where the first word of the text begins, this is the index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using the index, create a slice that excludes the frontmatter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Complete the loop below to remove punctuation and capital leters. Make sure you save the cleaned text to a new variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fill in the missing code at the comment, then run the cell. </span>
+
+<span class="n">no_punct</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># write the first line of the for loop here</span>
+  <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+    <span class="n">no_punct</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-10-a45c8c4583cf&gt;&quot;</span><span class="gt">, line </span><span class="mi">5</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: unexpected indent
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fill in the missing code at the comment, then run the cell.</span>
+
+<span class="n">stops</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+
+<span class="n">o_unstopped</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">o_text</span><span class="p">:</span>
+    <span class="k">if</span> <span class="c1"># complete the if statment here</span>
+        <span class="n">o_unstopped</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Bonus:
 Combine all of the cleaning steps (removing stopwords, punctuation, capital letters) within a single function called “clean” which you can then call on the text.</p>
 </section>
