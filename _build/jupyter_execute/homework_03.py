@@ -11,6 +11,8 @@
 
 # For this assignment, you will choose a text that you've read/seen before, maybe from the Project Gutenburg library. Then, in the cells below, you will load up your text into a Jupyter notebook or Google Colab notebook. 
 
+# ## Loading up the text
+
 # In[1]:
 
 
@@ -44,7 +46,9 @@
 # string type using decode(). Save the result to "decoded"
 
 
-# Next we will tokenize the text, then remove the front & back matter
+# ## Tokenizing and removing frontmatter
+
+# Next we will tokenize the text, then remove the frontmatter
 
 # In[6]:
 
@@ -68,33 +72,54 @@
 # In[9]:
 
 
-# using the index, create a slice that excludes the frontmatter
+# using the index, create a slice that excludes the frontmatter. Save the 
+# result to "tokens_no_frontmatter" variable.
 
-
-# Complete the loop below to remove punctuation and capital leters. Make sure you save the cleaned text to a new variable.
 
 # In[10]:
 
 
-# fill in the missing code at the comment, then run the cell. 
+# now, run the following line of code, which will automatically remove the 
+# backmatter from the text.
 
-no_punct = []
-# write the first line of the for loop here
-  if word.isalpha():
-    no_punct.append(word.lower())
+tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 
+
+# ## Removing punctuation and capital letters
+
+# Copy and paste loop to the cell below. Then, complete the loop (at the commented line) to remove punctuation and capital leters.
+# ```python
+# no_punct = []
+# 
+# # write the first line of the for loop here
+#   if word.isalpha():
+#     no_punct.append(word.lower())
+# ```
 
 # In[ ]:
 
 
-# fill in the missing code at the comment, then run the cell.
+# copy and paste the above loop into this cell 
 
-stops = stopwords.words('english')
 
-o_unstopped = []
-for t in o_text:
-    if # complete the if statment here
-        o_unstopped.append(t)
+
+# ## Removing stopwords
+
+# Copy and paste this loop to the cell below. Then, complete the loop (at the commented line) to remove stopwords.
+# 
+# ```python
+# stops = stopwords.words('english')
+# 
+# o_unstopped = []
+# for t in o_text:
+#     if # complete the if statment here
+#         o_unstopped.append(t)
+# ```
+
+# In[ ]:
+
+
+# copy and paste the above loop into this cell
 
 
 # Bonus: 

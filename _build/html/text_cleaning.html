@@ -350,6 +350,21 @@ title="Print to PDF"
    removing frontmatter and backmatter
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-data">
+   1) what is data?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-controls-data">
+   2) who controls data?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-the-people-who-control-data-do-with-it">
+   3) what do the people who control data do with it?
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -382,6 +397,21 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#removing-frontmatter-and-backmatter">
    removing frontmatter and backmatter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-data">
+   1) what is data?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-controls-data">
+   2) who controls data?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-the-people-who-control-data-do-with-it">
+   3) what do the people who control data do with it?
   </a>
  </li>
 </ul>
@@ -432,6 +462,18 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read the data in the URL</span>
 
 <span class="n">raw</span> <span class="o">=</span> <span class="n">opened_url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bytes
 </pre></div>
 </div>
 </div>
@@ -515,6 +557,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find where the first word of the text begins</span>
+<span class="c1"># use the index() method</span>
 
 <span class="n">tokens</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;TRAGEDY&quot;</span><span class="p">)</span>
 </pre></div>
@@ -570,6 +613,163 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># very complicated process of finding and removing backmatter</span>
+
+<span class="n">tokens_no_backmatter</span> <span class="o">=</span> <span class="n">tokens_no_frontmatter</span><span class="p">[:</span><span class="o">-</span><span class="mi">3246</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># changing the name to &quot;shakes&quot; for convenience</span>
+
+<span class="n">shakes</span> <span class="o">=</span> <span class="n">tokens_no_backmatter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shakes</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;THE&#39;,
+ &#39;TRAGEDY&#39;,
+ &#39;OF&#39;,
+ &#39;ROMEO&#39;,
+ &#39;AND&#39;,
+ &#39;JULIET&#39;,
+ &#39;by&#39;,
+ &#39;William&#39;,
+ &#39;Shakespeare&#39;,
+ &#39;Contents&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use the count() method to find the number of times a word appears in the text</span>
+
+<span class="n">shakes</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;Love&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the word counts are different depending on captialization</span>
+
+<span class="n">shakes</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;love&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>142
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we also see this with &quot;ROMEO&quot; vs &quot;Romeo&quot;</span>
+
+<span class="n">shakes</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;ROMEO&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>165
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shakes</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;Romeo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>148
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To make the word counts more accurate, we will convert all words to lowercase</span>
+<span class="c1"># we will also remove punctuation</span>
+
+<span class="n">shakes_no_punct_lower</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">shakes</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="n">shakes_no_punct_lower</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shakes_no_punct_lower</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;the&#39;,
+ &#39;tragedy&#39;,
+ &#39;of&#39;,
+ &#39;romeo&#39;,
+ &#39;and&#39;,
+ &#39;juliet&#39;,
+ &#39;by&#39;,
+ &#39;william&#39;,
+ &#39;shakespeare&#39;,
+ &#39;contents&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now we have regularized the text, so the word counts are more trustworthy</span>
+
+<span class="n">shakes_no_punct_lower</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;romeo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>313
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-data">
+<h2>1) what is data?<a class="headerlink" href="#what-is-data" title="Permalink to this headline">#</a></h2>
+<p>Information gathered and collected, used for counting and other math
+Facts and statistics to back up truth
+Qualitative – not just numbers
+Collection of information</p>
+</section>
+<section id="who-controls-data">
+<h2>2) who controls data?<a class="headerlink" href="#who-controls-data" title="Permalink to this headline">#</a></h2>
+<p>Humans, AI, Organizations.
+Government.</p>
+</section>
+<section id="what-do-the-people-who-control-data-do-with-it">
+<h2>3) what do the people who control data do with it?<a class="headerlink" href="#what-do-the-people-who-control-data-do-with-it" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 

@@ -42,20 +42,26 @@ raw = opened_url.read()
 # In[5]:
 
 
+type(raw)
+
+
+# In[6]:
+
+
 # our data is currently in byte type, and we want to convert 
 # it to a string
 
 decoded = raw.decode()
 
 
-# In[6]:
+# In[7]:
 
 
 # now we have a string type data -- which is necessary for analysis
 type(decoded)
 
 
-# In[7]:
+# In[8]:
 
 
 # let's check out what we have in 'decoded'
@@ -65,7 +71,7 @@ decoded
 
 # ## tokenizing the text
 
-# In[8]:
+# In[9]:
 
 
 # we use the NLTK "word_tokenize" method to create a list of "tokens,"
@@ -74,7 +80,7 @@ decoded
 tokens = nltk.word_tokenize(decoded)
 
 
-# In[9]:
+# In[10]:
 
 
 # check the first ten words from our list of tokens
@@ -84,15 +90,16 @@ tokens[:10]
 
 # ## removing frontmatter and backmatter
 
-# In[10]:
+# In[11]:
 
 
 # find where the first word of the text begins
+# use the index() method
 
 tokens.index("TRAGEDY")
 
 
-# In[11]:
+# In[12]:
 
 
 # the text begins at the 164th word
@@ -100,7 +107,7 @@ tokens.index("TRAGEDY")
 tokens[164]
 
 
-# In[12]:
+# In[13]:
 
 
 # create a slice that excludes the frontmatter
@@ -108,14 +115,99 @@ tokens[164]
 tokens_no_frontmatter = tokens[164:]
 
 
-# In[13]:
+# In[14]:
 
 
 tokens_no_frontmatter[:10]
 
 
-# In[ ]:
+# In[15]:
 
 
+# very complicated process of finding and removing backmatter
+
+tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 
 
+# In[16]:
+
+
+# changing the name to "shakes" for convenience
+
+shakes = tokens_no_backmatter
+
+
+# In[17]:
+
+
+shakes[:10]
+
+
+# In[18]:
+
+
+# use the count() method to find the number of times a word appears in the text
+
+shakes.count("Love")
+
+
+# In[19]:
+
+
+# the word counts are different depending on captialization
+
+shakes.count("love")
+
+
+# In[20]:
+
+
+# we also see this with "ROMEO" vs "Romeo"
+
+shakes.count('ROMEO')
+
+
+# In[21]:
+
+
+shakes.count('Romeo')
+
+
+# In[22]:
+
+
+# To make the word counts more accurate, we will convert all words to lowercase
+# we will also remove punctuation
+
+shakes_no_punct_lower = []
+
+for word in shakes:
+    if word.isalpha():
+        shakes_no_punct_lower.append(word.lower())
+
+
+# In[23]:
+
+
+shakes_no_punct_lower[:10]
+
+
+# In[24]:
+
+
+# now we have regularized the text, so the word counts are more trustworthy
+
+shakes_no_punct_lower.count('romeo')
+
+
+# ## 1) what is data?
+# Information gathered and collected, used for counting and other math
+# Facts and statistics to back up truth
+# Qualitative -- not just numbers
+# Collection of information
+# 
+# ## 2) who controls data? 
+# Humans, AI, Organizations.
+# Government.
+# 
+# ##  3) what do the people who control data do with it?
