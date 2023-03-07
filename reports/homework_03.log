@@ -17,18 +17,19 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# fill in the missing code at the comment, then run the cell. 
+# now, run the following line of code, which will automatically remove the 
+# backmatter from the text.
 
-no_punct = []
-# write the first line of the for loop here
-  if word.isalpha():
-    no_punct.append(word.lower())
+tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 ------------------
 
-[0;36m  File [0;32m"<ipython-input-10-a45c8c4583cf>"[0;36m, line [0;32m5[0m
-[0;31m    if word.isalpha():[0m
-[0m    ^[0m
-[0;31mIndentationError[0m[0;31m:[0m unexpected indent
-
-IndentationError: unexpected indent (<ipython-input-10-a45c8c4583cf>, line 5)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-10-4573ef926c8d>[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0;31m# backmatter from the text.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[0;32m----> 4[0;31m [0mtokens_no_backmatter[0m [0;34m=[0m [0mtokens_no_frontmatter[0m[0;34m[[0m[0;34m:[0m[0;34m-[0m[0;36m3246[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;31mNameError[0m: name 'tokens_no_frontmatter' is not defined
+NameError: name 'tokens_no_frontmatter' is not defined
 
