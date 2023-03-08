@@ -48,9 +48,9 @@
 # string type using decode(). Save the result to "decoded"
 
 
-# ## Tokenizing and removing frontmatter
+# ## Tokenizing
 
-# Next we will tokenize the text, then remove the frontmatter. Follow the directions in each cell.
+# Next we will tokenize the text. Follow the directions in each cell.
 
 # In[6]:
 
@@ -65,29 +65,8 @@
 # check the first ten words from our list of tokens
 
 
-# In[8]:
-
-
-# find where the first word of the text begins, this is the index
-
-
-# In[9]:
-
-
-# using the index, create a slice that excludes the frontmatter. Save the 
-# result to "tokens_no_frontmatter" variable.
-
-
-# In[10]:
-
-
-# now, run the following line of code, which will automatically remove the 
-# backmatter from the text.
-
-tokens_no_backmatter = tokens_no_frontmatter[:-3246]
-
-
 # ## Removing punctuation and capital letters
+# For this section, you will copy/paste the code fill in the missing lines (indicated with comments).
 
 # Copy and paste the below loop to the cell underneath this one. Then, complete the loop (at the commented line) to remove punctuation and capital leters.
 # ```python
@@ -98,7 +77,7 @@ tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 #     no_punct.append(word.lower())
 # ```
 
-# In[ ]:
+# In[8]:
 
 
 # copy and paste the above loop into this cell 
@@ -118,14 +97,14 @@ tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 #         o_unstopped.append(t)
 # ```
 
-# In[ ]:
+# In[9]:
 
 
 # copy and paste the above loop into this cell
 
 
 # ## Bonus: 
-# Combine all of the cleaning steps (removing stopwords, punctuation, capital letters) within a single function called "clean" which you can then call on the text. 
+# Why do we want to go through the process of cleaning the text? Explain in 2-3 sentences in a comment below
 
 # In[ ]:
 
