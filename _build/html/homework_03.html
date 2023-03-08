@@ -355,6 +355,11 @@ title="Print to PDF"
    Removing stopwords
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bonus">
+   Bonus:
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -394,6 +399,11 @@ title="Print to PDF"
    Removing stopwords
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bonus">
+   Bonus:
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -409,9 +419,10 @@ title="Print to PDF"
 <p>Please download this page by pressing the download button on upper right corner. You should save the page as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p>Afer downloading the document, open it on your own computer, either on Google Colab or Jupyter-Notebooks. If using Google Colab, you may need to first upload the document to your Google Drive before you can work on it.</p>
 <p>When you are finished, download the document as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and submit it through Blackboard.</p>
-<p>For this assignment, you will choose a text that you’ve read/seen before, maybe from the Project Gutenburg library. Then, in the cells below, you will load up your text into a Jupyter notebook or Google Colab notebook.</p>
 <section id="loading-up-the-text">
 <h2>Loading up the text<a class="headerlink" href="#loading-up-the-text" title="Permalink to this headline">#</a></h2>
+<p>For this assignment, you will choose a text that you’ve read/seen before, ideally from the Project Gutenburg library: <a class="reference external" href="https://www.gutenberg.org/browse/scores/top">https://www.gutenberg.org/browse/scores/top</a>. Make sure you select a the “plain text” link for the book.</p>
+<p>Then, in the cells below, you will load up your text into a Jupyter notebook or Google Colab notebook and follow the directions for each cell. FYI - you can find all of the code to fill out this section in the class notes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, import the libraries we need to analyze text (nltk) and get </span>
@@ -453,7 +464,7 @@ title="Print to PDF"
 </section>
 <section id="tokenizing-and-removing-frontmatter">
 <h2>Tokenizing and removing frontmatter<a class="headerlink" href="#tokenizing-and-removing-frontmatter" title="Permalink to this headline">#</a></h2>
-<p>Next we will tokenize the text, then remove the frontmatter</p>
+<p>Next we will tokenize the text, then remove the frontmatter. Follow the directions in each cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use NLTK &quot;word_tokenize&quot; method to create a list of &quot;tokens,&quot;</span>
@@ -509,7 +520,7 @@ title="Print to PDF"
 </section>
 <section id="removing-punctuation-and-capital-letters">
 <h2>Removing punctuation and capital letters<a class="headerlink" href="#removing-punctuation-and-capital-letters" title="Permalink to this headline">#</a></h2>
-<p>Copy and paste loop to the cell below. Then, complete the loop (at the commented line) to remove punctuation and capital leters.</p>
+<p>Copy and paste the below loop to the cell underneath this one. Then, complete the loop (at the commented line) to remove punctuation and capital leters.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">no_punct</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="c1"># write the first line of the for loop here</span>
@@ -527,7 +538,7 @@ title="Print to PDF"
 </section>
 <section id="removing-stopwords">
 <h2>Removing stopwords<a class="headerlink" href="#removing-stopwords" title="Permalink to this headline">#</a></h2>
-<p>Copy and paste this loop to the cell below. Then, complete the loop (at the commented line) to remove stopwords.</p>
+<p>Copy and paste the below loop to the cell underneath this one. Then, complete the loop (at the commented line) to remove stopwords.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stops</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
 
 <span class="n">o_unstopped</span> <span class="o">=</span> <span class="p">[]</span>
@@ -543,8 +554,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Bonus:
-Combine all of the cleaning steps (removing stopwords, punctuation, capital letters) within a single function called “clean” which you can then call on the text.</p>
+</section>
+<section id="bonus">
+<h2>Bonus:<a class="headerlink" href="#bonus" title="Permalink to this headline">#</a></h2>
+<p>Combine all of the cleaning steps (removing stopwords, punctuation, capital letters) within a single function called “clean” which you can then call on the text.</p>
 </section>
 </section>
 

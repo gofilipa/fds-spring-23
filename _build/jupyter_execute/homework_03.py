@@ -9,9 +9,11 @@
 # 
 # When you are finished, download the document as an `.ipynb` file and submit it through Blackboard. 
 
-# For this assignment, you will choose a text that you've read/seen before, maybe from the Project Gutenburg library. Then, in the cells below, you will load up your text into a Jupyter notebook or Google Colab notebook. 
-
 # ## Loading up the text
+
+# For this assignment, you will choose a text that you've read/seen before, ideally from the Project Gutenburg library: https://www.gutenberg.org/browse/scores/top. Make sure you select a the "plain text" link for the book. 
+# 
+# Then, in the cells below, you will load up your text into a Jupyter notebook or Google Colab notebook and follow the directions for each cell. FYI - you can find all of the code to fill out this section in the class notes.
 
 # In[1]:
 
@@ -48,7 +50,7 @@
 
 # ## Tokenizing and removing frontmatter
 
-# Next we will tokenize the text, then remove the frontmatter
+# Next we will tokenize the text, then remove the frontmatter. Follow the directions in each cell.
 
 # In[6]:
 
@@ -87,7 +89,7 @@ tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 
 # ## Removing punctuation and capital letters
 
-# Copy and paste loop to the cell below. Then, complete the loop (at the commented line) to remove punctuation and capital leters.
+# Copy and paste the below loop to the cell underneath this one. Then, complete the loop (at the commented line) to remove punctuation and capital leters.
 # ```python
 # no_punct = []
 # 
@@ -105,7 +107,7 @@ tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 
 # ## Removing stopwords
 
-# Copy and paste this loop to the cell below. Then, complete the loop (at the commented line) to remove stopwords.
+# Copy and paste the below loop to the cell underneath this one. Then, complete the loop (at the commented line) to remove stopwords.
 # 
 # ```python
 # stops = stopwords.words('english')
@@ -122,7 +124,7 @@ tokens_no_backmatter = tokens_no_frontmatter[:-3246]
 # copy and paste the above loop into this cell
 
 
-# Bonus: 
+# ## Bonus: 
 # Combine all of the cleaning steps (removing stopwords, punctuation, capital letters) within a single function called "clean" which you can then call on the text. 
 
 # In[ ]:
