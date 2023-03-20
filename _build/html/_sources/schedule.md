@@ -18,11 +18,11 @@ As course schedule and assignments are subject to change, please check this page
 | 3/8/2023  |  [cleaning continued ](https://curriculum.dhinstitutes.org/workshops/text-analysis/lessons/?page=9)  |   |   |
 | Week 8: 3/13/2023  |  midterm review |  | Homework #3 due: cleaning  |
 | 3/15/2023  |  MIDTERM |  |   |
-|  Week 9: 3/20/2023 |  data analysis: investigation |  Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4) |  |
-| 3/22/2023  |  data analysis: investigation | Data Feminism, Chapter 2. Collect, Analyze, Imagine, Teach  |   |
-|  Week 10: 3/27/2023 |  data analysis: exploration |   | Homework #4 due: Data exploration  |
-| 3/29/2023  |  data analysis: visualization | Data Feminism, Chapter 3. On Rational, Scientific, Objective Viewpoints from Mythical, Imaginary, Impossible Standpoints  |   |
-|  Week 11: 4/3/2023 |  data analysis: visualization |   |   |
+|  Week 9: 3/20/2023 | text analysis: research questions |   |  |
+| 3/22/2023  | text analysis: visualization |   |   |
+|  Week 10: 3/27/2023 |  data analysis: exploration | Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4)  |  |
+| 3/29/2023  |  data analysis | |   |
+|  Week 11: 4/3/2023 |  data analysis |   | Homework #4 due: Data exploration  |
 | 4/5/2023 - 4/12/2023  |  SPRING BREAK |   |   |
 | UNIT THREE
 Week 12: 4/17/2023  |  discovery | Data Feminism, Chapter 4. “What Gets Counted Counts”  |   |

@@ -19,7 +19,7 @@ As course schedule and assignments are subject to change, please check this page
 | Week 8: 3/13/2023  |  midterm review |  | Homework #3 due: cleaning  |
 | 3/15/2023  |  MIDTERM |  |   |
 |  Week 9: 3/20/2023 | text analysis: research questions |   |  |
-| 3/22/2023  | text analysis: visualization  |   |   |
+| 3/22/2023  | text analysis: visualization |   |   |
 |  Week 10: 3/27/2023 |  data analysis: exploration | Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4)  |  |
 | 3/29/2023  |  data analysis | |   |
 |  Week 11: 4/3/2023 |  data analysis |   | Homework #4 due: Data exploration  |

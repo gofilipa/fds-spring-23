@@ -100,10 +100,10 @@ from nltk.stem import WordNetLemmatizer
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
-nlkt.download('punkt')
+nltk.download('punkt')
 
 
-# In[ ]:
+# In[10]:
 
 
 # then, run this cell to load up and format the text, which is "Frankenstein"
@@ -115,7 +115,7 @@ decoded = raw.decode()
 tokens = nltk.word_tokenize(decoded)
 
 
-# In[ ]:
+# In[11]:
 
 
 # then, run this cell to check the first ten words "tokens"
@@ -123,7 +123,7 @@ tokens = nltk.word_tokenize(decoded)
 tokens[:10]
 
 
-# In[ ]:
+# In[12]:
 
 
 ## Question 6:
@@ -131,7 +131,7 @@ tokens[:10]
 # Explain what the above code is doing in your own words, 1-2 sentences. 
 
 
-# In[ ]:
+# In[13]:
 
 
 frank_no_punct_lower = [] # creating an empty list, to put new words in
@@ -141,7 +141,7 @@ for word in tokens: # picking out each word in list of tokens
         frank_no_punct_lower.append(word.lower())
 
 
-# In[ ]:
+# In[14]:
 
 
 ## Question 7:
@@ -150,7 +150,7 @@ for word in tokens: # picking out each word in list of tokens
 # line. 1 - 2 sentences.
 
 
-# In[ ]:
+# In[15]:
 
 
 # run this cell to load our list of stopwords
@@ -158,7 +158,7 @@ for word in tokens: # picking out each word in list of tokens
 stops = stopwords.words('english')
 
 
-# In[ ]:
+# In[16]:
 
 
 # run this cell to remove stopwords
@@ -170,7 +170,7 @@ for item in frank_no_punct_lower:
         frank_no_stops.append(item)
 
 
-# In[ ]:
+# In[17]:
 
 
 ## Question 8: 
@@ -179,7 +179,7 @@ for item in frank_no_punct_lower:
 # might they affect our analysis of word frequencies in the text? 1 - 2 sentences.
 
 
-# In[ ]:
+# In[18]:
 
 
 # FOR JUPYTER ONLY:
@@ -188,7 +188,7 @@ for item in frank_no_punct_lower:
 wordnet_lemmatizer = WordNetLemmatizer()
 
 
-# In[ ]:
+# In[19]:
 
 
 # FOR COLAB ONLY:
@@ -198,7 +198,7 @@ wordnet_lemmatizer = WordNetLemmatizer()
 wordnet_lemmatizer = nltk.stem.WordNetLemmatizer()
 
 
-# In[ ]:
+# In[20]:
 
 
 frank_lemmatized = []
@@ -208,7 +208,7 @@ for word in frank_no_stops: # picking out each word in our list of words without
     frank_lemmatized.append(lemma)
 
 
-# In[ ]:
+# In[21]:
 
 
 ## Question 8:
@@ -219,7 +219,7 @@ for word in frank_no_stops: # picking out each word in our list of words without
 
 # ## Bonus questions
 
-# In[ ]:
+# In[22]:
 
 
 # first, run this cell to create an NLTK type object from our current text, so we can analyze it.
@@ -227,7 +227,7 @@ for word in frank_no_stops: # picking out each word in our list of words without
 text = nltk.Text(frank_no_stops)
 
 
-# In[ ]:
+# In[23]:
 
 
 # then, run this cell to see the 20 most common words from the cleaned text
@@ -235,21 +235,21 @@ text = nltk.Text(frank_no_stops)
 text.vocab().most_common(20)
 
 
-# In[ ]:
+# In[24]:
 
 
 # BONUS QUESTION # 1:
 # use the NLTK method .similar() on one of the words from the above list
 
 
-# In[ ]:
+# In[25]:
 
 
 # BONUS QUESTION # 2:
-# use the NLTK method .condordance() on the word "monster"
+# use the NLTK method .concordance() on the word "monster"
 
 
-# In[ ]:
+# In[26]:
 
 
 # BONUS QUESTION # 3:
@@ -257,7 +257,7 @@ text.vocab().most_common(20)
 # the results so far.
 
 
-# In[ ]:
+# In[27]:
 
 
 # BONUS QUESTION # 4:

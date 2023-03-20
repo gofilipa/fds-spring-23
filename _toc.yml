@@ -11,6 +11,7 @@ chapters:
 - file: logic
 - file: nltk-intro
 - file: text_cleaning
+- file: nltk-research
 - file: homework_00
 - file: homework_01
 - file: homework_02
