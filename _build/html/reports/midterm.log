@@ -17,19 +17,21 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# now, run the following line of code, which will automatically remove the 
-# backmatter from the text.
+# for Google Colab ONLY: run this cell
 
-tokens_no_backmatter = tokens_no_frontmatter[:-3246]
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nlkt.download('punkt')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-10-4573ef926c8d>[0m in [0;36m<module>[0;34m[0m
-[1;32m      2[0m [0;31m# backmatter from the text.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      3[0m [0;34m[0m[0m
-[0;32m----> 4[0;31m [0mtokens_no_backmatter[0m [0;34m=[0m [0mtokens_no_frontmatter[0m[0;34m[[0m[0;34m:[0m[0;34m-[0m[0;36m3246[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-9-bf3cf756f8c7>[0m in [0;36m<module>[0;34m[0m
+[1;32m      4[0m [0mnltk[0m[0;34m.[0m[0mdownload[0m[0;34m([0m[0;34m'wordnet'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mnltk[0m[0;34m.[0m[0mdownload[0m[0;34m([0m[0;34m'omw-1.4'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m [0mnlkt[0m[0;34m.[0m[0mdownload[0m[0;34m([0m[0;34m'punkt'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;31mNameError[0m: name 'tokens_no_frontmatter' is not defined
-NameError: name 'tokens_no_frontmatter' is not defined
+[0;31mNameError[0m: name 'nlkt' is not defined
+NameError: name 'nlkt' is not defined
 
