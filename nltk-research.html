@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>NLTK research questions &#8212; Foundations of Data Science</title>
+    <title>NLTK part three: research questions &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   NLTK research questions
+   NLTK part three: research questions
   </a>
  </li>
  <li class="toctree-l1">
@@ -346,8 +346,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text8-the-personals-corpus">
+   text8: the personals corpus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#patterns-and-research-questions">
    patterns and research questions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text5-the-chat-corpus">
+   text5: the chat corpus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-challenge">
+   Group challenge
   </a>
  </li>
 </ul>
@@ -359,7 +374,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NLTK research questions</h1>
+                <h1>NLTK part three: research questions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -375,8 +390,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text8-the-personals-corpus">
+   text8: the personals corpus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#patterns-and-research-questions">
    patterns and research questions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text5-the-chat-corpus">
+   text5: the chat corpus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#group-challenge">
+   Group challenge
   </a>
  </li>
 </ul>
@@ -389,8 +419,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="nltk-research-questions">
-<h1>NLTK research questions<a class="headerlink" href="#nltk-research-questions" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="nltk-part-three-research-questions">
+<h1>NLTK part three: research questions<a class="headerlink" href="#nltk-part-three-research-questions" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On Jupyter - run this cell</span>
@@ -422,7 +452,9 @@ title="Print to PDF"
 [nltk_data]   Package wordnet is already up-to-date!
 [nltk_data] Downloading package omw-1.4 to
 [nltk_data]     /Users/filipacalado/nltk_data...
-[nltk_data]   Package omw-1.4 is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Package omw-1.4 is already up-to-date!
 [nltk_data] Downloading package punkt to
 [nltk_data]     /Users/filipacalado/nltk_data...
 [nltk_data]   Package punkt is already up-to-date!
@@ -454,7 +486,9 @@ Type: &#39;texts()&#39; or &#39;sents()&#39; to list the materials.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>text2: Sense and Sensibility by Jane Austen 1811
-text3: The Book of Genesis
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>text3: The Book of Genesis
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>text4: Inaugural Address Corpus
@@ -471,6 +505,9 @@ text9: The Man Who Was Thursday by G . K . Chesterton 1908
 </div>
 </div>
 </div>
+</section>
+<section id="text8-the-personals-corpus">
+<h2>text8: the personals corpus<a class="headerlink" href="#text8-the-personals-corpus" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check out text8, the personals ads, first 20 words</span>
@@ -527,7 +564,7 @@ text9: The Man Who Was Thursday by G . K . Chesterton 1908
 <span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">FreqDist</span>
 
 <span class="c1"># then check the most common 15 words</span>
-<span class="n">FreqDist</span><span class="p">(</span><span class="n">text8</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">FreqDist</span><span class="p">(</span><span class="n">text8</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -546,7 +583,12 @@ text9: The Man Who Was Thursday by G . K . Chesterton 1908
  (&#39;S&#39;, 36),
  (&#39;ship&#39;, 33),
  (&#39;&amp;&#39;, 30),
- (&#39;relationship&#39;, 29)]
+ (&#39;relationship&#39;, 29),
+ (&#39;fun&#39;, 28),
+ (&#39;in&#39;, 27),
+ (&#39;slim&#39;, 27),
+ (&#39;build&#39;, 27),
+ (&#39;o&#39;, 26)]
 </pre></div>
 </div>
 </div>
@@ -607,7 +649,7 @@ text9: The Man Who Was Thursday by G . K . Chesterton 1908
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a frequency distribution, the results are much better </span>
 <span class="c1"># than before</span>
 
-<span class="n">FreqDist</span><span class="p">(</span><span class="n">personals_clean</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">FreqDist</span><span class="p">(</span><span class="n">personals_clean</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -626,7 +668,26 @@ text9: The Man Who Was Thursday by G . K . Chesterton 1908
  (&#39;good&#39;, 26),
  (&#39;seeking&#39;, 25),
  (&#39;non&#39;, 25),
- (&#39;smoker&#39;, 23)]
+ (&#39;smoker&#39;, 23),
+ (&#39;n&#39;, 23),
+ (&#39;guy&#39;, 22),
+ (&#39;honest&#39;, 22),
+ (&#39;i&#39;, 22),
+ (&#39;movies&#39;, 22)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># right now, our data is in a list</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">personals_clean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
 </pre></div>
 </div>
 </div>
@@ -640,6 +701,20 @@ text9: The Man Who Was Thursday by G . K . Chesterton 1908
 <span class="c1"># for our text</span>
 
 <span class="n">personals</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">personals_clean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now we have an nltk.text.Text type of object, which is good</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">personals</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nltk.text.Text
 </pre></div>
 </div>
 </div>
@@ -706,7 +781,7 @@ sexy country guy ns seeks similar ns lady fun friendship well dressed emotiona
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/nltk-research_14_0.png" src="_images/nltk-research_14_0.png" />
+<img alt="_images/nltk-research_17_0.png" src="_images/nltk-research_17_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -754,6 +829,269 @@ medium_friendship loving_friendship
 <li><p>adjectives like ‘slim’, ‘fun’ are more common than ‘classy’</p></li>
 <li><p>seems like it’s more men seeking out women, ‘common_contexts’</p></li>
 </ul>
+</section>
+<section id="text5-the-chat-corpus">
+<h2>text5: the chat corpus<a class="headerlink" href="#text5-the-chat-corpus" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we are going to check out text5, the chat corpus</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># creating a slice to take a peek at the data</span>
+
+<span class="n">text5</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;now&#39;, &#39;im&#39;, &#39;left&#39;, &#39;with&#39;, &#39;this&#39;, &#39;gay&#39;, &#39;name&#39;, &#39;:P&#39;, &#39;PART&#39;, &#39;hey&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># checking the end of the data</span>
+
+<span class="n">text5</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;out&#39;,
+ &#39;U34&#39;,
+ &#39;?&#39;,
+ &#39;lol&#39;,
+ &#39;hi&#39;,
+ &#39;U3&#39;,
+ &#39;JOIN&#39;,
+ &#39;Hi&#39;,
+ &#39;,&#39;,
+ &#39;U197&#39;,
+ &#39;.&#39;,
+ &#39;Not&#39;,
+ &#39;that&#39;,
+ &#39;I&#39;,
+ &#39;know&#39;,
+ &#39;of&#39;,
+ &#39;,&#39;,
+ &#39;U98&#39;,
+ &#39;Uh&#39;,
+ &#39;.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># making a Frequency Distribution to see most common words</span>
+
+<span class="n">FreqDist</span><span class="p">(</span><span class="n">text5</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;.&#39;, 1268),
+ (&#39;JOIN&#39;, 1021),
+ (&#39;PART&#39;, 1016),
+ (&#39;?&#39;, 737),
+ (&#39;lol&#39;, 704),
+ (&#39;to&#39;, 658),
+ (&#39;i&#39;, 648),
+ (&#39;the&#39;, 646),
+ (&#39;you&#39;, 635),
+ (&#39;,&#39;, 596),
+ (&#39;I&#39;, 576),
+ (&#39;a&#39;, 568),
+ (&#39;hi&#39;, 546),
+ (&#39;me&#39;, 415),
+ (&#39;...&#39;, 412),
+ (&#39;is&#39;, 372),
+ (&#39;..&#39;, 361),
+ (&#39;in&#39;, 357),
+ (&#39;ACTION&#39;, 346),
+ (&#39;!&#39;, 342)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># it seems like there&#39;s a lot of stopwords and punctuation here, which we</span>
+<span class="c1"># want to clean</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function for cleaning the text</span>
+
+<span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">stops</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span> <span class="c1"># creating a list of stopwords</span>
+    <span class="n">clean</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># creating an empty list, to put new words in</span>
+
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="c1"># picking out each word in text5</span>
+        <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span> <span class="c1"># checking if in alphabet</span>
+            <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stops</span><span class="p">:</span> <span class="c1"># checking if stopword</span>
+                <span class="n">clean</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="c1"># adding to list</span>
+    <span class="k">return</span> <span class="n">clean</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calling the function</span>
+
+<span class="n">cleaned</span> <span class="o">=</span> <span class="n">clean</span><span class="p">(</span><span class="n">text5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can see that the stopwords, punctuation, and uppercase letters have been removed</span>
+
+<span class="n">cleaned</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;im&#39;, &#39;left&#39;, &#39;gay&#39;, &#39;name&#39;, &#39;part&#39;, &#39;hey&#39;, &#39;everyone&#39;, &#39;ah&#39;, &#39;well&#39;, &#39;nick&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;hi&#39;,
+ &#39;join&#39;,
+ &#39;fine&#39;,
+ &#39;gurls&#39;,
+ &#39;hurr&#39;,
+ &#39;pm&#39;,
+ &#39;find&#39;,
+ &#39;hi&#39;,
+ &#39;were&#39;,
+ &#39;one&#39;,
+ &#39;nicks&#39;,
+ &#39;kicked&#39;,
+ &#39;lol&#39;,
+ &#39;hi&#39;,
+ &#39;join&#39;,
+ &#39;hi&#39;,
+ &#39;not&#39;,
+ &#39;i&#39;,
+ &#39;know&#39;,
+ &#39;uh&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now our frequency distribution is more informative</span>
+<span class="c1"># though it&#39;s still not a very rich dataset</span>
+
+<span class="n">FreqDist</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;part&#39;, 1022),
+ (&#39;join&#39;, 1021),
+ (&#39;lol&#39;, 822),
+ (&#39;hi&#39;, 656),
+ (&#39;i&#39;, 576),
+ (&#39;action&#39;, 347),
+ (&#39;hey&#39;, 292),
+ (&#39;u&#39;, 204),
+ (&#39;like&#39;, 160),
+ (&#39;im&#39;, 149),
+ (&#39;pm&#39;, 149),
+ (&#39;chat&#39;, 146),
+ (&#39;good&#39;, 132),
+ (&#39;lmao&#39;, 128),
+ (&#39;wanna&#39;, 110),
+ (&#39;ok&#39;, 106),
+ (&#39;know&#39;, 104),
+ (&#39;get&#39;, 104),
+ (&#39;room&#39;, 103),
+ (&#39;ya&#39;, 100)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">similar</span><span class="p">(</span><span class="s1">&#39;lmao&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">28</span><span class="o">-</span><span class="n">f89acf8e8f88</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">text</span><span class="o">.</span><span class="n">similar</span><span class="p">(</span><span class="s1">&#39;lmao&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;text&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">concordance</span><span class="p">(</span><span class="s1">&#39;lmao&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying 25 of 128 matches:
+right hi fucking hot thought hi late lmao ahah iamahotniplickme part hi ny act
+wow twice i impressed part hiya room lmao im doin alright thanks omg finger de
+ioned honey depends hi ca babies yep lmao action laughs part fiance know handl
+es me love join lol u know jerkettes lmao co well girls didnts say anithing wr
+g wrong see eyes lol fiance jerketts lmao wtf yah i know honey join girl jerk 
+n ug shit il get u cheap flight hell lmao bbl maybe part lol lol hahah got ass
+ee lmfao join action goes wash hands lmao i innocent lies lmao check record lo
+goes wash hands lmao i innocent lies lmao check record lol lick em old r u lol
+d r u lol way lie mmhmm polite calls lmao u yo may om action lix ummm lol lol 
+ going bed want hot sexy dreams bite lmao darling guy action wishes someone wo
+art hahah hey funny way chase people lmao part watch ty hey part bored guys wa
+art hey put untouchable list im good lmao r u hehe hows bout u good hear knows
+orror scopes lol nice horrified hehe lmao even join well going talk later byb 
+i take advice lol client suffer join lmao i always days late i finish meeting 
+d hi hey good ques always lol strong lmao strait lol join shakin way i like oh
+ing dumb asses wont chat ya ok guess lmao go figure finally someone figured wo
+ i thinking orgy around lol orgy lol lmao wow one word people easy lol lol fun
+ol funny part join getting back orgy lmao whats bye part lets play naked twist
+ pissed sure lol hello oopps i meant lmao hey anyone pm room ya gotta watch ma
+ everyone yes hey oh meant lover lol lmao go figure think yeah cuz many lmao g
+l lmao go figure think yeah cuz many lmao gotta try seriously meant lol sexy i
+lol keep around gotta stick sometime lmao lol party hair like knockin door i b
+door i bet prob party hair seriously lmao join thanks sexy bonus point life lo
+part right join part perked ya right lmao steel ok say cant creative enough co
+ come better line ya horny stay away lmao ummm yeah sheepishly dang didnt even
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="group-challenge">
+<h2>Group challenge<a class="headerlink" href="#group-challenge" title="Permalink to this headline">#</a></h2>
+<p>Choose one text from the nltk.book list. Use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">nltk.book</span> <span class="pre">import</span> <span class="pre">*</span></code> to call up the list.
+Then, using NLTK methods we know, like similar(), concordance(), distribution_plot([]), do some analysis on these lists.</p>
+<p>What patterns do you see emerging from your exploration? Be ready to share with the class.</p>
 </section>
 </section>
 

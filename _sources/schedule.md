@@ -20,7 +20,7 @@ As course schedule and assignments are subject to change, please check this page
 | 3/15/2023  |  MIDTERM |  |   |
 |  Week 9: 3/20/2023 | text analysis: research questions |   |  |
 | 3/22/2023  | text analysis: visualization |   |   |
-|  Week 10: 3/27/2023 |  data analysis: exploration | Data Feminism, "[Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4)  |  |
+|  Week 10: 3/27/2023 |  data analysis: exploration | "[ChatGPT and the Hidden Bias of Language Models](https://thestoryexchange.org/chatgpt-and-the-hidden-bias-of-language-models/)" by Kate Brennan |  |
 | 3/29/2023  |  data analysis | |   |
 |  Week 11: 4/3/2023 |  data analysis |   | Homework #4 due: Data exploration  |
 | 4/5/2023 - 4/12/2023  |  SPRING BREAK |   |   |
