@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # NLTK research questions
+# # NLTK part three: research questions
 
 # In[1]:
 
@@ -34,6 +34,8 @@ nltk.download('punkt')
 from nltk.book import *
 
 
+# ## text8: the personals corpus
+
 # In[4]:
 
 
@@ -60,7 +62,7 @@ len(text8)
 from nltk import FreqDist
 
 # then check the most common 15 words
-FreqDist(text8).most_common(15)
+FreqDist(text8).most_common(20)
 
 
 # In[7]:
@@ -94,10 +96,18 @@ personals_clean[:20]
 # create a frequency distribution, the results are much better 
 # than before
 
-FreqDist(personals_clean).most_common(15)
+FreqDist(personals_clean).most_common(20)
 
 
 # In[10]:
+
+
+# right now, our data is in a list
+
+type(personals_clean)
+
+
+# In[11]:
 
 
 # let's try some nltk methods that we know, like dispersion_plot(), 
@@ -109,7 +119,15 @@ FreqDist(personals_clean).most_common(15)
 personals = nltk.Text(personals_clean)
 
 
-# In[11]:
+# In[12]:
+
+
+# now we have an nltk.text.Text type of object, which is good
+
+type(personals)
+
+
+# In[13]:
 
 
 # check similar words for our top word in the FreqDist, 'lady'
@@ -117,7 +135,7 @@ personals = nltk.Text(personals_clean)
 personals.similar('lady')
 
 
-# In[12]:
+# In[14]:
 
 
 # create a concordance for 'lady'
@@ -125,7 +143,7 @@ personals.similar('lady')
 personals.concordance('lady')
 
 
-# In[13]:
+# In[15]:
 
 
 # dispersion_plot() checks where certain words appear
@@ -133,7 +151,7 @@ personals.concordance('lady')
 personals.dispersion_plot(['lady', 'male', 'fun'])
 
 
-# In[14]:
+# In[16]:
 
 
 # collocations() checks words that frequently go together
@@ -141,7 +159,7 @@ personals.dispersion_plot(['lady', 'male', 'fun'])
 personals.collocations()
 
 
-# In[15]:
+# In[17]:
 
 
 # common_contexts([]) checks the immediate words (context) surrounding
@@ -157,3 +175,113 @@ personals.common_contexts(['lady'])
 # Results:
 # - adjectives like 'slim', 'fun' are more common than 'classy'
 # - seems like it's more men seeking out women, 'common_contexts'
+
+# ## text5: the chat corpus
+
+# In[18]:
+
+
+# we are going to check out text5, the chat corpus
+
+
+# In[19]:
+
+
+# creating a slice to take a peek at the data
+
+text5[:10]
+
+
+# In[20]:
+
+
+# checking the end of the data
+
+text5[-20:]
+
+
+# In[21]:
+
+
+# making a Frequency Distribution to see most common words
+
+FreqDist(text5).most_common(20)
+
+
+# In[22]:
+
+
+# it seems like there's a lot of stopwords and punctuation here, which we
+# want to clean
+
+
+# In[23]:
+
+
+# function for cleaning the text
+
+def clean(text):
+    stops = stopwords.words('english') # creating a list of stopwords
+    clean = [] # creating an empty list, to put new words in
+
+    for word in text: # picking out each word in text5
+        if word.isalpha(): # checking if in alphabet
+            if word not in stops: # checking if stopword
+                clean.append(word.lower()) # adding to list
+    return clean
+
+
+# In[24]:
+
+
+# calling the function
+
+cleaned = clean(text5)
+
+
+# In[25]:
+
+
+# we can see that the stopwords, punctuation, and uppercase letters have been removed
+
+cleaned[:10]
+
+
+# In[26]:
+
+
+cleaned[-20:]
+
+
+# In[27]:
+
+
+# now our frequency distribution is more informative
+# though it's still not a very rich dataset
+
+FreqDist(cleaned).most_common(20)
+
+
+# In[28]:
+
+
+text.similar('lmao')
+
+
+# In[52]:
+
+
+text.concordance('lmao')
+
+
+# ## Group challenge
+# Choose one text from the nltk.book list. Use `from nltk.book import *` to call up the list.
+# Then, using NLTK methods we know, like similar(), concordance(), distribution_plot([]), do some analysis on these lists. 
+# 
+# What patterns do you see emerging from your exploration? Be ready to share with the class.
+
+# In[ ]:
+
+
+
+

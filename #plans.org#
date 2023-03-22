@@ -643,7 +643,8 @@ Personals corpus - 20 minutes
 *** March 22: NLTKs research methods
 Continue looking for patterns, analyzing gender in novels. Research
 questions. 
-Visualizations
+Some new methods in NLTK
+prep for Data analysis next week
 
 Review NLTK methods - 10 min
 - similar, concordance, common_contexts, distribution_plot, 
@@ -657,7 +658,7 @@ import matplotlib
 %matplotlib inline 
 my_dist = FreqDist(text1_clean)
 type(my_dist) # 
-my_dist.plot(20)
+			   my_dist.plot(20)
 #+END_SOURCE
 
 Groups - 10 min
