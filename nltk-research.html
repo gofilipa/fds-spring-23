@@ -452,9 +452,7 @@ title="Print to PDF"
 [nltk_data]   Package wordnet is already up-to-date!
 [nltk_data] Downloading package omw-1.4 to
 [nltk_data]     /Users/filipacalado/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data]   Package omw-1.4 is already up-to-date!
 [nltk_data] Downloading package punkt to
 [nltk_data]     /Users/filipacalado/nltk_data...
 [nltk_data]   Package punkt is already up-to-date!
@@ -486,9 +484,7 @@ Type: &#39;texts()&#39; or &#39;sents()&#39; to list the materials.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>text2: Sense and Sensibility by Jane Austen 1811
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>text3: The Book of Genesis
+text3: The Book of Genesis
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>text4: Inaugural Address Corpus
@@ -1092,6 +1088,46 @@ part right join part perked ya right lmao steel ok say cant creative enough co
 <p>Choose one text from the nltk.book list. Use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">nltk.book</span> <span class="pre">import</span> <span class="pre">*</span></code> to call up the list.
 Then, using NLTK methods we know, like similar(), concordance(), distribution_plot([]), do some analysis on these lists.</p>
 <p>What patterns do you see emerging from your exploration? Be ready to share with the class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Text: Sense and Sensibility by Jane Austen 1811&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># one of the words in the title is associated with a character, &#39;Marianne&#39;</span>
+
+<span class="n">text2</span><span class="o">.</span><span class="n">similar</span><span class="p">(</span><span class="s1">&#39;sense&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sister that side as opinion mother means time marianne wish want part
+sweetness resolution and family property manner life but
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text2</span><span class="o">.</span><span class="n">similar</span><span class="p">(</span><span class="s1">&#39;sensibility&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this it time conduct mind company family man her house heart him
+mother that way living year income disposition marianne
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
