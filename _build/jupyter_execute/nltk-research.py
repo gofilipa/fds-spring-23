@@ -280,6 +280,26 @@ text.concordance('lmao')
 # 
 # What patterns do you see emerging from your exploration? Be ready to share with the class.
 
+# In[59]:
+
+
+text2
+
+
+# In[60]:
+
+
+# one of the words in the title is associated with a character, 'Marianne'
+
+text2.similar('sense')
+
+
+# In[61]:
+
+
+text2.similar('sensibility')
+
+
 # In[ ]:
 
 

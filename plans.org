@@ -601,7 +601,7 @@ Do some analysis in a group:
 
 *** DONE March 15: Midterm
      CLOSED: [2023-03-15 Wed 14:42]
-*** TODO March 20: NLTK continued
+*** March 20: NLTK continued
 Goals:
 - theory of text analysis: how to come up with research questions
 - exploring the Gutenberg corpus to ask questions about data
@@ -643,7 +643,8 @@ Personals corpus - 20 minutes
 *** March 22: NLTKs research methods
 Continue looking for patterns, analyzing gender in novels. Research
 questions. 
-Visualizations
+Some new methods in NLTK
+prep for Data analysis next week
 
 Review NLTK methods - 10 min
 - similar, concordance, common_contexts, distribution_plot, 
@@ -657,7 +658,7 @@ import matplotlib
 %matplotlib inline 
 my_dist = FreqDist(text1_clean)
 type(my_dist) # 
-my_dist.plot(20)
+			   my_dist.plot(20)
 #+END_SOURCE
 
 Groups - 10 min
@@ -668,6 +669,11 @@ Groups - 10 min
 - what kinds of further questions could you ask about this data? 
 
 Share - 10 min
+
+*** TODO March 27
+Looking for patterns in a structured way
+Developing research questions from these patterns
+---
 
 Freewrite - 5 min - developing research questions. 
 - What do you want to know about this data? Based on our exploration
