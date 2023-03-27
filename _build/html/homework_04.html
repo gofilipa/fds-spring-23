@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>homework 4: data exploration &#8212; Foundations of Data Science</title>
+    <title>homework 4: text analysis &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -140,17 +140,22 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nltk-intro.html">
-   NLTK part one: nltk.book
+   NLTK: nltk.book
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="text_cleaning.html">
-   NLTK part two: loading and cleaning texts
+  <a class="reference internal" href="nltk_cleaning.html">
+   NLTK: cleaning part one
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nltk-research.html">
-   NLTK part three: research questions
+  <a class="reference internal" href="nltk-cleaning-2.html">
+   NLTK: cleaning part 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="nltk-gender.html">
+   NLTK: gender analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -175,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   homework 4: data exploration
+   homework 4: text analysis
   </a>
  </li>
 </ul>
@@ -229,35 +234,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/homework_04.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -340,8 +316,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus">
-   Bonus
+  <a class="reference internal nav-link" href="#instructions">
+   instructions
   </a>
  </li>
 </ul>
@@ -353,7 +329,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>homework 4: data exploration</h1>
+                <h1>homework 4: text analysis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -364,8 +340,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus">
-   Bonus
+  <a class="reference internal nav-link" href="#instructions">
+   instructions
   </a>
  </li>
 </ul>
@@ -378,39 +354,69 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="homework-4-data-exploration">
-<h1>homework 4: data exploration<a class="headerlink" href="#homework-4-data-exploration" title="Permalink to this headline">#</a></h1>
-<p>In this assignment, you will demonstrate your knowledge of the Python and Pandas skills we’ve learned so far. These include:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-4-text-analysis">
+<h1>homework 4: text analysis<a class="headerlink" href="#homework-4-text-analysis" title="Permalink to this headline">#</a></h1>
+<p>Please download this page by pressing the download button on upper right corner. You should save the page as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p>Afer downloading the document, open it on your own computer, either on Google Colab or Jupyter-Notebooks. If using Google Colab, you may need to first upload the document to your Google Drive before you can work on it.</p>
+<p>When you are finished, download the document as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and submit it through Blackboard.</p>
+<section id="instructions">
+<h2>instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
+<p>For this assignment, you will choose a focus: either <strong>genders</strong> or <strong>monsters</strong>.</p>
+<p>If you choose <strong>genders</strong>, do the following:</p>
 <ul class="simple">
-<li><p>Getting an overview of your data</p></li>
-<li><p>Extracting columns</p></li>
-<li><p>Getting fundamental statistical information of a series, such as the mean and median</p></li>
-<li><p>Getting a random sample of your data</p></li>
-<li><p>Creating a subset of your data using indexing with boolean lists</p></li>
-<li><p>Sorting your data</p></li>
-<li><p>Indexing by matching a string</p></li>
+<li><p>Choose one text by a man and one text by a woman.</p></li>
+<li><p>Load and clean the text using the functions defined in the <code class="docutils literal notranslate"><span class="pre">nltk:</span> <span class="pre">text</span> <span class="pre">analysis</span></code> class notes.</p></li>
+<li><p>Do some text analysis using at least four NLTK methods like:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">similar()</span></code>, <code class="docutils literal notranslate"><span class="pre">concordance()</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution_plot([])</span></code>, <code class="docutils literal notranslate"><span class="pre">collocations()</span></code>, and <code class="docutils literal notranslate"><span class="pre">common_contexts([])</span></code></p></li>
+<li><p>check word counts with <code class="docutils literal notranslate"><span class="pre">text.vocab().most_common(20)</span></code></p></li>
 </ul>
-<p>You will not need to formulate or answer a research question for this assignment. You simply need to demonstrate your ability to perform specific operations on the data set you have selected. In the next assignment, your midterm, you will create a narrative exploration of the data using many of the same methods, but in such a way as to use narrative along with data analysis to answer a research question.</p>
-<p>You may use the data set you imported in assignment #1, or you may choose another data set. That means that you can reuse code you wrote in Assignment #1 to import the data.</p>
-<p>In the below notebook, I will ask for you to perform a task. Each task will be followed by one or more blank code cells. Use as many cells as you need to complete the task. If you know some other way to complete the task with Python and/or Pandas that is not the way we learned in class, that is also acceptable. Feel free to use Google searches to refresh your memory as to how to perform each task. You will also likely wish to consult the class notebooks, which have been emailed to you after class and which can be found in <a class="reference external" href="https://github.com/smythp/foundations-data-science/tree/master/class_notebooks">our class repository on GitHub</a>.</p>
-<p>If your data set does not have a needed form of data for a task, write code that would perform the task if a column with that data existed, and provide an explanation as a comment or markdown cell.</p>
-<p>You may receive partial credit for some incomplete or incorrect answers. Please feel free to add comments about your thought process, which will make it more likely that you will receive partial credit.</p>
-<p>The last cell is a bonus. You will not be penalized for not attempting or completing it.</p>
-<hr class="docutils" />
-<p>Import Pandas and read your data in as a data frame. Assign the data frame to a variable, such as <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
-<p>Make the data frame visible by placing the data frame variable in a cell by itself.</p>
-<p>What columns are in your data frame? Use a function or method that shows all the columns.</p>
-<p>Write Python code to output the number of rows in your data frame.</p>
-<p>Write code to output a column from your data frame as a series. (Extract a column.)</p>
-<p>Pick a column in your data set with numeric data (integers or floats). Output the mean (average) and median of that column.</p>
-<p>Use a conditional with a column to create a boolean series. Save the boolean series to a variable.</p>
-<p>Use your boolean series and index your data frame to create a subset of the data. Save the resulting data frame to a variable.</p>
-<p>Output the length of the resulting data frame (the subset of your data for which the conditional was true).</p>
-<p>Sort your data frame by a particular column and output the result.</p>
-<p>Output the first ten rows of your data set, the last ten rows of your data set, and a random ten rows of your data set (a sample of your data).</p>
-<section id="bonus">
-<h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">#</a></h2>
-<p>In the remaining cells of this notebook, use your original data frame and create a subset of the data that matches a specific string in a column. That is, extract all rows of the original data frame that contain a specific string in one of the columns.</p>
+</li>
+<li><p>Write a paragraph (5 - 7 sentences) about your results, and answer the following questions:</p>
+<ul>
+<li><p>What did you discover about the way gender is portrayed across the two texts?</p></li>
+<li><p>Based on your exploration so far, what kind of further questions could you ask about the topic or data?</p></li>
+</ul>
+</li>
+</ul>
+<p>If you choose <strong>monsters</strong>, do the following:</p>
+<ul class="simple">
+<li><p>Select two texts, <em>Dracula</em> and <em>Frankenstein</em>.</p></li>
+<li><p>Load and clean the text using the functions defined in the <code class="docutils literal notranslate"><span class="pre">nltk:</span> <span class="pre">text</span> <span class="pre">analysis</span></code> class notes.</p></li>
+<li><p>Do some text analysis using at least four NLTK methods like:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">similar()</span></code>, <code class="docutils literal notranslate"><span class="pre">concordance()</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution_plot([])</span></code>, <code class="docutils literal notranslate"><span class="pre">collocations()</span></code>, and <code class="docutils literal notranslate"><span class="pre">common_contexts([])</span></code></p></li>
+<li><p>check word counts with <code class="docutils literal notranslate"><span class="pre">text.vocab().most_common(20)</span></code></p></li>
+</ul>
+</li>
+<li><p>Write a paragraph (5 - 7 sentences) about your results, and answer the following questions:</p>
+<ul>
+<li><p>What did you discover about the way monsters are portrayed across the two texts?</p></li>
+<li><p>Based on your exploration so far, what kind of further questions could you ask about the topic or data?</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, below this cell, select and clean your texts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># second, below this cell, do some text analysis with NLTK across both texts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># third, below this cell, write a paragraph about your results</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

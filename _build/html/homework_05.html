@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Markdown Files &#8212; Foundations of Data Science</title>
+    <title>homework 4: data exploration &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -233,6 +233,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/homework_05.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -255,7 +284,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/markdown.md"
+        <a href="_sources/homework_05.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -266,7 +295,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -315,23 +344,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   What is MyST?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-roles-and-directives">
-   Sample Roles and Directives
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#bonus">
+   Bonus
   </a>
  </li>
 </ul>
@@ -343,7 +357,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Markdown Files</h1>
+                <h1>homework 4: data exploration</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -354,23 +368,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   What is MyST?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-roles-and-directives">
-   Sample Roles and Directives
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#bonus">
+   Bonus
   </a>
  </li>
 </ul>
@@ -383,58 +382,39 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this headline">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this headline">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-<p>For more about MyST, see <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST Markdown Overview</a>.</p>
-</section>
-<section id="sample-roles-and-directives">
-<h2>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Permalink to this headline">#</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<p>Here is a “note” directive:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
-</div>
-<p>It will be rendered in a special box when you build your book.</p>
-<p>Here is an inline directive to refer to a document: <a class="reference internal" href="markdown-notebooks.html"><span class="doc">Notebooks with MyST Markdown</span></a>.</p>
-</section>
-<section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
-<dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">HdHPK14</a></span></dt>
-<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</dd>
-</dl>
-</div>
-</section>
-<section id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">#</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-4-data-exploration">
+<h1>homework 4: data exploration<a class="headerlink" href="#homework-4-data-exploration" title="Permalink to this headline">#</a></h1>
+<p>In this assignment, you will demonstrate your knowledge of the Python and Pandas skills we’ve learned so far. These include:</p>
+<ul class="simple">
+<li><p>Getting an overview of your data</p></li>
+<li><p>Extracting columns</p></li>
+<li><p>Getting fundamental statistical information of a series, such as the mean and median</p></li>
+<li><p>Getting a random sample of your data</p></li>
+<li><p>Creating a subset of your data using indexing with boolean lists</p></li>
+<li><p>Sorting your data</p></li>
+<li><p>Indexing by matching a string</p></li>
+</ul>
+<p>You will not need to formulate or answer a research question for this assignment. You simply need to demonstrate your ability to perform specific operations on the data set you have selected. In the next assignment, your midterm, you will create a narrative exploration of the data using many of the same methods, but in such a way as to use narrative along with data analysis to answer a research question.</p>
+<p>You may use the data set you imported in assignment #1, or you may choose another data set. That means that you can reuse code you wrote in Assignment #1 to import the data.</p>
+<p>In the below notebook, I will ask for you to perform a task. Each task will be followed by one or more blank code cells. Use as many cells as you need to complete the task. If you know some other way to complete the task with Python and/or Pandas that is not the way we learned in class, that is also acceptable. Feel free to use Google searches to refresh your memory as to how to perform each task. You will also likely wish to consult the class notebooks, which have been emailed to you after class and which can be found in <a class="reference external" href="https://github.com/smythp/foundations-data-science/tree/master/class_notebooks">our class repository on GitHub</a>.</p>
+<p>If your data set does not have a needed form of data for a task, write code that would perform the task if a column with that data existed, and provide an explanation as a comment or markdown cell.</p>
+<p>You may receive partial credit for some incomplete or incorrect answers. Please feel free to add comments about your thought process, which will make it more likely that you will receive partial credit.</p>
+<p>The last cell is a bonus. You will not be penalized for not attempting or completing it.</p>
+<hr class="docutils" />
+<p>Import Pandas and read your data in as a data frame. Assign the data frame to a variable, such as <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<p>Make the data frame visible by placing the data frame variable in a cell by itself.</p>
+<p>What columns are in your data frame? Use a function or method that shows all the columns.</p>
+<p>Write Python code to output the number of rows in your data frame.</p>
+<p>Write code to output a column from your data frame as a series. (Extract a column.)</p>
+<p>Pick a column in your data set with numeric data (integers or floats). Output the mean (average) and median of that column.</p>
+<p>Use a conditional with a column to create a boolean series. Save the boolean series to a variable.</p>
+<p>Use your boolean series and index your data frame to create a subset of the data. Save the resulting data frame to a variable.</p>
+<p>Output the length of the resulting data frame (the subset of your data for which the conditional was true).</p>
+<p>Sort your data frame by a particular column and output the result.</p>
+<p>Output the first ten rows of your data set, the last ten rows of your data set, and a random ten rows of your data set (a sample of your data).</p>
+<section id="bonus">
+<h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">#</a></h2>
+<p>In the remaining cells of this notebook, use your original data frame and create a subset of the data that matches a specific string in a column. That is, extract all rows of the original data frame that contain a specific string in one of the columns.</p>
 </section>
 </section>
 

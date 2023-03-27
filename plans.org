@@ -601,9 +601,9 @@ Do some analysis in a group:
 
 *** DONE March 15: Midterm
      CLOSED: [2023-03-15 Wed 14:42]
-*** March 20: NLTK continued
+*** DONE March 20: NLTK continued
+    CLOSED: [2023-03-27 Mon 11:42]
 Goals:
-- theory of text analysis: how to come up with research questions
 - exploring the Gutenberg corpus to ask questions about data
 - setting us up for data analysis, final projects. 
 
@@ -640,26 +640,17 @@ Personals corpus - 20 minutes
 + common_contexts([])
 + collocations()
 
-*** March 22: NLTKs research methods
-Continue looking for patterns, analyzing gender in novels. Research
-questions. 
+*** DONE March 22: NLTKs research methods
+    CLOSED: [2023-03-27 Mon 11:42]
+Review nltk cleaning and methods
 Some new methods in NLTK
-prep for Data analysis next week
+Continue looking for patterns
 
-Review NLTK methods - 10 min
+Review NLTK cleaning and methods - 45 min
+- cleaning the text
 - similar, concordance, common_contexts, distribution_plot, 
 - common_contexts([])
 - collocations()
-
-Teach FreqDist - 10 min
-- to find most common words & plot them
-#+BEGIN_SOURCE python
-import matplotlib
-%matplotlib inline 
-my_dist = FreqDist(text1_clean)
-type(my_dist) # 
-			   my_dist.plot(20)
-#+END_SOURCE
 
 Groups - 10 min
 - play around with these methods. 
@@ -671,29 +662,54 @@ Groups - 10 min
 Share - 10 min
 
 *** TODO March 27
-Looking for patterns in a structured way
+Text analysis of gutenberg books
 Developing research questions from these patterns
 ---
+Discuss reading:
+- What is ChatGPT? What is a language model?
+ - a program that has "read" or been "trained" by lots of text so it
+   knows text patterns.
+ - one example is statistical models. A language model learns the
+   probability of word occurrence based on examples of text. similar()
+   is like a statistical model.
+ - example is next word prediction like ChatGPT, neural model. Does
+   the same thing, but at a much larger scale. Uses "word embeddings"
+   -- each word contains a vector of values.
 
-Freewrite - 5 min - developing research questions. 
-- What do you want to know about this data? Based on our exploration
-  so far, what kind of research questions could we ask about our data?
+- Bias 
+ - What is bias?
+ - What was the bias in ChaptGPT?
+ - Why is ChatGPT biased?
+  - trained on internet, "Common Crawl"
+  - it's biased because we are biased.
+ - What should we do about this problem? Freewrite 5 minutes. 
 
-Pair and share - 10 min
-Pick one to share with the larger group. 
+Analyzing gender with NLTK
+- select a text
+- load and clean it
+- use NLTK methods to explore the text
+ - similar, concordance, common_contexts, distribution_plot, 
+ - common_contexts([])
+ - collocations()
+
+In groups - 15 min:
+- look at text by men versus text by women. Choose one text from each
+  category for your group. 
+- look at male and female characters within these texts. You may have
+  to do some research. 
+- explore the different associations between male and female
+  characters in the two texts. What words are associated with each
+  gender? 
+- What are the differences you see between men and women characters? 
+- What are the differences you see between the male and female
+  authors?
 
 Share - 10 min
 
-
-
-
-*** 27, 29: DataFrames & investigation with Pandas
-Demo why NLTK isn't the best for dataframes on a sample of the USLGBT
-collection. So we use Spacy.
-https://colab.research.google.com/drive/1Mm2f2_ZAD7kUTByFmmCvsPJVcPNbYyYw?usp=sharing 
+*** 27, 29: 
 *** April 3: Catch-up day
 *** SPRING BREAK -- April 5 - 12
-*** April 17, 19, 24: Machine Learning with Transformers 
+*** April 17, 19, 24: Text modelling with Transformers 
 *** April 26, May 1, 3: Workshop final projects
 
 

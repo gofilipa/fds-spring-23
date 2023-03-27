@@ -1,163 +1,51 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # homework 4: data exploration
+# # homework 4: text analysis
+
+# Please download this page by pressing the download button on upper right corner. You should save the page as an `.ipynb` file. 
 # 
-# In this assignment, you will demonstrate your knowledge of the Python and Pandas skills we've learned so far. These include:
+# Afer downloading the document, open it on your own computer, either on Google Colab or Jupyter-Notebooks. If using Google Colab, you may need to first upload the document to your Google Drive before you can work on it.
 # 
-# - Getting an overview of your data
-# - Extracting columns
-# - Getting fundamental statistical information of a series, such as the mean and median
-# - Getting a random sample of your data
-# - Creating a subset of your data using indexing with boolean lists
-# - Sorting your data
-# - Indexing by matching a string
+# When you are finished, download the document as an `.ipynb` file and submit it through Blackboard. 
+
+# ## instructions
+# For this assignment, you will choose a focus: either **genders** or **monsters**. 
 # 
-# You will not need to formulate or answer a research question for this assignment. You simply need to demonstrate your ability to perform specific operations on the data set you have selected. In the next assignment, your midterm, you will create a narrative exploration of the data using many of the same methods, but in such a way as to use narrative along with data analysis to answer a research question.
+# If you choose **genders**, do the following:
+# - Choose one text by a man and one text by a woman.
+# - Load and clean the text using the functions defined in the `nltk: text analysis` class notes.
+# - Do some text analysis using at least four NLTK methods like:
+#     - `similar()`, `concordance()`, `distribution_plot([])`, `collocations()`, and `common_contexts([])`
+#     - check word counts with `text.vocab().most_common(20)` 
+# - Write a paragraph (5 - 7 sentences) about your results, and answer the following questions:
+#    - What did you discover about the way gender is portrayed across the two texts? 
+#    - Based on your exploration so far, what kind of further questions could you ask about the topic or data?
 # 
-# You may use the data set you imported in assignment #1, or you may choose another data set. That means that you can reuse code you wrote in Assignment #1 to import the data.
-# 
-# In the below notebook, I will ask for you to perform a task. Each task will be followed by one or more blank code cells. Use as many cells as you need to complete the task. If you know some other way to complete the task with Python and/or Pandas that is not the way we learned in class, that is also acceptable. Feel free to use Google searches to refresh your memory as to how to perform each task. You will also likely wish to consult the class notebooks, which have been emailed to you after class and which can be found in [our class repository on GitHub](https://github.com/smythp/foundations-data-science/tree/master/class_notebooks).
-# 
-# If your data set does not have a needed form of data for a task, write code that would perform the task if a column with that data existed, and provide an explanation as a comment or markdown cell.
-# 
-# You may receive partial credit for some incomplete or incorrect answers. Please feel free to add comments about your thought process, which will make it more likely that you will receive partial credit.
-# 
-# The last cell is a bonus. You will not be penalized for not attempting or completing it.
-# 
-# -----
+# If you choose **monsters**, do the following:
+# - Select two texts, *Dracula* and *Frankenstein*.
+# - Load and clean the text using the functions defined in the `nltk: text analysis` class notes.
+# - Do some text analysis using at least four NLTK methods like:
+#     - `similar()`, `concordance()`, `distribution_plot([])`, `collocations()`, and `common_contexts([])`
+#     - check word counts with `text.vocab().most_common(20)` 
+# - Write a paragraph (5 - 7 sentences) about your results, and answer the following questions:
+#    - What did you discover about the way monsters are portrayed across the two texts? 
+#    - Based on your exploration so far, what kind of further questions could you ask about the topic or data?
 
-# Import Pandas and read your data in as a data frame. Assign the data frame to a variable, such as `df`.
+# In[1]:
 
-# In[ ]:
 
+# first, below this cell, select and clean your texts
 
 
+# In[2]:
 
 
-# In[ ]:
+# second, below this cell, do some text analysis with NLTK across both texts
 
 
+# In[3]:
 
 
-
-# Make the data frame visible by placing the data frame variable in a cell by itself.
-
-# In[ ]:
-
-
-
-
-
-# What columns are in your data frame? Use a function or method that shows all the columns.
-
-# In[ ]:
-
-
-
-
-
-# Write Python code to output the number of rows in your data frame.
-
-# In[ ]:
-
-
-
-
-
-# Write code to output a column from your data frame as a series. (Extract a column.)
-
-# In[ ]:
-
-
-
-
-
-# Pick a column in your data set with numeric data (integers or floats). Output the mean (average) and median of that column.
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# Use a conditional with a column to create a boolean series. Save the boolean series to a variable.
-
-# In[ ]:
-
-
-
-
-
-# Use your boolean series and index your data frame to create a subset of the data. Save the resulting data frame to a variable.
-
-# In[ ]:
-
-
-
-
-
-# Output the length of the resulting data frame (the subset of your data for which the conditional was true).
-
-# In[ ]:
-
-
-
-
-
-# Sort your data frame by a particular column and output the result.
-
-# In[ ]:
-
-
-
-
-
-# Output the first ten rows of your data set, the last ten rows of your data set, and a random ten rows of your data set (a sample of your data).
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# ## Bonus
-# 
-# In the remaining cells of this notebook, use your original data frame and create a subset of the data that matches a specific string in a column. That is, extract all rows of the original data frame that contain a specific string in one of the columns.
-# 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
+# third, below this cell, write a paragraph about your results
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # NLTK part three: research questions
+# # NLTK: cleaning part 2
 
 # In[1]:
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # NLTK and gender
+# # NLTK: gender analysis
 
 # In[1]:
 
@@ -75,7 +75,7 @@ text = clean(orlando)
 print(text)
 
 
-# ## NLTK methods for tex analysis
+# ## NLTK methods for text analysis
 
 # In[7]:
 

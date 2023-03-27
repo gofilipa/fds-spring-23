@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # NLTK part one: nltk.book
+# # NLTK: nltk.book
 
 # In[1]:
 
