@@ -661,7 +661,8 @@ Groups - 10 min
 
 Share - 10 min
 
-*** TODO March 27
+*** DONE March 27: text analysis
+    CLOSED: [2023-03-28 Tue 16:11]
 Text analysis of gutenberg books
 Developing research questions from these patterns
 ---
@@ -706,8 +707,45 @@ In groups - 15 min:
 
 Share - 10 min
 
-*** 27, 29: 
-*** April 3: Catch-up day
+*** TODO March 29: text analysis continued
+
+Goals:
+- Text analysis of gutenberg books
+- Developing research questions from these patterns
+---
+Letter released yesterday calling for pause on AI development beyond GPT4
+https://futureoflife.org/open-letter/pause-giant-ai-experiments/
+
+Analyzing monsters with NLTK
+- select dracula or frankenstein text
+- load and clean it
+- use NLTK methods to explore the text
+ - similar, concordance, distribution_plot, 
+ - common_contexts([])
+ - collocations()
+
+In groups - 15 min:
+- look at the monsters within these texts. You may have to do some
+  research.
+- explore the different associations between the monsters in the two
+  texts. What words are associated with each one?
+- What are the differences you see? 
+
+Share as a class
+
+Freewrite - 5 min
+Group share - 5 min
+Class share - 10 min
+- What did you discover about the way monsters are portrayed across the two texts? 
+- Based on your exploration so far, what kind of further questions could you ask about the topic or data?
+
+*** April 3: Introduce transformers and pipeline tasks
+For final projects, you will play around with multiple language
+models, and assess them. 
+
+You will experiment with what they do, and look at the data they are
+trained on. 
+
 *** SPRING BREAK -- April 5 - 12
 *** April 17, 19, 24: Text modelling with Transformers 
 *** April 26, May 1, 3: Workshop final projects

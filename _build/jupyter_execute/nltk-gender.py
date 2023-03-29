@@ -32,17 +32,19 @@ from urllib.request import urlopen
 
 
 def clean(url):
-    stops = stopwords.words('english')
+    # loads and tokenizes the text
     open_url = urlopen(url)
     read_text = open_url.read()
     decoded_text = read_text.decode()
     tokens = nltk.word_tokenize(decoded_text)
     
+    # cleans the text
+    stops = stopwords.words('english')
     text = [] 
     for word in tokens:
         if word.isalpha(): 
             if word not in stops:
-                 text.append(word.lower())     
+                text.append(word.lower())     
     
     return text
 
@@ -66,6 +68,8 @@ heart_darkness = 'https://www.gutenberg.org/files/219/219-0.txt'
 # In[5]:
 
 
+# running the "clean" function on the text "orlando"
+
 text = clean(orlando)
 
 
@@ -80,13 +84,110 @@ print(text)
 # In[7]:
 
 
-text = nltk.Text(text)
+# turn our saved text (list of strings) to an NLTK object for 
+# text analysis
+
+orlando = nltk.Text(text)
 
 
 # In[8]:
 
 
-text.vocab().most_common(20)
+# most common words
+
+orlando.vocab().most_common(20)
+
+
+# In[9]:
+
+
+# load up and clean a text by a man for comparison 
+
+dorian = clean(dorian_gray)
+
+
+# In[10]:
+
+
+print(dorian)
+
+
+# In[11]:
+
+
+dorian = nltk.Text(dorian)
+
+dorian.vocab().most_common(20)
+
+
+# In[12]:
+
+
+# question: how does each text treat male and female characters?
+
+orlando.similar('man')
+
+
+# In[13]:
+
+
+orlando.similar('woman')
+
+
+# In[14]:
+
+
+orlando.common_contexts(["woman"])
+
+
+# ## group challenge
+
+# Compare and contrast one text by a woman and one text by a man. One possibility is to compare the main characters from each text. Another possibility is to compare the genders of the main characters. Or you can explore themes, or settings from the text.
+# 
+# After cleaning your text, use NLTK methods like: 
+# - `concordance()`
+# - `dispersion_plot([])`
+# - `collocations()`
+# - `common_contexts([])`
+# - most common words: `text.vocab().most_common(20)`
+# 
+# Try to answer the following questions:
+# - What words are associated with "man" and "woman" from each text?
+# - What are the differences between the genders?
+# - What are the differences in gender portrayal between the male and female authors?
+
+# Frankenstein: "man" vs "woman" 
+# - with `similar()`, "man" has 14 words, and "woman" has 1. 
+# - Means that men has more references than women text. Makes sense because it's about a male scientist creating a man. 
+
+# In[15]:
+
+
+orlando.count("woman")
+
+
+# In[16]:
+
+
+orlando.count("man")
+
+
+# In[17]:
+
+
+text = clean(dracula)
+
+
+# In[18]:
+
+
+dracula = nltk.Text(text)
+
+
+# In[19]:
+
+
+dracula.similar('woman')
 
 
 # In[ ]:
