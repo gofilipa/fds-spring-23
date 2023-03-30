@@ -150,7 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="nltk-cleaning-2.html">
-   NLTK: cleaning part 2
+   NLTK: cleaning part two
   </a>
  </li>
  <li class="toctree-l1">
@@ -234,6 +234,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/homework_04.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -356,7 +385,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="homework-4-text-analysis">
 <h1>homework 4: text analysis<a class="headerlink" href="#homework-4-text-analysis" title="Permalink to this headline">#</a></h1>
-<p>Please download this page by pressing the download button on upper right corner. You should save the page as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p>Please download this page from the course website by pressing the download button on upper right corner. You should save the page as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p>Afer downloading the document, open it on your own computer, either on Google Colab or Jupyter-Notebooks. If using Google Colab, you may need to first upload the document to your Google Drive before you can work on it.</p>
 <p>When you are finished, download the document as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and submit it through Blackboard.</p>
 <section id="instructions">
@@ -374,7 +403,8 @@ title="Print to PDF"
 </li>
 <li><p>Write a paragraph (5 - 7 sentences) about your results, and answer the following questions:</p>
 <ul>
-<li><p>What did you discover about the way gender is portrayed across the two texts?</p></li>
+<li><p>What did you discover about the way gender is portrayed across the two texts? How is gender being characterized across texts?</p></li>
+<li><p>Explain some conclusions you might draw about gender or the text from specific words that appear in your analysis.</p></li>
 <li><p>Based on your exploration so far, what kind of further questions could you ask about the topic or data?</p></li>
 </ul>
 </li>
@@ -391,14 +421,16 @@ title="Print to PDF"
 </li>
 <li><p>Write a paragraph (5 - 7 sentences) about your results, and answer the following questions:</p>
 <ul>
-<li><p>What did you discover about the way monsters are portrayed across the two texts?</p></li>
-<li><p>Based on your exploration so far, what kind of further questions could you ask about the topic or data?</p></li>
+<li><p>What did you discover about the way monsters are portrayed across the two texts? How are they monsters being characterized across texts?</p></li>
+<li><p>Explain some conclusions you might draw about monsters from specific words that appear in your analysis.</p></li>
+<li><p>Based on your exploration so far, what kind of further questions could you ask about the topic or the texts?</p></li>
 </ul>
 </li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, below this cell, select and clean your texts</span>
+<span class="c1"># use the clean() function and the variables set to URL from the class notes</span>
 </pre></div>
 </div>
 </div>
@@ -406,6 +438,8 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># second, below this cell, do some text analysis with NLTK across both texts</span>
+<span class="c1"># use the nltk methods specified above</span>
+<span class="c1"># remember to first create an &quot;nltk object&quot; from your text</span>
 </pre></div>
 </div>
 </div>
@@ -413,6 +447,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># third, below this cell, write a paragraph about your results</span>
+<span class="c1"># make sure to answer all questions from the prompt above</span>
 </pre></div>
 </div>
 </div>
