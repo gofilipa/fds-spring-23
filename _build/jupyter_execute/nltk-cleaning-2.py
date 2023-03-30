@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # NLTK: cleaning part 2
+# # NLTK: cleaning part two
 
 # In[1]:
 

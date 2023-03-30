@@ -70,71 +70,89 @@ heart_darkness = 'https://www.gutenberg.org/files/219/219-0.txt'
 
 # running the "clean" function on the text "orlando"
 
-text = clean(orlando)
+orl = clean(orlando)
 
 
 # In[6]:
 
 
-print(text)
+frank = clean(frankenstein)
+
+
+# In[7]:
+
+
+print(frank)
 
 
 # ## NLTK methods for text analysis
 
-# In[7]:
+# In[8]:
 
 
 # turn our saved text (list of strings) to an NLTK object for 
 # text analysis
 
-orlando = nltk.Text(text)
-
-
-# In[8]:
-
-
-# most common words
-
-orlando.vocab().most_common(20)
+frank = nltk.Text(frank)
 
 
 # In[9]:
 
 
-# load up and clean a text by a man for comparison 
+# checks the most common words
 
-dorian = clean(dorian_gray)
+frank.vocab().most_common(20)
 
 
 # In[10]:
 
 
-print(dorian)
+# load up and clean a text by a man for comparison 
+
+drac = clean(dracula)
 
 
 # In[11]:
 
 
-dorian = nltk.Text(dorian)
-
-dorian.vocab().most_common(20)
+print(drac)
 
 
 # In[12]:
 
 
-# question: how does each text treat male and female characters?
+drac = nltk.Text(drac)
 
-orlando.similar('man')
+drac.vocab().most_common(20)
 
 
 # In[13]:
 
 
-orlando.similar('woman')
+# question: how does each text portray the monster characters?
+
+drac.similar('monster')
 
 
 # In[14]:
+
+
+frank.similar('monster')
+
+
+# In[15]:
+
+
+drac.count("monster")
+
+
+# In[16]:
+
+
+frank.count("monster")
+
+
+# In[17]:
 
 
 orlando.common_contexts(["woman"])
@@ -160,34 +178,118 @@ orlando.common_contexts(["woman"])
 # - with `similar()`, "man" has 14 words, and "woman" has 1. 
 # - Means that men has more references than women text. Makes sense because it's about a male scientist creating a man. 
 
-# In[15]:
+# In[ ]:
 
 
 orlando.count("woman")
 
 
-# In[16]:
+# In[ ]:
 
 
 orlando.count("man")
 
 
-# In[17]:
+# In[ ]:
 
 
 text = clean(dracula)
 
 
-# In[18]:
+# In[ ]:
 
 
 dracula = nltk.Text(text)
 
 
-# In[19]:
+# In[ ]:
 
 
 dracula.similar('woman')
+
+
+# ## group challenge: monsters
+# 
+# Compare and contrast the monsters from Frankenstein and Dracula. One possibility is to compare the main characters from each text.
+# 
+# After cleaning your text, use NLTK methods like: 
+# - `concordance()`
+# - `dispersion_plot([])`
+# - `collocations()`
+# - `common_contexts([])`
+# - most common words: `text.vocab().most_common(20)`
+# 
+# Explore the different ways that monster is being portrayed across Dracula and Frankenstein. What words are associated with each one? Try using words like “Dracula” “Vampire” and “Murderer”, or other words that seem appropriate to your analysis
+
+# In[16]:
+
+
+drac.concordance("monster")
+
+
+# In[17]:
+
+
+frank.concordance("monster")
+
+
+# In[ ]:
+
+
+# for frankenstein, words like "miserable", "fear", "solitude" appear in context with "monster"
+# for dracula, words like "destroy", "terrible", "threw", "shouted" appear in context with "monster"
+
+# these resulst suggest that Dracula was much less sympathetic than Frankenstein. 
+# we sort of pity Frankenstein, while we fear Dracula. 
+
+
+# In[20]:
+
+
+# dispersion plot of the words "child", "scream", and "hide"
+
+frank.dispersion_plot(["child", "scream", "hide"])
+
+
+# In[ ]:
+
+
+# compared to frankenstein, dracula has more instances of "scream" and "hide". This suggests
+# that the monster in dracula is more terrifying than the monster in frankenstein.
+
+# the graph also shows more instances of "child" in the middle and end of the novel. Maybe there's 
+# a loss of innocence "child" in frankenstein, but not in dracula. To find out, we would look at 
+# the context of the word "child" across the novels.
+ 
+drac.dispersion_plot(["child", "scream", "hide"])
+
+
+# In[22]:
+
+
+# checking words similar to "child" in frankenstein and dracula
+
+frank.similar('child')
+
+
+# In[23]:
+
+
+drac.similar('child')
+
+
+# In[24]:
+
+
+# checking the context of "child" in frankenstein and dracula
+
+drac.concordance('child')
+
+
+# In[25]:
+
+
+frank.concordance('child')
 
 
 # In[ ]:
