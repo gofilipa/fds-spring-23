@@ -17,15 +17,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-
-orlando.common_contexts(["woman"])
+drac.concordance("monster")
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mAttributeError[0m                            Traceback (most recent call last)
-[0;32m<ipython-input-17-937db92a9ab5>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0morlando[0m[0;34m.[0m[0mcommon_contexts[0m[0;34m([0m[0;34m[[0m[0;34m"woman"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-29-6813da0ed826>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mdrac[0m[0;34m.[0m[0mconcordance[0m[0;34m([0m[0;34m"monster"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;31mAttributeError[0m: 'str' object has no attribute 'common_contexts'
-AttributeError: 'str' object has no attribute 'common_contexts'
+[0;31mNameError[0m: name 'drac' is not defined
+NameError: name 'drac' is not defined
 

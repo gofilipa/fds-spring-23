@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # NLTK: gender analysis
+# # NLTK: text analysis
 
 # In[1]:
 
@@ -44,7 +44,10 @@ def clean(url):
     for word in tokens:
         if word.isalpha(): 
             if word not in stops:
-                text.append(word.lower())     
+                lemmatizer = WordNetLemmatizer()
+                # lemmatizer = nltk.stem.WordNetLemmatizer()
+                root = lemmatizer.lemmatize(word)
+                text.append(root.lower())     
     
     return text
 
@@ -76,86 +79,142 @@ orl = clean(orlando)
 # In[6]:
 
 
-frank = clean(frankenstein)
-
-
-# In[7]:
-
-
-print(frank)
+dor = clean(dorian_gray)
 
 
 # ## NLTK methods for text analysis
 
+# In[7]:
+
+
+orl[:20]
+
+
 # In[8]:
 
 
-# turn our saved text (list of strings) to an NLTK object for 
-# text analysis
-
-frank = nltk.Text(frank)
+type(orl)
 
 
 # In[9]:
 
 
-# checks the most common words
+# turn our saved text (list of strings) to an NLTK object for 
+# text analysis
 
-frank.vocab().most_common(20)
+orlando = nltk.Text(orl)
 
 
 # In[10]:
 
 
-# load up and clean a text by a man for comparison 
-
-drac = clean(dracula)
+type(orlando)
 
 
 # In[11]:
 
 
-print(drac)
+# checks the most common words
+
+orlando.vocab().most_common(20)
 
 
 # In[12]:
 
 
-drac = nltk.Text(drac)
+dorian = nltk.Text(dor)
 
-drac.vocab().most_common(20)
+dorian.vocab().most_common(20)
 
 
 # In[13]:
 
 
-# question: how does each text portray the monster characters?
+# my goal is to compare the genders in the text
 
-drac.similar('monster')
+orlando.similar('woman')
 
 
 # In[14]:
 
 
-frank.similar('monster')
+# I want to explore the word "servant"
+
+orlando.similar('servant')
 
 
 # In[15]:
 
 
-drac.count("monster")
+orlando.similar('serpentine')
 
 
 # In[16]:
 
 
-frank.count("monster")
+orlando.similar('friend')
 
 
 # In[17]:
 
 
-orlando.common_contexts(["woman"])
+orlando.similar('word')
+
+
+# In[18]:
+
+
+orlando.concordance('serpentine')
+
+
+# In[19]:
+
+
+orlando.dispersion_plot(['ecstasy'])
+
+
+# In[20]:
+
+
+# I want to dig deeper into this word 'ecstasy'
+
+orlando.concordance('ecstasy')
+
+
+# In[21]:
+
+
+dorian.similar('woman')
+
+
+# In[22]:
+
+
+dorian.concordance('ecstasy')
+
+
+# In[23]:
+
+
+dorian.common_contexts(['ecstasy'])
+
+
+# In[24]:
+
+
+orlando.common_contexts(['ecstasy'])
+
+
+# In[25]:
+
+
+dorian.dispersion_plot(['woman', 'man'])
+
+
+# In[26]:
+
+
+dorian.collocations()
 
 
 # ## group challenge
@@ -178,34 +237,16 @@ orlando.common_contexts(["woman"])
 # - with `similar()`, "man" has 14 words, and "woman" has 1. 
 # - Means that men has more references than women text. Makes sense because it's about a male scientist creating a man. 
 
-# In[ ]:
+# In[27]:
 
 
 orlando.count("woman")
 
 
-# In[ ]:
+# In[28]:
 
 
 orlando.count("man")
-
-
-# In[ ]:
-
-
-text = clean(dracula)
-
-
-# In[ ]:
-
-
-dracula = nltk.Text(text)
-
-
-# In[ ]:
-
-
-dracula.similar('woman')
 
 
 # ## group challenge: monsters
@@ -221,7 +262,7 @@ dracula.similar('woman')
 # 
 # Explore the different ways that monster is being portrayed across Dracula and Frankenstein. What words are associated with each one? Try using words like “Dracula” “Vampire” and “Murderer”, or other words that seem appropriate to your analysis
 
-# In[16]:
+# In[29]:
 
 
 drac.concordance("monster")
