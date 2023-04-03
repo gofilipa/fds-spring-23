@@ -20,13 +20,13 @@ As course schedule and assignments are subject to change, please check this page
 | 3/15/2023  |  MIDTERM |  |   |
 |  Week 9: 3/20/2023 | nltk: text analysis |   |  |
 | 3/22/2023  | nltk: text analysis  |   |   |
-|  Week 10: 3/27/2023 | nltk: gender analysis  | Emily Bender, "[ChatGPT and the Hidden Bias of Language Models](https://thestoryexchange.org/chatgpt-and-the-hidden-bias-of-language-models/)" by Kate Brennan |  |
-| 3/29/2023 | nltk: gender analysis |"[Pause Giant AI Experiments Open Letter](https://futureoflife.org/open-letter/pause-giant-ai-experiments/)" | |
+|  Week 10: 3/27/2023 | nltk: gender analysis  | Kate Brennan, "[ChatGPT and the Hidden Bias of Language Models](https://thestoryexchange.org/chatgpt-and-the-hidden-bias-of-language-models/)" |  |
+| 3/29/2023 | nltk: gender analysis | The Future of Life Institute, "[Pause Giant AI Experiments Open Letter](https://futureoflife.org/open-letter/pause-giant-ai-experiments/)" | |
 |  Week 11: 4/3/2023 |  nltk: gender analysis  |   | Homework #4 due: text analysis (at end of class)  |
 | 4/5/2023 - 4/12/2023  |  SPRING BREAK |   |   |
 | UNIT THREE
-Week 12: 4/17/2023  |  word embeddings | "[On the Dangers of Stochastic Parrots: Can Language Models be too Big?](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)" |   |
-|  4/19/2023 |  language modelling with Transformers: Sentiment Analysis|   |  |
+Week 12: 4/17/2023  |  word embeddings | Timnit Gebru et al.: "[Statement from the listed authors of Stochastic Parrots on the “AI pause” letter](https://www.dair-institute.org/blog/letter-statement-March2023)"|   |
+|  4/19/2023 |  language modelling with Transformers: Sentiment Analysis| Optional: "[On the Dangers of Stochastic Parrots: Can Language Models be too Big?](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)"  |  |
 | Week 13: 4/24/2023  |  language modelling with Transformers: Question/Answer |  |   |
 | 4/26/2023  |  language modelling with Transformers: Text Generation |   |   |
 |  Week 14: 5/1/2023 |  workshops |  |  |
