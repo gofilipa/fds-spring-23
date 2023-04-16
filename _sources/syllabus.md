@@ -55,3 +55,5 @@ Course overview:
 - Unit 1: Introduction to Python programming
 - Unit 2: Introduction to data analysis and visualization, *Data Feminism* by Lauren Klein and Katherine D'Ignazio
 - Unit 3: Research methods and final projects
+
+![](cc-by-nc-sa.png)
