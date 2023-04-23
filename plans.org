@@ -750,36 +750,39 @@ models, and assess them.
 You will experiment with what they do, and look at the data they are
 trained on. 
 
-Word Embeddings
+**** Word Embeddings
 - how words are represented in Large Language Models (like ChatGPT) 
 - "vectors" "word embeddings" - a list of numbers. The numbers
-represent probabilities of how much a word relates to every other
-word. 
+  represent probabilities of how much a word relates to every other
+  word.
 - In graphical space, these number represent dots on a graph. But the
-graph has thousands, millions of dimensions. So you cannot really
-visualize it. 
+  graph has thousands, millions of dimensions. So you cannot really
+  visualize it.
 - In this representation, the actual words don't really matter. All
-that matters is the list of numbers. 
+  that matters is the list of numbers.
 - You can use the vectors / embeddings to do computations. The most
-popular one is the King + Woman - Man = Queen. So we take all the
-numbers (probabilites) represented by "King", then we add all the
-vectors of "Woman," and then we subtract "Man." The result is "Queen."
+  popular one is the King + Woman - Man = Queen. So we take all the
+  numbers (probabilites) represented by "King", then we add all the
+  vectors of "Woman," and then we subtract "Man." The result is
+  "Queen."
 
 Watch Jay Alammar: How GPT3 Works - Easily Explained with Animations
 https://www.youtube.com/watch?v=MQnJZuBGmSQ 
 
-Introduction to Transformers
+**** Introduction to Transformers
+
 Taken from: HuggingFace course, "Natural Language Processing"
 https://huggingface.co/course/chapter1/2?fw=pt
+
 With my notes:
 https://colab.research.google.com/drive/17SEa305DE8cGnttxPHndxoyuLN3LscGh?usp=sharing
 
 - Transformers is a python library (like NLTK) for Machine Learning.
 - It comes with functionality to you to play around with LLMs.
 - We are going to look at some basic tasks in NLP. Just to get a taste
-of the kinds of things we can do. 
+  of the kinds of things we can do.
 - Text Generation, Zero-shot Classification, Mask filling, Question
-answering, Translation. 
+  answering, Translation.
 
 *** April 19, 24: Text modelling with Transformers
 *** April 26, May 1, 3: Workshop final projects
