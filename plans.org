@@ -750,25 +750,6 @@ models, and assess them.
 You will experiment with what they do, and look at the data they are
 trained on. 
 
-**** Word Embeddings
-- how words are represented in Large Language Models (like ChatGPT) 
-- "vectors" "word embeddings" - a list of numbers. The numbers
-  represent probabilities of how much a word relates to every other
-  word.
-- In graphical space, these number represent dots on a graph. But the
-  graph has thousands, millions of dimensions. So you cannot really
-  visualize it.
-- In this representation, the actual words don't really matter. All
-  that matters is the list of numbers.
-- You can use the vectors / embeddings to do computations. The most
-  popular one is the King + Woman - Man = Queen. So we take all the
-  numbers (probabilites) represented by "King", then we add all the
-  vectors of "Woman," and then we subtract "Man." The result is
-  "Queen."
-
-Watch Jay Alammar: How GPT3 Works - Easily Explained with Animations
-https://www.youtube.com/watch?v=MQnJZuBGmSQ 
-
 **** Introduction to Transformers
 
 Taken from: HuggingFace course, "Natural Language Processing"
@@ -784,7 +765,51 @@ https://colab.research.google.com/drive/17SEa305DE8cGnttxPHndxoyuLN3LscGh?usp=sh
 - Text Generation, Zero-shot Classification, Mask filling, Question
   answering, Translation.
 
-*** April 19, 24: Text modelling with Transformers
+*** April 19 Word embeddings & transformers
+Final project: comparing how different LLM models take the same
+prompts and comparing across different NLP tasks. 
+- we did text generation last week, today we will do classification
+
+**** Word Embeddings
+The question: how do language models like ChatGPT know how to respond
+to our questions? 
+
+Statistical methods. Probability. 
+
+In NLTK, we saw how similarity was computed by words appearing
+together. Now we see how words are represented by /scores/ that
+indicate basically the same thing -- what words are associated with
+each other. 
+
+- how words are represented in Large Language Models (like ChatGPT) 
+- "vectors" "word embeddings" - a list of numbers. The numbers
+  represent probabilities of how much a word relates to every other
+  word.
+- In graphical space, these number represent dots on a graph. But the
+  graph has thousands, millions of dimensions. So you cannot really
+  visualize it.
+- In this representation, the actual words don't really matter. All
+  that matters is the list of numbers.
+- You can use the vectors / embeddings to do computations. The most
+  popular one is the King + Woman - Man = Queen. So we take all the
+  numbers (probabilites) represented by "King", then we add all the
+  vectors of "Woman," and then we subtract "Man." The result is
+  "Queen."
+
+Demo / walkthrough
+ https://jalammar.github.io/illustrated-word2vec/
+
+
+**** Transformers continued 
+- Review 
+- Begin: classification, mask filling
+- Coming up with some prompts. You'll create your own prompts for the
+  final project
+
+*** 24: Text modelling with Transformers
+Watch Jay Alammar: How GPT3 Works - Easily Explained with Animations
+https://www.youtube.com/watch?v=MQnJZuBGmSQ 
+
 *** April 26, May 1, 3: Workshop final projects
 
 
