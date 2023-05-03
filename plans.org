@@ -743,7 +743,12 @@ Class share - 10 min
 *** DONE April 3: Review homework #4
     CLOSED: [2023-04-16 Sun 19:11]
 *** SPRING BREAK -- April 5 - 12
-*** April 17 Intro to Language Models: Word Embeddings.
+*** DONE April 17 Intro to Language Models: Word Embeddings.
+    CLOSED: [2023-04-27 Thu 14:13]
+
+*** DONE April 19 Transformers
+    CLOSED: [2023-04-27 Thu 14:13]
+
 For final projects, you will play around with multiple language
 models, and assess them. 
 
@@ -765,7 +770,10 @@ https://colab.research.google.com/drive/17SEa305DE8cGnttxPHndxoyuLN3LscGh?usp=sh
 - Text Generation, Zero-shot Classification, Mask filling, Question
   answering, Translation.
 
-*** April 19 Word embeddings & transformers
+*** DONE April 24: Word Embeddings &  Transformers continued
+    CLOSED: [2023-04-27 Thu 14:13]
+
+
 Final project: comparing how different LLM models take the same
 prompts and comparing across different NLP tasks. 
 - we did text generation last week, today we will do classification
@@ -799,20 +807,89 @@ each other.
 Demo / walkthrough
  https://jalammar.github.io/illustrated-word2vec/
 
-
 **** Transformers continued 
 - Review 
 - Begin: classification, mask filling
 - Coming up with some prompts. You'll create your own prompts for the
   final project
 
-*** 24: Text modelling with Transformers
+*** DONE April 26 Review word embeddings & tranformers continued
+    CLOSED: [2023-04-27 Thu 14:16]
+
+- Review Word Embeddings
+- Review tranformers and NLP tasks so far
+- Introduce 
+
+
 Watch Jay Alammar: How GPT3 Works - Easily Explained with Animations
 https://www.youtube.com/watch?v=MQnJZuBGmSQ 
 
-*** April 26, May 1, 3: Workshop final projects
+*** May 1, Models
+
+Review "generating language" 
+
+*** May 3: Datasets
+
+Review Reading: "Stocastic Parrots"
+- Freewrite: why is bias a problem in LLMs? What causes it? Refer to section 4 of the reading.
+
+Review Final project
+
+** Final Project
+Objective: To explore & analyze how a language model from the
+/Transformers/ libary generates text based on specific prompts. You
+will have the choice of analyzing discrimination and bias, or
+analyzing a topic of your choosing. If you choose to do the latter,
+you must also submit your prompts that you use for inputing to the
+language model.
+
+Steps: 
+- First, you will load up a dataset for analysis. In the default
+  option, this dataset is "[toxcicity
+  prompts](https://huggingface.co/datasets/allenai/real-toxicity-prompts),"
+  which is a collection of prompts that tend to provoke biased
+  responses. You will load this dataset using the provided code in the
+  assignment sheet, which contains an if statement that filters out
+  the prompts by toxicity score. 
+- Second, trom the dataset, you will compile a list of 20 prompts, using the
+  provided code in the assignment sheet. Later on, you will draw from
+  this list to feed prompts into the text generator. You may use the
+  code provided.
+- Third, you will create a generator object tied into which you will
+  pass your prompts. Here, you may use the default language model
+  (which is 'distil-gpt2', or use one of your choosing from the
+  [models
+  hub](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads)),
+  with the "text generation" option from the "Natural Language
+  Processing" selected on the lefthand menu. If selecting your own
+  model, modify the code provided by adding a
+  ~model='your-model-name'~ argument in the pipeline function. 
+- Fourth, pick out five prompts from your list of twenty to pass into
+  the generator object. You can create a slice (using list slicing) or
+  specify the index for each prompt, one at a time. Use the
+  code provided, but modify it to select the 5 prompts of your
+  choosing. 
+- Fifth, when you've selected your prompts, pass them into the generator
+  object, which you created from the pipeline function.
+- Finally, examine the results and summarize your response. Pay
+  attention to anything that sticks out to you. Do you find the
+  results to be more biased or offensive than the original prompt? Do
+  you find them to be more biased or offensive than the "continuation"
+  sentences from the original dataset. Write up a summary of your
+  examination.
 
 
+
+
+- DistilGPT2 : https://huggingface.co/distilgpt2
+- BLOOM: https://huggingface.co/bigscience/bloom-560m
+
+
+
+Using Real-Toxcitiy-Prompts:
+https://huggingface.co/datasets/allenai/real-toxicity-prompts
+
+Or a dataset of your choice. 
 
 
 

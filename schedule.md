@@ -26,12 +26,12 @@ As course schedule and assignments are subject to change, please check this page
 | 4/5/2023 - 4/12/2023  |  SPRING BREAK |   |   |
 | UNIT THREE
 Week 12: 4/17/2023  |  [Transformer models](https://huggingface.co/course/chapter1/3?fw=pt) | Timnit Gebru et al: "[Statement from the listed authors of Stochastic Parrots on the “AI pause” letter](https://www.dair-institute.org/blog/letter-statement-March2023)"|   |
-|  4/19/2023 |  The Model Hub |  |  |
-| Week 13: 4/24/2023  |  Text Generation & Classification | "[The Illustrated Word2Vec](https://www.youtube.com/watch?v=ISPId9Lhc1g&feature=youtu.be)" Video |   |
+|  4/19/2023 |  Transformer models continued |  |  |
+| Week 13: 4/24/2023  |  Text Generation continued | "[The Illustrated Word2Vec](https://www.youtube.com/watch?v=ISPId9Lhc1g&feature=youtu.be)" Video |   |
 | 4/26/2023  |  Question-Answering & Mask-Filling |   |   |
 |  Week 14: 5/1/2023 | Models |  Emily Bender et al: "[On the Dangers of Stochastic Parrots: Can Language Models be too Big?](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)" |  |
 |  5/3/2023 | Datasets |   |  |
-| Week 15: 5/8/2023  |  Workshops |   | Project proposals due |
+| Week 15: 5/8/2023  |  Workshops | Gehman et al: "[RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models](https://arxiv.org/pdf/2009.11462.pdf)"  | Project proposals due |
 | 5/10/2023  |  Workshops |   |   |
 |  Week 16: 5/15/2023 |  Final exam review |  |  Final projects due |
-| TBD  |  FINAL EXAM |   |   |
+| 5/17, 1:00pm–3:15pm  |  FINAL EXAM |   |   |
