@@ -13,11 +13,11 @@ chapters:
 - file: nltk_cleaning
 - file: nltk-cleaning-2
 - file: nltk-gender
-- file: intro-transformers
-- file: generating-language
+- file: intro_transformers
+- file: generating_language
 - file: homework_00
 - file: homework_01
 - file: homework_02
 - file: homework_03
 - file: homework_04
-- file: final-project
+- file: final_project
