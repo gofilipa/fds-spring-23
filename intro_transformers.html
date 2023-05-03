@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="transformers: generating language" href="generating_language.html" />
+    <link rel="prev" title="NLTK: text analysis" href="nltk-gender.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="schedule.html">
    Course Schedule
@@ -157,6 +159,16 @@ const thebe_selector_output = ".output, .cell_output"
    NLTK: text analysis
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   transformers: introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="generating_language.html">
+   transformers: generating language
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="homework_00.html">
    homework 0: install python (optional)
@@ -180,6 +192,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="homework_04.html">
    homework 4: text analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="final_project.html">
+   Final Project
   </a>
  </li>
 </ul>
@@ -437,30 +454,30 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: transformers in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (4.23.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tqdm&gt;=4.27 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (4.65.0)
-Requirement already satisfied: pyyaml&gt;=5.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (5.3.1)
-Requirement already satisfied: huggingface-hub&lt;1.0,&gt;=0.10.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.14.1)
-Requirement already satisfied: regex!=2019.12.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2020.7.14)
-Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.13.1)
-Requirement already satisfied: requests in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2.23.0)
-Requirement already satisfied: numpy&gt;=1.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (1.21.6)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2.23.0)
 Requirement already satisfied: importlib-metadata in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (6.0.0)
+Requirement already satisfied: regex!=2019.12.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2020.7.14)
 Requirement already satisfied: packaging&gt;=20.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (21.3)
-Requirement already satisfied: filelock in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (3.0.12)
+Requirement already satisfied: numpy&gt;=1.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (1.21.6)
+Requirement already satisfied: tqdm&gt;=4.27 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (4.65.0)
+Requirement already satisfied: huggingface-hub&lt;1.0,&gt;=0.10.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.14.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (4.1.1)
-Requirement already satisfied: fsspec in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (2023.1.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: filelock in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (3.0.12)
+Requirement already satisfied: pyyaml&gt;=5.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (5.3.1)
+Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.13.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fsspec in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (2023.1.0)
+Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (4.1.1)
 Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from packaging&gt;=20.0-&gt;transformers) (2.4.7)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=0.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from importlib-metadata-&gt;transformers) (3.1.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (1.25.11)
 Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (3.0.4)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2.10)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2020.6.20)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (1.25.11)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">23.1.2</span>
@@ -520,8 +537,8 @@ If your task is similar to the task the model of the checkpoint was trained on, 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting `pad_token_id` to 50256 (first `eos_token_id`) to generate sequence
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;generated_text&#39;: &quot;This summer, I was rock climbing in Yosemite when my girlfriend and I decided to do something about the mountain. The first day we were out on a day hike, we were in our late 70&#39;s, I was at the store and went back into&quot;},
- {&#39;generated_text&#39;: &#39;This summer, I was rock climbing in Yosemite when I stopped by a ski shop named Rodeo Valley, at 8am. My dad always wanted me to see those amazing trails they always say. &quot;Rodeo Valley&quot;, just after the name&#39;}]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;generated_text&#39;: &#39;This summer, I was rock climbing in Yosemite when I heard an elephant talking. He wasn\&#39;t my dad, but he said, &quot;Look here, I wanted you to come here and learn how to dance.&quot; I started crying. I tried to ask&#39;},
+ {&#39;generated_text&#39;: &quot;This summer, I was rock climbing in Yosemite when I was spotted by a beautiful lady. She didn&#39;t let me down and even said that when I put on my makeup she asked for a kiss after she showed it. My face felt a little too&quot;}]
 </pre></div>
 </div>
 </div>
@@ -544,9 +561,7 @@ Using a pipeline without specifying a model name and revision in production is n
 </pre></div>
 </div>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "690bfb06bf744b269c882c745dbdae29"}
-</script><script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "ac157a3cfa94497ba3082cf60584c64c"}
+{"version_major": 2, "version_minor": 0, "model_id": "90ea0fa0591c47a296523d263f4863f1"}
 </script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">WantReadError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
 <span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, *args, **kwargs)</span>
@@ -926,6 +941,20 @@ Using a pipeline without specifying a model name and revision in production is n
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="nltk-gender.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">NLTK: text analysis</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="generating_language.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">transformers: generating language</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

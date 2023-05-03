@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="homework 0: install python (optional)" href="homework_00.html" />
+    <link rel="prev" title="transformers: introduction" href="intro_transformers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="schedule.html">
    Course Schedule
@@ -158,6 +160,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="intro_transformers.html">
+   transformers: introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   transformers: generating language
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="homework_00.html">
    homework 0: install python (optional)
   </a>
@@ -180,6 +192,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="homework_04.html">
    homework 4: text analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="final_project.html">
+   Final Project
   </a>
  </li>
 </ul>
@@ -433,31 +450,29 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: transformers in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (4.23.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.13.1)
-Requirement already satisfied: filelock in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (3.0.12)
-Requirement already satisfied: packaging&gt;=20.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (21.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2.23.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: filelock in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (3.0.12)
+Requirement already satisfied: importlib-metadata in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (6.0.0)
 Requirement already satisfied: tqdm&gt;=4.27 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (4.65.0)
-Requirement already satisfied: huggingface-hub&lt;1.0,&gt;=0.10.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.14.1)
 Requirement already satisfied: regex!=2019.12.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2020.7.14)
 Requirement already satisfied: pyyaml&gt;=5.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (5.3.1)
-Requirement already satisfied: importlib-metadata in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (6.0.0)
+Requirement already satisfied: huggingface-hub&lt;1.0,&gt;=0.10.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.14.1)
+Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.13.1)
+Requirement already satisfied: packaging&gt;=20.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (21.3)
 Requirement already satisfied: numpy&gt;=1.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (1.21.6)
-Requirement already satisfied: requests in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2.23.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fsspec in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (2023.1.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (4.1.1)
+Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (4.1.1)
 Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from packaging&gt;=20.0-&gt;transformers) (2.4.7)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=0.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from importlib-metadata-&gt;transformers) (3.1.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (3.0.4)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2.10)
 Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (1.25.11)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2.10)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (3.0.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2020.6.20)
 </pre></div>
 </div>
@@ -468,49 +483,49 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/filipacalado/opt/
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: datasets in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (2.12.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tqdm&gt;=4.62.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (4.65.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: xxhash in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (3.2.0)
 Requirement already satisfied: aiohttp in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (3.8.4)
-Requirement already satisfied: pyyaml&gt;=5.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (5.3.1)
+Requirement already satisfied: pyarrow&gt;=8.0.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (12.0.0)
+Requirement already satisfied: tqdm&gt;=4.62.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (4.65.0)
 Requirement already satisfied: fsspec[http]&gt;=2021.11.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (2023.1.0)
-Requirement already satisfied: requests&gt;=2.19.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (2.23.0)
-Requirement already satisfied: numpy&gt;=1.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (1.21.6)
-Requirement already satisfied: multiprocess in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (0.70.14)
-Requirement already satisfied: dill&lt;0.3.7,&gt;=0.3.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (0.3.6)
-Requirement already satisfied: xxhash in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (3.2.0)
-Requirement already satisfied: huggingface-hub&lt;1.0.0,&gt;=0.11.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (0.14.1)
+Requirement already satisfied: pandas in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (1.3.5)
 Requirement already satisfied: packaging in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (21.3)
 Requirement already satisfied: importlib-metadata in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (6.0.0)
+Requirement already satisfied: multiprocess in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (0.70.14)
+Requirement already satisfied: dill&lt;0.3.7,&gt;=0.3.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (0.3.6)
+Requirement already satisfied: numpy&gt;=1.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (1.21.6)
 Requirement already satisfied: responses&lt;0.19 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (0.18.0)
-Requirement already satisfied: pandas in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (1.3.5)
-Requirement already satisfied: pyarrow&gt;=8.0.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (12.0.0)
+Requirement already satisfied: pyyaml&gt;=5.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (5.3.1)
+Requirement already satisfied: requests&gt;=2.19.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (2.23.0)
+Requirement already satisfied: huggingface-hub&lt;1.0.0,&gt;=0.11.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from datasets) (0.14.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (3.1.0)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (1.3.3)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (4.0.2)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (1.9.2)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (1.3.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.7.4 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (4.1.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: frozenlist&gt;=1.1.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (1.3.3)
 Requirement already satisfied: asynctest==0.13.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (0.13.0)
+Requirement already satisfied: typing-extensions&gt;=3.7.4 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (4.1.1)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (4.0.2)
 Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (6.0.4)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (1.3.1)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (1.9.2)
 Requirement already satisfied: attrs&gt;=17.3.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (21.4.0)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from aiohttp-&gt;datasets) (3.1.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: filelock in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0.0,&gt;=0.11.0-&gt;datasets) (3.0.12)
 Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from packaging-&gt;datasets) (2.4.7)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.19.0-&gt;datasets) (2.10)
-Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.19.0-&gt;datasets) (3.0.4)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.19.0-&gt;datasets) (2020.6.20)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.19.0-&gt;datasets) (3.0.4)
 Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.19.0-&gt;datasets) (1.25.11)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.19.0-&gt;datasets) (2020.6.20)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.19.0-&gt;datasets) (2.10)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=0.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from importlib-metadata-&gt;datasets) (3.1.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pytz&gt;=2017.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from pandas-&gt;datasets) (2020.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from pandas-&gt;datasets) (2.8.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.7.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from pandas-&gt;datasets) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from pandas-&gt;datasets) (2020.1)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;datasets) (1.15.0)
@@ -535,24 +550,11 @@ Requirement already satisfied: python-dateutil&gt;=2.7.3 in /Users/filipacalado/
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "5b3e1fd2b4d442fc8c60abd15f19535d"}
-</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading and preparing dataset json/allenai--real-toxicity-prompts to /Users/filipacalado/.cache/huggingface/datasets/allenai___json/allenai--real-toxicity-prompts-d8a476abeeb3bf44/0.0.0/e347ab1c932092252e717ff3f949105a4dd28b27e842dd53157d2f72e276c2e4...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found cached dataset json (/Users/filipacalado/.cache/huggingface/datasets/allenai___json/allenai--real-toxicity-prompts-d8a476abeeb3bf44/0.0.0/e347ab1c932092252e717ff3f949105a4dd28b27e842dd53157d2f72e276c2e4)
 </pre></div>
 </div>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "d194561d9651475c856c4c6ca8d52b4f"}
-</script><script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "e75826ec76ea40eab23d68b0656f78d5"}
-</script><script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "258b714eab93492aa7e334963e3cb280"}
-</script><script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "de84e0d0bb6048e7a054cc285d50aa21"}
-</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset json downloaded and prepared to /Users/filipacalado/.cache/huggingface/datasets/allenai___json/allenai--real-toxicity-prompts-d8a476abeeb3bf44/0.0.0/e347ab1c932092252e717ff3f949105a4dd28b27e842dd53157d2f72e276c2e4. Subsequent calls will reuse this data.
-</pre></div>
-</div>
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "d572f9e9cee1472689c4242a0b76762a"}
+{"version_major": 2, "version_minor": 0, "model_id": "09f6e71df41a4eb7b9dd79fe4fdf466b"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -816,7 +818,7 @@ If your task is similar to the task the model of the checkpoint was trained on, 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting `pad_token_id` to 50256 (first `eos_token_id`) to generate sequence
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;generated_text&#39;: &quot;This may sound like a bunch of hippy communist bullflubs, but when it comes to taking over the world&#39;s biggest corporations and ruling the political and military establishment, this is the most important of the game: taking control of the planet. And&quot;}]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;generated_text&#39;: &quot;This may sound like a bunch of hippy communist bullshitters, but just because you&#39;re from the city doesn&#39;t mean you can do it in public.\n\nFirst, remember we&#39;re not talking about how much you want your wallet! We&quot;}]
 </pre></div>
 </div>
 </div>
@@ -843,9 +845,7 @@ If your task is similar to the task the model of the checkpoint was trained on, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "4415a28922f44dc19fcb39ef603e48f4"}
-</script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">16</span><span class="o">-</span><span class="n">ac0acd268046</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># the second one is bloom, read more here: https://huggingface.co/bigscience/bloom-560m</span>
@@ -947,6 +947,20 @@ If your task is similar to the task the model of the checkpoint was trained on, 
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro_transformers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">transformers: introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="homework_00.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">homework 0: install python (optional)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
