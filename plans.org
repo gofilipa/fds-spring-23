@@ -835,6 +835,25 @@ Review Reading: "Stocastic Parrots"
 
 Review Final project
 
+*** May 8, workshops
+Today in group work.
+
+Goals:
+- Review final project assignment
+- Review the different ways you can customize the assignment.
+  - Going to give you options for datasets, if not into toxicity.
+  - Option for looking at different kinds of toxicity.
+
+Review Final Project, step by step. 
+- First choose dataset. Can be from books, movies, games, or toxicity
+dataset. 
+- Second from dataset, choose 10 prompts. Can be a slice, or a
+  selected list.
+- Third make generator object, with model of your choice. 
+- Fourth, run prompts through generator. 
+- Finally, examine results and writeup analysis. 
+
+
 ** Final Project
 Objective: To explore & analyze how a language model from the
 /Transformers/ libary generates text based on specific prompts. You
