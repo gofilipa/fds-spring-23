@@ -15,6 +15,7 @@ chapters:
 - file: nltk-gender
 - file: intro_transformers
 - file: generating_language
+- file: transformers_bias
 - file: homework_00
 - file: homework_01
 - file: homework_02
