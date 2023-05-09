@@ -84,19 +84,19 @@ dor = clean(dorian_gray)
 
 # ## NLTK methods for text analysis
 
-# In[12]:
+# In[7]:
 
 
 orl[:20]
 
 
-# In[14]:
+# In[8]:
 
 
 type(orl)
 
 
-# In[17]:
+# In[9]:
 
 
 # turn our saved text (list of strings) to an NLTK object for 
@@ -105,13 +105,13 @@ type(orl)
 orlando = nltk.Text(orl)
 
 
-# In[18]:
+# In[10]:
 
 
 type(orlando)
 
 
-# In[20]:
+# In[11]:
 
 
 # checks the most common words
@@ -119,7 +119,7 @@ type(orlando)
 orlando.vocab().most_common(20)
 
 
-# In[40]:
+# In[12]:
 
 
 dorian = nltk.Text(dor)
@@ -127,7 +127,7 @@ dorian = nltk.Text(dor)
 dorian.vocab().most_common(20)
 
 
-# In[24]:
+# In[13]:
 
 
 # my goal is to compare the genders in the text
@@ -135,7 +135,7 @@ dorian.vocab().most_common(20)
 orlando.similar('woman')
 
 
-# In[26]:
+# In[14]:
 
 
 # I want to explore the word "servant"
@@ -143,37 +143,37 @@ orlando.similar('woman')
 orlando.similar('servant')
 
 
-# In[27]:
+# In[15]:
 
 
 orlando.similar('serpentine')
 
 
-# In[28]:
+# In[16]:
 
 
 orlando.similar('friend')
 
 
-# In[29]:
+# In[17]:
 
 
 orlando.similar('word')
 
 
-# In[30]:
+# In[18]:
 
 
 orlando.concordance('serpentine')
 
 
-# In[32]:
+# In[19]:
 
 
 orlando.dispersion_plot(['ecstasy'])
 
 
-# In[33]:
+# In[20]:
 
 
 # I want to dig deeper into this word 'ecstasy'
@@ -181,37 +181,37 @@ orlando.dispersion_plot(['ecstasy'])
 orlando.concordance('ecstasy')
 
 
-# In[38]:
+# In[21]:
 
 
 dorian.similar('woman')
 
 
-# In[35]:
+# In[22]:
 
 
 dorian.concordance('ecstasy')
 
 
-# In[36]:
+# In[23]:
 
 
 dorian.common_contexts(['ecstasy'])
 
 
-# In[37]:
+# In[24]:
 
 
 orlando.common_contexts(['ecstasy'])
 
 
-# In[43]:
+# In[25]:
 
 
 dorian.dispersion_plot(['woman', 'man'])
 
 
-# In[44]:
+# In[26]:
 
 
 dorian.collocations()
@@ -237,13 +237,13 @@ dorian.collocations()
 # - with `similar()`, "man" has 14 words, and "woman" has 1. 
 # - Means that men has more references than women text. Makes sense because it's about a male scientist creating a man. 
 
-# In[ ]:
+# In[27]:
 
 
 orlando.count("woman")
 
 
-# In[ ]:
+# In[28]:
 
 
 orlando.count("man")
@@ -262,7 +262,7 @@ orlando.count("man")
 # 
 # Explore the different ways that monster is being portrayed across Dracula and Frankenstein. What words are associated with each one? Try using words like “Dracula” “Vampire” and “Murderer”, or other words that seem appropriate to your analysis
 
-# In[16]:
+# In[29]:
 
 
 drac.concordance("monster")

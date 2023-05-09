@@ -266,7 +266,7 @@ FreqDist(shakes_no_punct_lower).most_common(10)
 stops = stopwords.words('english')
 
 
-# In[31]:
+# In[29]:
 
 
 # check out the first 20 words in the list
@@ -274,7 +274,7 @@ stops = stopwords.words('english')
 stops[:20]
 
 
-# In[34]:
+# In[30]:
 
 
 # Now, we create a loop that checks if the words in our no punctuation 
@@ -290,7 +290,7 @@ for item in shakes_no_punct_lower:
         shakes_no_stops.append(item)
 
 
-# In[35]:
+# In[31]:
 
 
 # see that there are no stopwords in the new list
@@ -298,7 +298,7 @@ for item in shakes_no_punct_lower:
 shakes_no_stops[:10]
 
 
-# In[37]:
+# In[32]:
 
 
 # so what are the most common words now?
@@ -310,7 +310,7 @@ FreqDist(shakes_no_stops).most_common(10)
 # # lemmatizing
 # Lemmatizing is the process of getting a root from the word. This is another thing we want to make sure that our data is as regularized and simplified as possible.
 
-# In[39]:
+# In[33]:
 
 
 # first, create the lemmatizer variable which links to the function
@@ -319,7 +319,7 @@ wordnet_lemmatizer = WordNetLemmatizer()
 # for google colab: wordnet_lemmatizer = nltk.stem.WordNetLemmatizer() 
 
 
-# In[40]:
+# In[34]:
 
 
 # the lemmatizer simplies words to their root form
@@ -327,7 +327,7 @@ wordnet_lemmatizer = WordNetLemmatizer()
 wordnet_lemmatizer.lemmatize("children")
 
 
-# In[41]:
+# In[35]:
 
 
 # geese becomes goose
@@ -335,7 +335,7 @@ wordnet_lemmatizer.lemmatize("children")
 wordnet_lemmatizer.lemmatize("geese")
 
 
-# In[42]:
+# In[36]:
 
 
 # families becomes family
@@ -343,7 +343,7 @@ wordnet_lemmatizer.lemmatize("geese")
 wordnet_lemmatizer.lemmatize("families")
 
 
-# In[43]:
+# In[37]:
 
 
 # now, we can write a loop that lemmatizes all of the words
@@ -358,7 +358,7 @@ for word in shakes_no_stops:
     shakes_lemmatized.append(lemma)
 
 
-# In[47]:
+# In[38]:
 
 
 # let's check the new list
@@ -368,7 +368,7 @@ shakes_lemmatized[:10]
 
 # # ready for analysis!
 
-# In[48]:
+# In[39]:
 
 
 # Congratulations!
@@ -377,7 +377,7 @@ shakes_lemmatized[:10]
 # and to singular forms.
 
 
-# In[50]:
+# In[40]:
 
 
 # Now, turn the text into a nltk.Text type object. 
@@ -385,7 +385,7 @@ shakes_lemmatized[:10]
 shakes = nltk.Text(shakes_lemmatized)
 
 
-# In[51]:
+# In[41]:
 
 
 # now we can run methods like "similar()" and "concordance()"
