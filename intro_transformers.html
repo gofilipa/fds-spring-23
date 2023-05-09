@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="generating_language.html" />
+    <link rel="next" title="transformers: generating language" href="generating_language.html" />
     <link rel="prev" title="NLTK: text analysis" href="nltk-gender.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -162,6 +162,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    transformers: introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="generating_language.html">
+   transformers: generating language
   </a>
  </li>
  <li class="toctree-l1">
@@ -454,18 +459,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: transformers in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (4.23.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: packaging&gt;=20.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (21.3)
-Requirement already satisfied: requests in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2.23.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2.23.0)
+Requirement already satisfied: numpy&gt;=1.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (1.21.6)
 Requirement already satisfied: importlib-metadata in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (6.0.0)
 Requirement already satisfied: pyyaml&gt;=5.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (5.3.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: huggingface-hub&lt;1.0,&gt;=0.10.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.14.1)
-Requirement already satisfied: regex!=2019.12.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2020.7.14)
-Requirement already satisfied: numpy&gt;=1.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (1.21.6)
-Requirement already satisfied: tqdm&gt;=4.27 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (4.65.0)
-Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.13.1)
+Requirement already satisfied: packaging&gt;=20.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (21.3)
 Requirement already satisfied: filelock in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (3.0.12)
+Requirement already satisfied: tqdm&gt;=4.27 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (4.65.0)
+Requirement already satisfied: regex!=2019.12.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (2020.7.14)
+Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.13.1)
+Requirement already satisfied: huggingface-hub&lt;1.0,&gt;=0.10.0 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from transformers) (0.14.1)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from huggingface-hub&lt;1.0,&gt;=0.10.0-&gt;transformers) (4.1.1)
@@ -474,10 +477,12 @@ Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /Users/filipacalad
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=0.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from importlib-metadata-&gt;transformers) (3.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2020.6.20)
 Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (1.25.11)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2020.6.20)
-Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (3.0.4)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (2.10)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/filipacalado/opt/anaconda3/lib/python3.7/site-packages (from requests-&gt;transformers) (3.0.4)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">23.1.2</span>
@@ -537,8 +542,8 @@ If your task is similar to the task the model of the checkpoint was trained on, 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting `pad_token_id` to 50256 (first `eos_token_id`) to generate sequence
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;generated_text&#39;: &#39;This summer, I was rock climbing in Yosemite when I was 17, and when I was 26, I experienced quite a bit of climbing in Yosemite, as well as much of Yosemite National Park.\n\nThe topography of Yosemite was great, but&#39;},
- {&#39;generated_text&#39;: &#39;This summer, I was rock climbing in Yosemite when our dog was kidnapped, because his hands were tied, and I fell back down on my legs, and a few feet down to take his camera for a few photos — this picture was taken near the&#39;}]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;generated_text&#39;: &#39;This summer, I was rock climbing in Yosemite when Santa Cruz began to appear in the sky. I started to look for my lost treasure, but I got no answer. I figured I had to stop. It had just landed on my feet, and&#39;},
+ {&#39;generated_text&#39;: &#39;This summer, I was rock climbing in Yosemite when my sister and I visited our favorite trail to hike - the Hikers\&#39; Trail.&quot; That\&#39;s right! I am on a trip.&#39;}]
 </pre></div>
 </div>
 </div>
@@ -561,28 +566,8 @@ Using a pipeline without specifying a model name and revision in production is n
 </pre></div>
 </div>
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "4bdd3a0784744171ab1ac628a76d1b80"}
+{"version_major": 2, "version_minor": 0, "model_id": "962566281b6a4efabd380d2ba658a44c"}
 </script><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">WantReadError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">313</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span>         <span class="k">except</span> <span class="n">OpenSSL</span><span class="o">.</span><span class="n">SSL</span><span class="o">.</span><span class="n">SysCallError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/OpenSSL/SSL.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1839</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">_lib</span><span class="o">.</span><span class="n">SSL_read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ssl</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1840</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_raise_ssl_error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ssl</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1841</span> 
-
-<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/OpenSSL/SSL.py</span> in <span class="ni">_raise_ssl_error</span><span class="nt">(self, ssl, result)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1645</span>         <span class="k">if</span> <span class="n">error</span> <span class="o">==</span> <span class="n">_lib</span><span class="o">.</span><span class="n">SSL_ERROR_WANT_READ</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1646</span>             <span class="k">raise</span> <span class="n">WantReadError</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1647</span>         <span class="k">elif</span> <span class="n">error</span> <span class="o">==</span> <span class="n">_lib</span><span class="o">.</span><span class="n">SSL_ERROR_WANT_WRITE</span><span class="p">:</span>
-
-<span class="ne">WantReadError</span>: 
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
 <span class="ne">WantReadError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
 <span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, *args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">312</span>         <span class="k">try</span><span class="p">:</span>
@@ -735,32 +720,39 @@ Using a pipeline without specifying a model name and revision in production is n
 <span class="g g-Whitespace">    </span><span class="mi">330</span>         <span class="c1"># TLS 1.3 post-handshake authentication</span>
 
 <span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>                 <span class="k">raise</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="k">except</span> <span class="n">OpenSSL</span><span class="o">.</span><span class="n">SSL</span><span class="o">.</span><span class="n">WantReadError</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">325</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">util</span><span class="o">.</span><span class="n">wait_for_read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">gettimeout</span><span class="p">()):</span>
 <span class="g g-Whitespace">    </span><span class="mi">326</span>                 <span class="k">raise</span> <span class="n">timeout</span><span class="p">(</span><span class="s2">&quot;The read operation timed out&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">327</span>             <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">328</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> 
-<span class="g g-Whitespace">    </span><span class="mi">330</span>         <span class="c1"># TLS 1.3 post-handshake authentication</span>
 
-<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span>                 <span class="k">raise</span> <span class="n">timeout</span><span class="p">(</span><span class="s2">&quot;The read operation timed out&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span>             <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">328</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span> 
-<span class="g g-Whitespace">    </span><span class="mi">330</span>         <span class="c1"># TLS 1.3 post-handshake authentication</span>
+<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/util/wait.py</span> in <span class="ni">wait_for_read</span><span class="nt">(sock, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">144</span>     <span class="n">Returns</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">the</span> <span class="n">socket</span> <span class="ow">is</span> <span class="n">readable</span><span class="p">,</span> <span class="ow">or</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">the</span> <span class="n">timeout</span> <span class="n">expired</span><span class="o">.</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">146</span><span class="s2">     return wait_for_socket(sock, read=True, timeout=timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span><span class="s2"> </span>
 
-<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">311</span>     <span class="k">def</span> <span class="nf">recv_into</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">313</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span>         <span class="k">except</span> <span class="n">OpenSSL</span><span class="o">.</span><span class="n">SSL</span><span class="o">.</span><span class="n">SysCallError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">suppress_ragged_eofs</span> <span class="ow">and</span> <span class="n">e</span><span class="o">.</span><span class="n">args</span> <span class="o">==</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Unexpected EOF&quot;</span><span class="p">):</span>
+<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/util/wait.py</span> in <span class="ni">poll_wait_for_socket</span><span class="nt">(sock, read, write, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span><span class="s2">         return poll_obj.poll(t)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">107</span><span class="s2">     return bool(_retry_on_intr(do_poll, timeout))</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span><span class="s2"> </span>
 
-<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/OpenSSL/SSL.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1844</span>         <span class="c1"># on CPython 3.3+ that segfaults. As a workaround, we can temporarily</span>
-<span class="g g-Whitespace">   </span><span class="mi">1845</span>         <span class="c1"># wrap it in a memoryview.</span>
-<span class="ne">-&gt; </span><span class="mi">1846</span>         <span class="n">buffer</span><span class="p">[:</span><span class="n">result</span><span class="p">]</span> <span class="o">=</span> <span class="nb">memoryview</span><span class="p">(</span><span class="n">_ffi</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">1847</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1848</span>         <span class="k">return</span> <span class="n">result</span>
+<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/util/wait.py</span> in <span class="ni">_retry_on_intr</span><span class="nt">(fn, timeout)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="s2">     # Modern Python, that retries syscalls by default</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="s2">     def _retry_on_intr(fn, timeout):</span>
+<span class="ne">---&gt; </span><span class="mi">43</span><span class="s2">         return fn(timeout)</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span><span class="s2"> </span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.7/site-packages/urllib3/util/wait.py</span> in <span class="ni">do_poll</span><span class="nt">(t)</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span><span class="s2">         if t is not None:</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span><span class="s2">             t *= 1000</span>
+<span class="ne">--&gt; </span><span class="mi">105</span><span class="s2">         return poll_obj.poll(t)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span><span class="s2">     return bool(_retry_on_intr(do_poll, timeout))</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -991,7 +983,7 @@ Using a pipeline without specifying a model name and revision in production is n
     <a class='right-next' id="next-link" href="generating_language.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">transformers: generating language</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
