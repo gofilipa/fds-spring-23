@@ -824,11 +824,13 @@ Demo / walkthrough
 Watch Jay Alammar: How GPT3 Works - Easily Explained with Animations
 https://www.youtube.com/watch?v=MQnJZuBGmSQ 
 
-*** May 1, Models
+*** DONE May 1, Models
+    CLOSED: [2023-05-10 Wed 14:03]
 
 Review "generating language" 
 
-*** May 3: Datasets
+*** DONE May 3: Datasets
+    CLOSED: [2023-05-10 Wed 14:03]
 
 Review Reading: "Stocastic Parrots"
 - Freewrite: why is bias a problem in LLMs? What causes it? Refer to section 4 of the reading.
@@ -852,6 +854,16 @@ dataset.
 - Third make generator object, with model of your choice. 
 - Fourth, run prompts through generator. 
 - Finally, examine results and writeup analysis. 
+
+*** May 10, workshops
+Goals: 
+- Go over assignment, code in 2nd half
+- Go over analysis section
+
+COMMENTS
+- review code, 
+- how to pull in own dataset
+- work on final project
 
 
 ** Final Project
