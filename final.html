@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Final Project &#8212; Foundations of Data Science</title>
+    <title>Final Exam &#8212; Foundations of Data Science</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="homework 4: text analysis" href="homework_04.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="schedule.html">
    Course Schedule
@@ -198,8 +197,8 @@ const thebe_selector_output = ".output, .cell_output"
    homework 4: text analysis
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="final_project.html">
    Final Project
   </a>
  </li>
@@ -276,7 +275,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/final_project.ipynb"
+        <a href="_sources/final.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -287,7 +286,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -336,13 +335,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objective">
-   Objective:
+  <a class="reference internal nav-link" href="#python-basics">
+   Python Basics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   Instructions:
+  <a class="reference internal nav-link" href="#text-analysis">
+   Text Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-generation">
+   Text Generation
   </a>
  </li>
 </ul>
@@ -354,7 +358,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Final Project</h1>
+                <h1>Final Exam</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -365,13 +369,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objective">
-   Objective:
+  <a class="reference internal nav-link" href="#python-basics">
+   Python Basics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   Instructions:
+  <a class="reference internal nav-link" href="#text-analysis">
+   Text Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-generation">
+   Text Generation
   </a>
  </li>
 </ul>
@@ -384,56 +393,33 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="final-project">
-<h1>Final Project<a class="headerlink" href="#final-project" title="Permalink to this headline">#</a></h1>
-<section id="objective">
-<h2>Objective:<a class="headerlink" href="#objective" title="Permalink to this headline">#</a></h2>
-<p>To explore &amp; analyze how a language model from the
-<em>Transformers</em> libary generates text based on specific prompts. You
-will have the choice of analyzing discrimination and bias, or
-analyzing a topic of your choosing. If you choose to do the latter,
-you must also submit your prompts that you use for inputing to the
-language model.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="final-exam">
+<h1>Final Exam<a class="headerlink" href="#final-exam" title="Permalink to this headline">#</a></h1>
+<p>Format: short answer, 2-4 sentences.</p>
+<section id="python-basics">
+<h2>Python Basics<a class="headerlink" href="#python-basics" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>What is a <code class="docutils literal notranslate"><span class="pre">loop</span></code> in Python? What does it do? Name one example of something you can do to a list of words using a <code class="docutils literal notranslate"><span class="pre">loop</span></code>.</p></li>
+<li><p>What is an <code class="docutils literal notranslate"><span class="pre">if-statement</span></code> in Python? How does it work? Name one example of something you can do with an <code class="docutils literal notranslate"><span class="pre">if-statement</span></code>.</p></li>
+</ol>
 </section>
-<section id="instructions">
-<h2>Instructions:<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
-<p>Steps:</p>
-<ul class="simple">
-<li><p>First, you will load up a dataset for analysis. You may choose from the following sets of data:</p>
-<ul>
-<li><p>In the default option, this dataset is “<a class="reference external" href="https://huggingface.co/datasets/allenai/real-toxicity-prompts">toxicity
-prompts</a>,”
-which is a collection of prompts that tend to provoke biased
-responses. You will load this dataset using the provided code in the
-assignment sheet, which contains an if statement that filters out
-the prompts by toxicity score.</p></li>
-<li><p>Choose a dataset that has some creativity, like from a novel, game, movie, etc. You might, for example, load up the first sentences from a selection of novels in <a class="reference external" href="https://www.gutenberg.org/">Project Gutenberg</a>. Or you can use quotes from a game. Your choice, as long as it’s creative!</p></li>
-</ul>
-</li>
-<li><p>Second, trom the dataset, you will compile a list of 10 prompts, using the
-provided code in the assignment sheet. Later on, you will draw from
-this list to feed prompts into the text generator. You may use the
-code provided.</p></li>
-<li><p>Third, you will create a generator object tied into which you will
-pass your prompts. Here, you may use the default language model
-(which is ‘gpt2’, or use one of your choosing from the
-<a class="reference external" href="https://huggingface.co/models?pipeline_tag=text-generation&amp;sort=downloads">models
-hub</a>),
-with the “text generation” option from the “Natural Language
-Processing” selected on the lefthand menu. If selecting your own
-model, modify the code provided by adding a
-<code class="docutils literal notranslate"><span class="pre">model='your-model-name'</span></code> argument in the pipeline function.</p></li>
-<li><p>Fourth, pass your selected prompts into the generator
-object, which you created from the pipeline function.</p></li>
-<li><p>Finally, examine the results and summarize your response. Use the following questions to    prompt your thinking. 5 - 7 sentences.</p>
-<ul>
-<li><p>Pay attention to anything in the results that sticks out to you. Are there any surprising results? Or any patterns that you can notice across multiple results? What do these surprises or patterns in the results suggest about the training data?</p></li>
-<li><p>Do you find the results to be more biased or offensive than the original prompt? Do
-you find them to be more biased or offensive than the “continuation” sentences from the original dataset? How so?</p></li>
-<li><p>What do the results say about the original training data? What ideas or biases might be prevalent in the original dataset?</p></li>
-</ul>
-</li>
-</ul>
+<section id="text-analysis">
+<h2>Text Analysis<a class="headerlink" href="#text-analysis" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>What is tokenizing? Why would we want to tokenize a text to be used for text analysis?</p></li>
+<li><p>What is text cleaning? What are things you want to clean in a text prior to doing text analysis? Pick one of these and explain in detail why it needs to be cleaned from the text before doing text analysis.</p></li>
+<li><p>Re-write what this sentence would look like after cleaning: <code class="docutils literal notranslate"><span class="pre">It</span> <span class="pre">was</span> <span class="pre">the</span> <span class="pre">best</span> <span class="pre">of</span> <span class="pre">times,</span> <span class="pre">it</span> <span class="pre">was</span> <span class="pre">the</span> <span class="pre">worst</span> <span class="pre">of</span> <span class="pre">times</span></code></p></li>
+<li><p>Pick one function from NLTK, like <code class="docutils literal notranslate"><span class="pre">similar()</span></code> or <code class="docutils literal notranslate"><span class="pre">concordance()</span></code> and explain what it does. Why is the function useful for analyzing text?</p></li>
+</ol>
+</section>
+<section id="text-generation">
+<h2>Text Generation<a class="headerlink" href="#text-generation" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>How does a computer know what words tend to be associated with a single word, like <code class="docutils literal notranslate"><span class="pre">monster</span></code> or <code class="docutils literal notranslate"><span class="pre">woman</span></code>, for example?</p></li>
+<li><p>Why is bias and discrimination a problem in large language models? Where do models learn to be biased?</p></li>
+<li><p>Why is it difficult to train a model that isn’t biased or discriminatory?</p></li>
+<li><p>What is the most important thing you learned in this class, and why is it important to you?</p></li>
+</ol>
 </section>
 </section>
 
@@ -464,13 +450,6 @@ you find them to be more biased or offensive than the “continuation” sentenc
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="homework_04.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">homework 4: text analysis</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
