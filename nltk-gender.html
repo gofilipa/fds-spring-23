@@ -481,7 +481,7 @@ title="Print to PDF"
 <h2>selecting and cleaning our text<a class="headerlink" href="#selecting-and-cleaning-our-text" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
     <span class="c1"># loads and tokenizes the text</span>
     <span class="n">open_url</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="n">read_text</span> <span class="o">=</span> <span class="n">open_url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -526,6 +526,25 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># running the &quot;clean&quot; function on the text &quot;orlando&quot;</span>
 
 <span class="n">orl</span> <span class="o">=</span> <span class="n">clean</span><span class="p">(</span><span class="n">orlando</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">73</span><span class="n">ce5fb15cd5</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># running the &quot;clean&quot; function on the text &quot;orlando&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">orl</span> <span class="o">=</span> <span class="n">clean</span><span class="p">(</span><span class="n">orlando</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-3-cd8afc8ea239&gt;</span> in <span class="ni">clean</span><span class="nt">(tokens)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="c1"># loads and tokenizes the text</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">open_url</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">read_text</span> <span class="o">=</span> <span class="n">open_url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">decoded_text</span> <span class="o">=</span> <span class="n">read_text</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;url&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -901,20 +920,10 @@ prince charming; young man; lady agatha
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>181
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orlando</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;man&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>130
 </pre></div>
 </div>
 </div>
@@ -939,12 +948,30 @@ prince charming; young man; lady agatha
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">29</span><span class="o">-</span><span class="mi">6813</span><span class="n">da0ed826</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">drac</span><span class="o">.</span><span class="n">concordance</span><span class="p">(</span><span class="s2">&quot;monster&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;drac&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying 23 of 23 matches:
+ forward shouted voice laden menace monster give child she threw knees raising 
+e profanation word write connection monster asked why may i go because dear sir
+ old chapel i knew well enough find monster i sought the great box place close 
+terrible desire came upon rid world monster there lethal weapon hand i seized s
+y glassy sea like roaring devouring monster waves beat madly level sands rushed
+leave ship but i shall baffle fiend monster i shall tie hands wheel strength be
+rrible things world awful thing man monster really london i fear think i moment
+ led struggle us rid earth terrible monster must knowledge help get i think cyl
+ men determined nay pledged destroy monster part woman even harmed heart may fa
+oxes ready must either capture kill monster lair must speak sterilise earth see
+ sickens think every breath exhaled monster seemed clung place intensified loat
+ arthur we matters us dangers fears monster used power brute world last time so
+least time tell finished earth free monster nether world i daresay difficult be
+ould walked sleep gone night asleep monster could destroyed oh i ever go whitby
+wed doings count coming destruction monster may carried subtle way if could get
+morning guards us course until sets monster must retain whatever form he confin
+ed since came hands papers relating monster i studied greater seems necessity u
+ spoke ah child i plain do see late monster creeping knowledge experimentally h
+ly along arm without surprise i saw monster cower back similar movement made sp
+weet pity last night pity made hate monster seem despicable surely god permit w
+y for sake first sake humanity this monster done much harm already narrow scope
+when i see box i shall open destroy monster though thousand men looking i wiped
+ry speck dust whirls wind devouring monster embryo have felt vampire lips upon 
 </pre></div>
 </div>
 </div>
