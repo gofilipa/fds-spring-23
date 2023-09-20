@@ -5,11 +5,11 @@ As course schedule and assignments are subject to change, please check this page
 | Date  | Topic  | Readings  | Due  |
 |---|---|---|---|
 | Week 1: 1/25/2023  | introduction  |   |   |
-| UNIT ONE Week 2: 1/30/2023  | Jupyter, calculation and data types  |   | |
-| 2/1/2023  | [types and variables](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/02-types.md)  | *Keywords for Gender and Sexuality Studies* on "[Race](https://keywords.nyupress.org/gender-and-sexuality-studies/essay/race/)"| Homework #0 due (optional) |
-| Week 3: 2/6/2023 |  [functions](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/06-functions.md) |   | Homework #1 due: data types and variables  |
-| 2/8/2023  |  [loops](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/08-loops.md) |  *Keywords for Gender and Sexuality Studies* on "[Sexuality](https://keywords.nyupress.org/gender-and-sexuality-studies/essay/sexuality/)" |   |
-| Week 4: 2/15/2023  | [lists](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/07-lists.md) |   |  |
+| UNIT ONE Week 2: 1/30/2023  | Jupyter, calculation and data types  |  Cifor, M., Garcia, P., et al, [*Feminist Data Manifest-NO*](https://www.manifestno.com/) | |
+| 2/1/2023  | [types and variables](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/02-types.md)  | | Homework #0 due (optional) |
+| Week 3: 2/6/2023 |  [functions](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/06-functions.md) |  *Keywords for Gender and Sexuality Studies* on "[Race](https://keywords.nyupress.org/gender-and-sexuality-studies/essay/race/)" | Homework #1 due: data types and variables  |
+| 2/8/2023  |  [loops](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/08-loops.md) |   |   |
+| Week 4: 2/15/2023  | [lists](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/07-lists.md) |  *Keywords for Gender and Sexuality Studies* on "[Sexuality](https://keywords.nyupress.org/gender-and-sexuality-studies/essay/sexuality/)" |  |
 |  Week 5: CUNY MONDAY 2/21/2023 | [logic](https://github.com/DHRI-Curriculum/python/blob/v2.0/sections/09-conditionals.md)  |   |  Homework #2 due: python basics |
 |  UNIT TWO 2/22/2023 | intro to nltk | *The NLTK Book*, [chapter 1, sections 1.2 - 1.4 & 3.1](https://www.nltk.org/book/ch01.html)  |   |
 | Week 6: 2/27/2023  | CLASS CANCELED |  |   |
